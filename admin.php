@@ -3,6 +3,10 @@
 add_action('admin_menu', 'name_directory_menu');
 add_action('wp_ajax_name_directory_ajax_names', 'name_directory_names');
 
+
+/**
+ * Add a menu entry on options
+ */
 function name_directory_menu()
 {
     add_options_page(__('Name Directory Options', 'name-directory'),
@@ -10,6 +14,12 @@ function name_directory_menu()
         'manage_options', 'name-directory', 'name_directory_options');
 }
 
+
+/**
+ * Return yes or no based on a variable
+ * @param $var
+ * @return string|void
+ */
 function name_directory_yesno($var)
 {
     if(! empty($var))
@@ -20,6 +30,13 @@ function name_directory_yesno($var)
     return __('No', 'name-directory');
 }
 
+
+/**
+ * Return the first character of a word,
+ * or hashtag, may the word begin with a number
+ * @param $name
+ * @return string
+ */
 function name_directory_get_first_char($name)
 {
     $first_char = strtoupper(substr($name, 0, 1));
@@ -31,6 +48,11 @@ function name_directory_get_first_char($name)
     return $first_char;
 }
 
+
+/**
+ * This is a little router for the
+ * name-directory plugin
+ */
 function name_directory_options()
 {
     if (!current_user_can('manage_options'))
@@ -61,8 +83,10 @@ function name_directory_options()
 
 }
 
+
 /**
- * Show the list of directories
+ * Show the list of directories and all of the
+ * links to manage the directories
  */
 function show_list()
 {
@@ -254,6 +278,12 @@ function show_list()
 <?php
 }
 
+
+/**
+ * A double purpose function for editing a name-directory and
+ * creating a new directory.
+ * @param string $mode
+ */
 function name_directory_edit($mode = 'edit')
 {
     if (!current_user_can('manage_options'))
@@ -439,6 +469,12 @@ function name_directory_edit($mode = 'edit')
 }
 
 
+/**
+ * Handle the names in the name directory
+ *  - Display all names
+ *  - Edit names (ajax and 'oldskool' view
+ *  - Create new names
+ */
 function name_directory_names()
 {
     if (!current_user_can('manage_options'))
@@ -488,6 +524,17 @@ function name_directory_names()
     }
     else if(! empty($_POST['name']))
     {
+        $wpdb->get_results(sprintf("SELECT `id` FROM `%s` WHERE `name` = '%s'",
+                           $table_directory_name, esc_sql($_POST['name'])));
+        if($wpdb->num_rows == 1 && $_POST['action'] == "name_directory_ajax_names")
+        {
+            echo '<p>';
+            echo sprintf(__('Name %s was already on the list, so it was not added', 'name-directory'),
+                                '<i>' . esc_sql($_POST['name']) . '</i>');
+            echo '</p>';
+            exit;
+        }
+
         $wpdb->insert(
             $table_directory_name,
             array(
@@ -504,14 +551,14 @@ function name_directory_names()
         if($_POST['action'] == "name_directory_ajax_names")
         {
             echo '<p>';
-            echo sprintf(__('New name %s added', 'name-directory'), "<i>" . esc_sql($_POST['name']) . "</i>");
+            echo sprintf(__('New name %s added', 'name-directory'), '<i>' . esc_sql($_POST['name']) . '.</i> ');
+            echo ' <small><i>' . __('Will be visible when the page is refreshed.', 'name-directory') . '</i></small>';
             echo '</p>';
             exit;
         }
 
         echo "<div class='updated'><p><strong>"
             . sprintf(__('New name %s added', 'name-directory'), "<i>" . esc_sql($_POST['name']) . "</i> ")
-            . "<small><i>" . __('Will be visible when the page is refreshed.', 'name-directory') . "</i></small>"
             . "</strong></p></div>";
     }
     else if($_SERVER['REQUEST_METHOD'] == 'POST')

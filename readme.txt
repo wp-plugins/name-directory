@@ -59,6 +59,9 @@ Yes, through this plugin page.
 
 == Changelog ==
 
+= 1.1 =
+* Added double name detection
+
 = 1.0 =
 * First major public release
 
