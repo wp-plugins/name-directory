@@ -1,0 +1,304 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
+"POT-Creation-Date: 2013-11-06 22:36:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin.php:8
+msgid "Name Directory Options"
+msgstr ""
+
+#: admin.php:9
+msgid "Name Directory Plugin"
+msgstr ""
+
+#: admin.php:17 admin.php:322 admin.php:343 admin.php:364 admin.php:385
+#: admin.php:406 admin.php:570 admin.php:653
+msgid "Yes"
+msgstr ""
+
+#: admin.php:20 admin.php:334 admin.php:355 admin.php:376 admin.php:397
+#: admin.php:418 admin.php:567 admin.php:661
+msgid "No"
+msgstr ""
+
+#: admin.php:38 admin.php:261 admin.php:446
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: admin.php:79
+msgid "Name directory %s and all entries deleted"
+msgstr ""
+
+#: admin.php:92
+msgid "Name Directory management"
+msgstr ""
+
+#: admin.php:93
+msgid "Add directory"
+msgstr ""
+
+#: admin.php:113
+msgid "Directory %s updated."
+msgstr ""
+
+#: admin.php:135
+msgid "Directory %s created."
+msgstr ""
+
+#: admin.php:141
+msgid "name directory"
+msgstr ""
+
+#: admin.php:141
+msgid "name directories"
+msgstr ""
+
+#: admin.php:144
+msgid "You currently have %d %s."
+msgstr ""
+
+#: admin.php:153 admin.php:167 admin.php:310
+msgid "Title"
+msgstr ""
+
+#: admin.php:155 admin.php:169
+msgid "Entries"
+msgstr ""
+
+#: admin.php:156 admin.php:170 admin.php:318
+msgid "Show title"
+msgstr ""
+
+#: admin.php:157 admin.php:171
+msgid "Show descr."
+msgstr ""
+
+#: admin.php:158 admin.php:172
+msgid "Show line"
+msgstr ""
+
+#: admin.php:159 admin.php:173 admin.php:360
+msgid "Submit form"
+msgstr ""
+
+#: admin.php:209
+msgid "Add, edit and remove names"
+msgstr ""
+
+#: admin.php:209
+msgid "Manage names"
+msgstr ""
+
+#: admin.php:210
+msgid "Go to the add-name-form on the Manage page"
+msgstr ""
+
+#: admin.php:210 admin.php:601
+msgid "Add name"
+msgstr ""
+
+#: admin.php:211
+msgid "Edit name, description and appearance settings"
+msgstr ""
+
+#: admin.php:211
+msgid "Settings"
+msgstr ""
+
+#: admin.php:212
+msgid "Show the copy-paste shortcode for this directory"
+msgstr ""
+
+#: admin.php:212
+msgid "Shortcode"
+msgstr ""
+
+#: admin.php:213
+msgid "Permanently remove this name directory"
+msgstr ""
+
+#: admin.php:213 admin.php:582
+msgid "Delete"
+msgstr ""
+
+#: admin.php:215
+msgid "Number of names in this directory"
+msgstr ""
+
+#: admin.php:234
+msgid "To show your directory on your website, use the shortcode on the right."
+msgstr ""
+
+#: admin.php:235
+msgid "Copy the code and paste it in a post or in a page."
+msgstr ""
+
+#: admin.php:280 admin.php:282
+msgid "Create new name directory"
+msgstr ""
+
+#: admin.php:281
+msgid "Create"
+msgstr ""
+
+#: admin.php:283
+msgid "Complete the form below to create a new name directory."
+msgstr ""
+
+#: admin.php:287
+msgid "Edit this directory"
+msgstr ""
+
+#: admin.php:288
+msgid "Save Changes"
+msgstr ""
+
+#: admin.php:289
+msgid "Edit name directory"
+msgstr ""
+
+#: admin.php:291
+msgid "You are editing the name, description and settings of directory %s"
+msgstr ""
+
+#: admin.php:294 admin.php:546 admin.php:606
+msgid "Back to the directory overview"
+msgstr ""
+
+#: admin.php:314 admin.php:552 admin.php:646 shortcode.php:51
+msgid "Description"
+msgstr ""
+
+#: admin.php:339
+msgid "Show description"
+msgstr ""
+
+#: admin.php:381
+msgid "Submitter name"
+msgstr ""
+
+#: admin.php:402
+msgid "Show line between names"
+msgstr ""
+
+#: admin.php:429
+msgid "Cancel"
+msgstr ""
+
+#: admin.php:458
+msgid "Name %s deleted"
+msgstr ""
+
+#: admin.php:478 admin.php:484
+msgid "Name %s updated"
+msgstr ""
+
+#: admin.php:507 admin.php:513
+msgid "New name %s added"
+msgstr ""
+
+#: admin.php:514
+msgid "Will be visible when the page is refreshed."
+msgstr ""
+
+#: admin.php:521 admin.php:526
+msgid "Please fill in at least a name"
+msgstr ""
+
+#: admin.php:544
+msgid "Manage names for %s"
+msgstr ""
+
+#: admin.php:551 admin.php:642 shortcode.php:49
+msgid "Name"
+msgstr ""
+
+#: admin.php:553 admin.php:665
+msgid "Submitted by"
+msgstr ""
+
+#: admin.php:554 admin.php:650
+msgid "Published"
+msgstr ""
+
+#: admin.php:555
+msgid "Manage"
+msgstr ""
+
+#: admin.php:563
+msgid "Currently, there are no names in this directory.."
+msgstr ""
+
+#: admin.php:581
+msgid "Edit"
+msgstr ""
+
+#: admin.php:595
+msgid "Edit a name"
+msgstr ""
+
+#: admin.php:596
+msgid "Save name"
+msgstr ""
+
+#: admin.php:600
+msgid "Add a new name"
+msgstr ""
+
+#: admin.php:628
+msgid "Show the compact form, showing only the name, always published)"
+msgstr ""
+
+#: admin.php:630
+msgid "Quick add view"
+msgstr ""
+
+#: admin.php:632
+msgid ""
+"Show the full form, which allows you to enter a description and submitter"
+msgstr ""
+
+#: admin.php:634
+msgid "Full add view"
+msgstr ""
+
+#: shortcode.php:50
+msgid "Required"
+msgstr ""
+
+#: shortcode.php:52
+msgid "Your name"
+msgstr ""
+
+#: shortcode.php:53
+msgid "Submit"
+msgstr ""
+
+#: shortcode.php:119
+msgid "All"
+msgstr ""
+
+#: shortcode.php:173
+msgid "There are currently %d names in this directory"
+msgstr ""
+
+#: shortcode.php:177
+msgid "There are %d names in this directory beginning with the letter %s."
+msgstr ""
+
+#: shortcode.php:186
+msgid "There are no names in this directory at the moment"
+msgstr ""
+
+#: shortcode.php:211
+msgid "Submit a name"
+msgstr ""
