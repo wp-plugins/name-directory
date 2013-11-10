@@ -32,24 +32,6 @@ function name_directory_yesno($var)
 
 
 /**
- * Return the first character of a word,
- * or hashtag, may the word begin with a number
- * @param $name
- * @return string
- */
-function name_directory_get_first_char($name)
-{
-    $first_char = strtoupper(substr($name, 0, 1));
-    if(is_numeric($first_char))
-    {
-        $first_char = '#';
-    }
-
-    return $first_char;
-}
-
-
-/**
  * This is a little router for the
  * name-directory plugin
  */
@@ -172,29 +154,25 @@ function show_list()
     <table class="wp-list-table widefat fixed name-directory" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col" class="manage-column column-cb check-column">&nbsp;</th>
-                <th scope="col" id="title" class="manage-column column-title sortable desc">
+                <th width="1%" scope="col" class="manage-column column-cb check-column">&nbsp;</th>
+                <th width="52%" scope="col" id="title" class="manage-column column-title sortable desc">
                     <span><?php echo __('Title', 'name-directory'); ?></span>
                 </th>
-                <th width="10%" scope="col"><?php echo __('Entries', 'name-directory'); ?></th>
-                <th width="10%" scope="col"><?php echo __('Show title', 'name-directory'); ?></th>
-                <th width="10%" scope="col"><?php echo __('Show descr.', 'name-directory'); ?></th>
-                <th width="10%" scope="col"><?php echo __('Show line', 'name-directory'); ?></th>
-                <th width="10%" scope="col"><?php echo __('Submit form', 'name-directory'); ?></th>
+                <th width="13%" scope="col"><?php echo __('Entries', 'name-directory'); ?></th>
+                <th width="13%" scope="col"><?php echo __('Published', 'name-directory'); ?></th>
+                <th width="13%" scope="col"><?php echo __('Unpublished', 'name-directory'); ?></th>
             </tr>
         </thead>
 
         <tfoot>
         <tr>
-            <th scope="col" class="manage-column column-cb check-column">&nbsp;</th>
-            <th scope="col" id="title" class="manage-column column-title sortable desc">
+            <th width="1%" scope="col" class="manage-column column-cb check-column">&nbsp;</th>
+            <th width="52%" scope="col" id="title" class="manage-column column-title sortable desc">
                 <span><?php echo __('Title', 'name-directory'); ?></span>
             </th>
-            <th width="10%" scope="col"><?php echo __('Entries', 'name-directory'); ?></th>
-            <th width="10%" scope="col"><?php echo __('Show title', 'name-directory'); ?></th>
-            <th width="10%" scope="col"><?php echo __('Show descr.', 'name-directory'); ?></th>
-            <th width="10%" scope="col"><?php echo __('Show line', 'name-directory'); ?></th>
-            <th width="10%" scope="col"><?php echo __('Submit form', 'name-directory'); ?></th>
+            <th width="13%" scope="col"><?php echo __('Entries', 'name-directory'); ?></th>
+            <th width="13%" scope="col"><?php echo __('Published', 'name-directory'); ?></th>
+            <th width="13%" scope="col"><?php echo __('Unpublished', 'name-directory'); ?></th>
         </tr>
         </tfoot>
 
@@ -203,6 +181,7 @@ function show_list()
             foreach ( $directories as $directory )
             {
                 $entries = $wpdb->get_var(sprintf("SELECT COUNT(`id`) FROM %s WHERE directory=%d", $table_directory_name, $directory->id));
+                $unpublished = $wpdb->get_var(sprintf("SELECT COUNT(`id`) FROM %s WHERE directory=%d AND `published` = 0", $table_directory_name, $directory->id));
                 echo sprintf("
                 <tr class='type-page status-publish hentry alternate iedit author-self' valign='top'>
                     <th scope='col'>&nbsp;</th>
@@ -222,10 +201,8 @@ function show_list()
                         &nbsp; <strong title='%s'>%d</strong>
                         <br /><br />&nbsp;
                     </td>
-                    <td>%s</td>
-                    <td>%s</td>
-                    <td>%s</td>
-                    <td>%s</td>
+                    <td>%d</td>
+                    <td>%d</td>
                     </tr>",
 
                     $directory->id, $directory->name, $directory->name,
@@ -238,11 +215,8 @@ function show_list()
 
                     __('Number of names in this directory', 'name-directory'),
                     $entries,
-
-                    name_directory_yesno($directory->show_title),
-                    name_directory_yesno($directory->show_description),
-                    name_directory_yesno($directory->show_line_between_names),
-                    name_directory_yesno($directory->show_submit_form)
+                    ($entries - $unpublished),
+                    $unpublished
                     );
                     echo sprintf("
                     <tr id='embed_code_%s' style='display: none;'>
@@ -582,16 +556,39 @@ function name_directory_names()
     $overview_url = sprintf("%s?page=%s", $wp_file, $wp_page);
     $wp_url_path = sprintf("%s?page=%s&sub=%s&dir=%d", $wp_file, $wp_page, $wp_sub, $directory_id);
 
+    $published_status = '0,1';
+    $empasis_class = 's_all';
+    if($_GET['status'] == 'published')
+    {
+        $published_status = '1';
+        $empasis_class = 's_published';
+    }
+    else if($_GET['status'] == 'unpublished')
+    {
+        $published_status = '0';
+        $empasis_class = 's_unpublished';
+    }
+
     $directory = $wpdb->get_row("SELECT * FROM " . $table_directory . " WHERE `id` = " . $directory_id, ARRAY_A);
-    $names = $wpdb->get_results(sprintf("SELECT * FROM %s WHERE `directory` = %d ORDER BY `name` ASC",
-        $table_directory_name, $directory_id));
+    $names = $wpdb->get_results(sprintf("SELECT * FROM %s WHERE `directory` = %d AND `published` IN (%s) ORDER BY `name` ASC",
+        $table_directory_name, $directory_id, $published_status));
 
     echo '<div class="wrap">';
     echo '<div id="icon-page" class="icon32 icon32-posts-post"><br></div>';
     echo "<h2>" . sprintf(__('Manage names for %s', 'name-directory'), $directory['name']) . "</h2>";
-    echo "<a style='float: right'; href='" . $overview_url . "'>"
-        . __('Back to the directory overview', 'name-directory') . "</a><br /><br />";
     ?>
+
+    <p>
+        View:
+        <a class='s_all' href='<?php echo $wp_url_path; ?>&status=all'><?php _e('all', 'name-directory'); ?></a> |
+        <a class='s_published' href='<?php echo $wp_url_path; ?>&status=published'><?php _e('published', 'name-directory'); ?></a> |
+        <a class='s_unpublished' href='<?php echo $wp_url_path; ?>&status=unpublished'><?php _e('unpublished', 'name-directory'); ?></a>
+
+        <a style='float: right'; href='<?php echo $overview_url; ?>'>
+            <?php _e('Back to the directory overview', 'name-directory'); ?>
+        </a>
+    </p>
+
     <table class="wp-list-table widefat fixed" cellpadding="0">
         <thead>
         <tr>
@@ -724,14 +721,14 @@ function name_directory_names()
     </form>
 
     <?php
-    echo print_javascript();
+    echo print_javascript($empasis_class);
 }
 
 /**
  * Return the Javascripts needed by this plugin
  * @return string
  */
-function print_javascript()
+function print_javascript($empasis_class = '')
 {
     $js = '
 
@@ -778,7 +775,11 @@ function print_javascript()
             var pref = readPreference("wp-plugin-nd-add_form");
             if(pref != null)
             {
-                jQuery("#input_" + pref).click();
+                jQuery("#input_" + pref).trigger("click");
+                if(! window.location.hash)
+                {
+                    jQuery("html, body").animate({scrollTop:0}, 1);
+                }
             }
 
             jQuery("#add_form_ajax_submit").val("name_directory_ajax_names");
@@ -814,6 +815,18 @@ function print_javascript()
             });
         });
     </script>';
+
+    if(! empty($empasis_class))
+    {
+        $js .= "<script>jQuery('." . $empasis_class . "').css('font-weight', 'bold');</script>";
+    }
+
+    if(! empty($_GET['edit_name']))
+    {
+        $js .= "<script>jQuery(document).ready(function(){
+                    jQuery('#input_extensive').trigger('click');
+                });</script>";
+    }
 
     return $js;
 }

@@ -3,7 +3,7 @@
  * Plugin Name: Name Directory
  * Plugin URI: http://www.jeroen.in
  * Description: A Name Directory, i.e. for animal names. Visitors can add names and browse all names.
- * Version: 1.1
+ * Version: 1.2
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
@@ -43,6 +43,28 @@ if (! function_exists('add_action'))
     exit;
 }
 
+
+/**
+ * Return the first character of a word,
+ * or hashtag, may the word begin with a number
+ * @param $name
+ * @return string
+ */
+function name_directory_get_first_char($name)
+{
+    $first_char = strtoupper(substr($name, 0, 1));
+    if(is_numeric($first_char))
+    {
+        $first_char = '#';
+    }
+
+    return $first_char;
+}
+
+
+/**
+ * Only run the DB provisioning if an admin accesses this page
+ */
 if (is_admin())
 {
     require_once dirname( __FILE__ ) . '/admin.php';
@@ -50,6 +72,11 @@ if (is_admin())
     register_activation_hook( __FILE__, 'run_db_provisioning');
 }
 
+
+/**
+ * This takes care of setting up the database and
+ * installing some sample data
+ */
 function run_db_provisioning()
 {
     global $name_directory_db_version;
@@ -62,29 +89,17 @@ function run_db_provisioning()
     add_option("name_directory_db_version", $name_directory_db_version);
 }
 
+
 require_once dirname( __FILE__ ) . '/shortcode.php';
 
 
+/**
+ * Initialize the plugin
+ * Ready.. set.. go!
+ */
 function name_directory_init()
 {
     $plugin_dir = basename(dirname(__FILE__));
     load_plugin_textdomain('name-directory', false, $plugin_dir . '/lang/');
 }
 add_action('plugins_loaded', 'name_directory_init');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

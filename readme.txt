@@ -13,6 +13,8 @@ This plugin provides a name directory (glossary) with configurable layout option
 
 This plugin adds name/term directories to your Wordpress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more that words.
 
+The Name Directory plugin was orginally developed for ParkietenVilla.nl to show a directory of names to name your budgies.
+
 A name directory is a directory that contains entries with the following properties:
 
  - name
@@ -45,7 +47,7 @@ If you download the zip-file, it's also very easy:
 
 = Can I contact you? =
 
-Yes, through this plugin page.
+Yes, through this plugin information page.
 
 == Screenshots ==
 
@@ -59,6 +61,12 @@ Yes, through this plugin page.
 
 == Changelog ==
 
+= 1.2 =
+* Added support for submission form on the front-end
+
+* Added possibility for admin to filter on published/unpublished names
+* Rearranged directory overview for admin, overview now shows totals for published/unpublished
+
 = 1.1 =
 * Added double name detection
 
@@ -68,7 +76,4 @@ Yes, through this plugin page.
 = 0.5 =
 * First version for private use
 
-== Upgrade Notice ==
 
-= 1.0 =
-* It's just the first version
