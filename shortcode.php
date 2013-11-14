@@ -203,7 +203,7 @@ function name_directory_make_plugin_url($index = 'name_directory_startswith')
     unset($url[$index]);
     $url[$index] = '';
 
-    return get_site_url() . '?' . http_build_query($url);
+    return get_permalink() . '?' . http_build_query($url);
 }
 
 
