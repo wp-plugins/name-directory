@@ -61,6 +61,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.2.1 =
+* Plugin url's are now compatible with third party SEO modules
+
 = 1.2 =
 * Added support for submission form on the front-end
 
