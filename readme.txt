@@ -2,12 +2,12 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 3.7.1
+Tested up to: 3.8
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin provides a name directory (glossary) with configurable layout options. It can be embedded with a simple shortcode. You can have multiple directories.
+This plugin provides a name directory (glossary) with a lot of options. It can be embedded with a simple shortcode. You can have multiple directories.
 
 == Description ==
 
@@ -60,6 +60,11 @@ Yes, through this plugin information page.
 7. Dutch view of the 'edit name' form
 
 == Changelog ==
+
+= 1.3 =
+* Name lists can now have multiple columns at the frontend
+* Added css in a seperate file
+* Added database upgrade module
 
 = 1.2.1 =
 * Plugin url's are now compatible with third party SEO modules

@@ -111,6 +111,7 @@ function show_list()
                 'show_submit_form'      => $_POST['show_submit_form'],
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
+                'nr_columns'            => $_POST['nr_columns'],
             ),
             array('id' => intval($_POST['dir_id']))
         );
@@ -133,8 +134,9 @@ function show_list()
                 'show_submit_form'      => $_POST['show_submit_form'],
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
+                'nr_columns'            => $_POST['nr_columns'],
             ),
-            array('%s', '%s', '%s', '%s', '%s', '%s', '%s')
+            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d')
         );
 
         echo "<div class='updated'><p>"
@@ -421,6 +423,24 @@ function name_directory_edit($mode = 'edit')
                         }?> />
                         &nbsp;<?php echo __('No', 'name-directory') ?>
                     </label>
+                </td>
+            </tr>
+            <tr>
+                <td><?php echo __('Number of columns', 'name-directory'); ?></td>
+                <td>
+                    <select name="nr_columns">
+                        <?php
+                        for($i=1;$i<4;$i++)
+                        {
+                            $selected = null;
+                            if(! empty($directory['nr_columns']) && $i == $directory['nr_columns'])
+                            {
+                                $selected = " selected";
+                            }
+                            echo "<option value='" . $i . "'" . $selected . ">" . $i . "</option>";
+                        }
+                        ?>
+                    </select>
                 </td>
             </tr>
             <tr>

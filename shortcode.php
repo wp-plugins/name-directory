@@ -1,4 +1,14 @@
 <?php
+add_action('wp_enqueue_scripts', 'name_directory_add_my_stylesheet');
+
+/**
+ * Add the CSS file to output
+ */
+function name_directory_add_my_stylesheet()
+{
+    wp_register_style('prefix-style', plugins_url('name_directory.css', __FILE__));
+    wp_enqueue_style('prefix-style');
+}
 
 /**
  * Get the directory with the supplied ID
@@ -15,42 +25,6 @@ function get_directory_properties($id)
         esc_sql($id)), ARRAY_A);
 
     return $directory;
-}
-
-
-/**
- * Return the CSS message
- */
-function get_form_css()
-{
-    return <<<CSS
-    <style>
-    .name-directory-form-result {
-        padding: 10px;
-        width: 100%;
-        border: 1px solid #D8D8D8;
-        text-align: center;
-        border-radius: 5px;
-        font-family: Arial;
-        font-size: 11px;
-        text-transform: uppercase;
-        display: none;
-    }
-
-    .name-directory-form-result.form-result-success {
-        background-color: rgb(236, 255, 216);
-        display: block;
-        color: green;
-    }
-
-    .name-directory-form-result.form-result-error {
-        background-color: rgb(255, 249, 242);
-        display: block;
-        color: rgb(211, 0, 0);
-    }
-    </style>
-CSS;
-
 }
 
 
@@ -101,7 +75,6 @@ function name_directory_show_submit_form($directory, $overview_url)
     $back_txt = __('Back to name directory', 'name-directory');
 
     $result_class = '';
-    $form_css = get_form_css();
     $form_result = null;
 
     if(! empty($_POST['name_directory_submitted']))
@@ -153,8 +126,6 @@ function name_directory_show_submit_form($directory, $overview_url)
 
     $form = <<<HTML
         <form method='post' name='name_directory_submit'>
-
-            {$form_css}
 
             <div class='name-directory-form-result {$result_class}'>{$form_result}</div>
 
@@ -240,7 +211,7 @@ function show_directory($attributes)
 
     if(! empty($directory['show_title']))
     {
-        echo "<h3>" . $directory['name'] . "</h3>";
+        echo "<h3 class='name_directory_title'>" . $directory['name'] . "</h3>";
     }
 
     echo <<<HTML
@@ -277,7 +248,7 @@ HTML;
 
     if(! empty($directory['show_submit_form']))
     {
-        echo " | <a href='" . $letter_url . "&show_submitform=true'>" . __('Submit', 'name-directory') . "</a>";
+        echo " | <a href='" . $letter_url . "&show_submitform=true'>" . __('Submit a name', 'name-directory') . "</a>";
     }
 
     echo '</div>';
@@ -302,7 +273,16 @@ HTML;
     }
     else
     {
+        $split_at = null;
+        if(! empty($directory['nr_columns']) && $directory['nr_columns'] > 1)
+        {
+            $split_at = round($num_names/$directory['nr_columns'])+1;
+        }
+
+        echo '<div class="name_directory_column name_directory_nr' . (int)$directory['nr_columns'] . '">';
+
         $i = 1;
+        $split_i = 1;
         foreach($names as $entry)
         {
             echo '<div class="name_directory_name_box">';
@@ -317,15 +297,29 @@ HTML;
             {
                 echo '<hr />';
             }
+
+            $split_i++;
             $i++;
+
+            if($split_at == $split_i)
+            {
+                echo '</div><div class="name_directory_column name_directory_nr' . (int)$directory['nr_columns'] . '">';
+                $split_i = 0;
+            }
         }
+        echo '</div>';
     }
     echo '</div>';
+
+    if(! empty($directory['nr_columns']) && $directory['nr_columns'] > 1)
+    {
+        echo '<div class="name_directory_column_clear"></div>';
+    }
 
     if(! empty($directory['show_submit_form']))
     {
         echo "<br /><br />
-              <a href='" . $letter_url . "&show_submitform=true'>" . __('Submit a name', 'name-directory') . "</a>";
+              <a href='" . $letter_url . "&show_submitform=true' class='name_directory_submit_bottom_link'>" . __('Submit a name', 'name-directory') . "</a>";
     }
 
 	return ob_get_clean();

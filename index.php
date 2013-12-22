@@ -3,7 +3,7 @@
  * Plugin Name: Name Directory
  * Plugin URI: http://www.jeroen.in
  * Description: A Name Directory, i.e. for animal names. Visitors can add names and browse all names.
- * Version: 1.2.1
+ * Version: 1.4
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
@@ -27,7 +27,7 @@
 global $wpdb;
 
 global $name_directory_db_version;
-$name_directory_db_version = '0.1';
+$name_directory_db_version = '1.3';
 
 global $table_directory;
 $table_directory = $wpdb->prefix . "name_directory";
@@ -103,3 +103,14 @@ function name_directory_init()
     load_plugin_textdomain('name-directory', false, $plugin_dir . '/lang/');
 }
 add_action('plugins_loaded', 'name_directory_init');
+
+
+function myplugin_update_db_check()
+{
+    global $name_directory_db_version;
+    if (get_site_option('name_directory_db_version') != $name_directory_db_version)
+    {
+        run_db_provisioning();
+    }
+}
+add_action( 'plugins_loaded', 'myplugin_update_db_check' );

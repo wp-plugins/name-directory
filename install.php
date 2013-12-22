@@ -12,6 +12,10 @@ if (! function_exists('add_action'))
 function name_directory_install_list()
 {
     global $table_directory;
+    global $name_directory_db_version;
+
+    $installed_ver = get_option( "jal_db_version" );
+
     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
     $sql = "CREATE TABLE $table_directory (
@@ -25,7 +29,29 @@ function name_directory_install_list()
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id)
     );";
+
     dbDelta($sql);
+
+    if($installed_ver != $name_directory_db_version)
+    {
+        $sql = "CREATE TABLE $table_directory (
+                id INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                name VARCHAR( 255 ) NOT NULL,
+                show_title BOOLEAN NULL,
+                show_description BOOLEAN NULL,
+                show_submit_form BOOLEAN NULL,
+                show_submitter_name BOOLEAN NULL,
+                show_line_between_names BOOLEAN NULL,
+                nr_columns INT( 1 ) NULL,
+                description TEXT NOT NULL,
+                UNIQUE KEY id (id)
+        );";
+
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        dbDelta( $sql );
+
+        update_option("name_directory_db_version", $name_directory_db_version);
+    }
 }
 
 /**
