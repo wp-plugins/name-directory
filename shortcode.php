@@ -289,7 +289,7 @@ HTML;
             echo '<strong>' . htmlentities($entry['name']) . '</strong>';
             if(! empty($entry['description']))
             {
-                echo '<br /><div>' . htmlentities($entry['description']) . '</div>';
+                echo '<br /><div>' . html_entity_decode(stripslashes($entry['description'])) . '</div>';
             }
             echo '</div>';
 

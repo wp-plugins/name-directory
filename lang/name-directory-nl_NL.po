@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress plugin: Name Directory\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
-"POT-Creation-Date: 2013-12-22 20:57:34+00:00\n"
-"PO-Revision-Date: 2013-12-22 22:01+0100\n"
+"POT-Creation-Date: 2013-12-26 21:59:31+00:00\n"
+"PO-Revision-Date: 2013-12-26 23:16+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
 "Language-Team: \n"
 "Language: Dutch\n"
@@ -23,12 +23,12 @@ msgid "Name Directory Plugin"
 msgstr "Namenlijst Plugin"
 
 #: admin.php:27 admin.php:328 admin.php:349 admin.php:370 admin.php:391
-#: admin.php:412 admin.php:634 admin.php:717
+#: admin.php:412 admin.php:634 admin.php:719
 msgid "Yes"
 msgstr "Ja"
 
 #: admin.php:30 admin.php:340 admin.php:361 admin.php:382 admin.php:403
-#: admin.php:424 admin.php:631 admin.php:725
+#: admin.php:424 admin.php:631 admin.php:727
 msgid "No"
 msgstr "Nee"
 
@@ -76,7 +76,7 @@ msgstr "Titel"
 msgid "Entries"
 msgstr "Namen"
 
-#: admin.php:164 admin.php:176 admin.php:618 admin.php:714
+#: admin.php:164 admin.php:176 admin.php:618 admin.php:716
 msgid "Published"
 msgstr "Tonen op site"
 
@@ -246,7 +246,7 @@ msgstr "verborgen"
 msgid "Name"
 msgstr "Naam"
 
-#: admin.php:617 admin.php:729
+#: admin.php:617 admin.php:731
 msgid "Submitted by"
 msgstr "Toegevoegd door"
 
@@ -292,6 +292,18 @@ msgstr "Volledig formulier weergeven, waarbij alle velden getoond worden"
 #: admin.php:698
 msgid "Full add view"
 msgstr "Volledige weergave"
+
+#: admin.php:712
+msgid "Please be careful!"
+msgstr "Let goed op!"
+
+#: admin.php:713
+msgid ""
+"HTML markup is allowed and will we printed on your website and in the "
+"Wordpress admin."
+msgstr ""
+"Het gebruik van HTML is toegestaan en zal op je website en in de Wordpress "
+"admin te zien zijn."
 
 #: shortcode.php:71
 msgid "Required"

@@ -641,7 +641,7 @@ function name_directory_names()
                         <a class='button button-small' href='" . $wp_url_path . "&delete_name=%d'>%s</a>
                     </td>
                 </tr>",
-                $name->name, $name->description, $name->submitted_by, $published,
+                $name->name, html_entity_decode(stripslashes($name->description)), $name->submitted_by, $published,
                 $name->id, __('Edit', 'name-directory'),
                 $name->id, __('Delete', 'name-directory'));
         }
@@ -708,7 +708,9 @@ function name_directory_names()
             </tr>
             <tr id="add_description">
                 <td><?php echo __('Description', 'name-directory'); ?></td>
-                <td><textarea name="description" rows="5" style="width: 100%;"><?php echo $name['description']; ?></textarea></td>
+                <td><textarea name="description" rows="5" style="width: 100%;"><?php echo stripslashes($name['description']); ?></textarea>
+                    <small><strong><?php echo __('Please be careful!', 'name-directory'); ?></strong>
+                        <?php echo __('HTML markup is allowed and will we printed on your website and in the Wordpress admin.', 'name-directory'); ?></small></td>
             </tr>
             <tr id="add_published">
                 <td><?php echo __('Published', 'name-directory'); ?></td>
