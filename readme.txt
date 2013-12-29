@@ -61,6 +61,12 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.4.1 = 
+* Fixed sorting issue at the frontend
+
+= 1.4 = 
+* Added support for HTML in the name description
+
 = 1.3 =
 * Name lists can now have multiple columns at the frontend
 * Added css in a seperate file
