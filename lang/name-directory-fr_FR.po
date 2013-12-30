@@ -1,0 +1,364 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
+"POT-Creation-Date: 2013-12-29 18:12:19+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-12-30 10:49+0100\n"
+"Last-Translator: Patrick BARDET <info@web-studio-creation.fr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: admin.php:12
+msgid "Name Directory Options"
+msgstr "Options de l'annuaire"
+
+# French translation by Patrick BARDET (http://www.web-studio-creation.fr)
+#: admin.php:13
+msgid "Name Directory Plugin"
+msgstr "Annuaire/glossaire plugin"
+
+#: admin.php:27 admin.php:328 admin.php:349 admin.php:370 admin.php:391
+#: admin.php:412 admin.php:634 admin.php:719
+msgid "Yes"
+msgstr "Oui"
+
+#: admin.php:30 admin.php:340 admin.php:361 admin.php:382 admin.php:403
+#: admin.php:424 admin.php:631 admin.php:727
+msgid "No"
+msgstr "Non"
+
+#: admin.php:42 admin.php:267 admin.php:476
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous ne disposez pas des droits suffisants pour accéder à cette page"
+
+#: admin.php:85
+msgid "Name directory %s and all entries deleted"
+msgstr "Le nom de  l'annuaire %s et toutes ses entrées ont été supprimées"
+
+#: admin.php:98
+msgid "Name Directory management"
+msgstr "Gestion des entrées de l'annuaire"
+
+#: admin.php:99
+msgid "Add directory"
+msgstr "Ajouter un annuaire"
+
+#: admin.php:120
+msgid "Directory %s updated."
+msgstr "Annuaire %s mis à jour."
+
+#: admin.php:143
+msgid "Directory %s created."
+msgstr "Annuaire %s créé."
+
+#: admin.php:149
+msgid "name directory"
+msgstr "Entrée de l'annuaire"
+
+#: admin.php:149
+msgid "name directories"
+msgstr "Entrées de l'annuaire"
+
+#: admin.php:152
+msgid "You currently have %d %s."
+msgstr "Vous avez %d %s"
+
+#: admin.php:161 admin.php:173 admin.php:316
+msgid "Title"
+msgstr "Titre"
+
+#: admin.php:163 admin.php:175
+msgid "Entries"
+msgstr "Entrées"
+
+#: admin.php:164 admin.php:176 admin.php:618 admin.php:716
+msgid "Published"
+msgstr "Publié"
+
+#: admin.php:165 admin.php:177
+msgid "Unpublished"
+msgstr "Non publié"
+
+#: admin.php:212
+msgid "Add, edit and remove names"
+msgstr "Ajouter, éditer et supprimer les éléments"
+
+#: admin.php:212
+msgid "Manage names"
+msgstr "Gérer les entrées"
+
+#: admin.php:213
+msgid "Go to the add-name-form on the Manage page"
+msgstr "Aller au formulaire add-name-form dans la gestion des pages"
+
+#: admin.php:213 admin.php:665
+msgid "Add name"
+msgstr "Ajouter un élément"
+
+#: admin.php:214
+msgid "Edit name, description and appearance settings"
+msgstr "Editer les paramètres de nom, de description, et d'apparence "
+
+#: admin.php:214
+msgid "Settings"
+msgstr "Paramètres de configuration"
+
+#: admin.php:215
+msgid "Show the copy-paste shortcode for this directory"
+msgstr "Afficher le shortcode copié-collé pour cet annuaire"
+
+#: admin.php:215
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin.php:216
+msgid "Permanently remove this name directory"
+msgstr "Supprimer définitivement cet annuaire"
+
+#: admin.php:216 admin.php:646
+msgid "Delete"
+msgstr "Supprimer"
+
+#: admin.php:218
+msgid "Number of names in this directory"
+msgstr "Nombre d'éléments de l'annuaire"
+
+#: admin.php:234
+msgid "To show your directory on your website, use the shortcode on the right."
+msgstr ""
+"Pour afficher l'annuaire sur votre site, utilisez le shortcode présent sur "
+"la droite"
+
+#: admin.php:235
+msgid "Copy the code and paste it in a post or in a page."
+msgstr "Copier le code et collez le dans un article ou une page"
+
+#: admin.php:286 admin.php:288
+msgid "Create new name directory"
+msgstr "Créer "
+
+#: admin.php:287
+msgid "Create"
+msgstr "Créer"
+
+#: admin.php:289
+msgid "Complete the form below to create a new name directory."
+msgstr ""
+"Remplissez le formulaire ci-dessous pour créer un élément de l'annuaire"
+
+#: admin.php:293
+msgid "Edit this directory"
+msgstr "Modifier cet annuaire"
+
+#: admin.php:294
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: admin.php:295
+msgid "Edit name directory"
+msgstr "Editer l'annuaire"
+
+#: admin.php:297
+msgid "You are editing the name, description and settings of directory %s"
+msgstr ""
+"Vous éditez actuellement le nom, la description et les parmaètres de "
+"l'annuaire %s"
+
+#: admin.php:300 admin.php:608 admin.php:670
+msgid "Back to the directory overview"
+msgstr "Retour à la liste des annuaires"
+
+#: admin.php:320 admin.php:616 admin.php:710 shortcode.php:72
+msgid "Description"
+msgstr "Description"
+
+#: admin.php:324
+msgid "Show title"
+msgstr "Afficher le titre"
+
+#: admin.php:345
+msgid "Show description"
+msgstr "Afficher le description"
+
+#: admin.php:366
+msgid "Submit form"
+msgstr "Soumettre le formulaire"
+
+#: admin.php:387
+msgid "Submitter name"
+msgstr "Nom de la personne qui soumet"
+
+#: admin.php:408
+msgid "Show line between names"
+msgstr "Afficher une ligne entre les entrées"
+
+#: admin.php:429
+msgid "Number of columns"
+msgstr "Nombre de colonnes"
+
+#: admin.php:453
+msgid "Cancel"
+msgstr "Annuler"
+
+#: admin.php:488
+msgid "Name %s deleted"
+msgstr "L'entrée %s a été supprimée"
+
+#: admin.php:508 admin.php:514
+msgid "Name %s updated"
+msgstr "L'entrée %s a été mise à jour"
+
+#: admin.php:526
+msgid "Name %s was already on the list, so it was not added"
+msgstr ""
+"Le nouvel annuaire %s est déjà présent dasn la liste; il n'a pas eté ajouté"
+
+#: admin.php:548 admin.php:555
+msgid "New name %s added"
+msgstr "Le nouvel annuaire %s a été ajouté"
+
+#: admin.php:549
+msgid "Will be visible when the page is refreshed."
+msgstr "sera visible quand la page sera rafraichie."
+
+#: admin.php:562 admin.php:567 shortcode.php:124
+msgid "Please fill in at least a name"
+msgstr "Entrez au moins le nom"
+
+#: admin.php:598
+msgid "Manage names for %s"
+msgstr "Gestion des entrées de %s"
+
+#: admin.php:603
+msgid "all"
+msgstr "tout"
+
+#: admin.php:604
+msgid "published"
+msgstr "publié"
+
+#: admin.php:605
+msgid "unpublished"
+msgstr "non publié"
+
+#: admin.php:615 admin.php:706 shortcode.php:70
+msgid "Name"
+msgstr "Entrée"
+
+#: admin.php:617 admin.php:731
+msgid "Submitted by"
+msgstr "Soumis par"
+
+#: admin.php:619
+msgid "Manage"
+msgstr "Gérer"
+
+#: admin.php:627
+msgid "Currently, there are no names in this directory.."
+msgstr "Il n'y a aucune entrée dans l'annuaire"
+
+#: admin.php:645
+msgid "Edit"
+msgstr "Editer"
+
+#: admin.php:659
+msgid "Edit a name"
+msgstr "Editer une entrée"
+
+#: admin.php:660
+msgid "Save name"
+msgstr "Sauvegarder l'entrée"
+
+#: admin.php:664
+msgid "Add a new name"
+msgstr "Ajouter une nouvelle entrée"
+
+#: admin.php:692
+msgid "Show the compact form, showing only the name, always published)"
+msgstr ""
+"Afficher le formulaire compact, affichant seulement le nom, toujours publié) "
+
+#: admin.php:694
+msgid "Quick add view"
+msgstr "Ajout partiel de paramètres"
+
+#: admin.php:696
+msgid ""
+"Show the full form, which allows you to enter a description and submitter"
+msgstr ""
+"Afficher le formulaire complet, permettant d'entrer une description et de la "
+"soumettre"
+
+#: admin.php:698
+msgid "Full add view"
+msgstr "Ajouter tous les paramètres"
+
+#: admin.php:712
+msgid "Please be careful!"
+msgstr "Attention !!!"
+
+#: admin.php:713
+msgid ""
+"HTML markup is allowed and will we printed on your website and in the "
+"Wordpress admin."
+msgstr ""
+"Les balises HTML sont autorisées et seront prises en compte côté front-"
+"office et back-office"
+
+#: shortcode.php:71
+msgid "Required"
+msgstr "Obligatoire"
+
+#: shortcode.php:73
+msgid "Your name"
+msgstr "Votre nom"
+
+#: shortcode.php:74
+msgid "Submit"
+msgstr "Soumettre"
+
+#: shortcode.php:75
+msgid "Back to name directory"
+msgstr "Retour à la liste des annuaires"
+
+#: shortcode.php:91
+msgid "Sorry, %s was already on the list so your submission was not sent."
+msgstr ""
+"Désolé, %s est déjà dans la liste; votre soumission n'a pas été prise en "
+"compte."
+
+#: shortcode.php:112
+msgid "Thank you for your submission! It will be reviewed shortly."
+msgstr ""
+"Merci pour votre soumission. Votre demande sera traitée très prochainment."
+
+#: shortcode.php:117
+msgid "Something must have gone terribly wrong. Would you please try it again?"
+msgstr "Erreur !! Merdi de réessayer."
+
+#: shortcode.php:199
+msgid "All"
+msgstr "Tout"
+
+#: shortcode.php:251 shortcode.php:322
+msgid "Submit a name"
+msgstr "Soumettre une entrée"
+
+#: shortcode.php:259
+msgid "There are currently %d names in this directory"
+msgstr "Il y a %s entrée(s) dans cet annuaire"
+
+#: shortcode.php:263
+msgid "There are %d names in this directory beginning with the letter %s."
+msgstr "Il y a %d entrée(s) commençant par la lettre %s dans cet annuaire "
+
+#: shortcode.php:272
+msgid "There are no names in this directory at the moment"
+msgstr "Il n'y a aucune entrée dans cet annuaire pour le moment."

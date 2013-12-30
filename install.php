@@ -75,6 +75,24 @@ function name_directory_install_names()
     dbDelta($sqlnames);
 }
 
+
+/**
+ * Convert tables to UTF8
+ */
+function name_directory_convert_to_utf8()
+{
+    global $wpdb;
+    global $table_directory;
+    global $table_directory_name;
+
+    $convert_dirs = "ALTER TABLE $table_directory CONVERT TO CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci';";
+    $wpdb->query($convert_dirs);
+
+    $convert_names = "ALTER TABLE $table_directory_name CONVERT TO CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci';";
+    $wpdb->query($convert_names);
+}
+
+
 /**
  * Install some sample data, if applies
  */

@@ -7,7 +7,7 @@ Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin provides a name directory (glossary) with a lot of options. It can be embedded with a simple shortcode. You can have multiple directories.
+This plugin provides a name directory (glossary) with a lot of options. It can be embedded with a simple shortcode and can have multiple directories.
 
 == Description ==
 
@@ -28,6 +28,7 @@ Every directory can be embedded with a very simple shortcode which you can past 
  - Show/Hide suggestion form
  - Show/Hide submitter name
  - Show/Hide a horizontal rule between the entries
+ - Choose if it has to be presented in 1, 2 or 3 columns
 
 The administration view of this plugin has the familiar look and feel of (the rest of) the Wordpress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
 
@@ -60,6 +61,10 @@ Yes, through this plugin information page.
 7. Dutch view of the 'edit name' form
 
 == Changelog ==
+
+= 1.4.2 = 
+* Fixed support for Chinese characters
+* Added French Translation (Translated by: Patrick BARDET http://www.web-studio-creation.fr
 
 = 1.4.1 = 
 * Fixed sorting issue at the frontend

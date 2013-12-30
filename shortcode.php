@@ -286,7 +286,7 @@ HTML;
         foreach($names as $entry)
         {
             echo '<div class="name_directory_name_box">';
-            echo '<strong>' . htmlentities($entry['name']) . '</strong>';
+            echo '<strong>' . htmlspecialchars($entry['name']) . '</strong>';
             if(! empty($entry['description']))
             {
                 echo '<br /><div>' . html_entity_decode(stripslashes($entry['description'])) . '</div>';
