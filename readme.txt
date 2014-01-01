@@ -62,6 +62,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.4.3 =
+* Fixed bug which allowed non-published items to be shown
+
 = 1.4.2 = 
 * Fixed support for Chinese characters
 * Added French Translation (Translated by: Patrick BARDET http://www.web-studio-creation.fr

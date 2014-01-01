@@ -45,7 +45,12 @@ function get_directory_names($dir, $char)
         $limit = " AND `letter`='" . $char . "' ";
     }
 
-    $names = $wpdb->get_results(sprintf("SELECT * FROM %s WHERE `directory` = %d %s ORDER BY `letter`, `name` ASC",
+    $names = $wpdb->get_results(sprintf("
+		SELECT * 
+		FROM %s 
+		WHERE `directory` = %d AND `published` = 1
+		%s 
+		ORDER BY `letter`, `name` ASC",
         esc_sql($table_directory_name),
         esc_sql($dir),
         $limit),
