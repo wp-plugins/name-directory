@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress plugin: Name Directory\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
-"POT-Creation-Date: 2013-12-26 21:59:31+00:00\n"
-"PO-Revision-Date: 2013-12-26 23:16+0100\n"
+"POT-Creation-Date: 2014-02-23 14:49:55+00:00\n"
+"PO-Revision-Date: 2014-02-23 15:52+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
 "Language-Team: \n"
 "Language: Dutch\n"
@@ -23,16 +23,16 @@ msgid "Name Directory Plugin"
 msgstr "Namenlijst Plugin"
 
 #: admin.php:27 admin.php:328 admin.php:349 admin.php:370 admin.php:391
-#: admin.php:412 admin.php:634 admin.php:719
+#: admin.php:412 admin.php:433 admin.php:655 admin.php:740
 msgid "Yes"
 msgstr "Ja"
 
 #: admin.php:30 admin.php:340 admin.php:361 admin.php:382 admin.php:403
-#: admin.php:424 admin.php:631 admin.php:727
+#: admin.php:424 admin.php:445 admin.php:652 admin.php:748
 msgid "No"
 msgstr "Nee"
 
-#: admin.php:42 admin.php:267 admin.php:476
+#: admin.php:42 admin.php:267 admin.php:497
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Je hebt niet de juiste rehten om deze pagina te bekijken."
 
@@ -76,7 +76,7 @@ msgstr "Titel"
 msgid "Entries"
 msgstr "Namen"
 
-#: admin.php:164 admin.php:176 admin.php:618 admin.php:716
+#: admin.php:164 admin.php:176 admin.php:639 admin.php:737
 msgid "Published"
 msgstr "Tonen op site"
 
@@ -96,7 +96,7 @@ msgstr "Namen beheren"
 msgid "Go to the add-name-form on the Manage page"
 msgstr "Ga naar het naam-toevoegen-formulier op de beheerpagina"
 
-#: admin.php:213 admin.php:665
+#: admin.php:213 admin.php:686
 msgid "Add name"
 msgstr "Naam toevoegen"
 
@@ -120,7 +120,7 @@ msgstr "Shortcode"
 msgid "Permanently remove this name directory"
 msgstr "Deze namenlijst permanent verwijderen"
 
-#: admin.php:216 admin.php:646
+#: admin.php:216 admin.php:667
 msgid "Delete"
 msgstr "Verwijder"
 
@@ -165,11 +165,11 @@ msgstr "Namenlijst bewerken"
 msgid "You are editing the name, description and settings of directory %s"
 msgstr "Bewerk naam, beschrijving en layout instellingen van namenlijst %s"
 
-#: admin.php:300 admin.php:608 admin.php:670
+#: admin.php:300 admin.php:629 admin.php:691
 msgid "Back to the directory overview"
 msgstr "Terug naar het namenlijst overzicht"
 
-#: admin.php:320 admin.php:616 admin.php:710 shortcode.php:72
+#: admin.php:320 admin.php:637 admin.php:731 shortcode.php:81
 msgid "Description"
 msgstr "Beschrijving"
 
@@ -194,110 +194,113 @@ msgid "Show line between names"
 msgstr "Toon een lijn tussen de namen"
 
 #: admin.php:429
+msgid "Show search form"
+msgstr "Zoekformulier tonen"
+
+#: admin.php:450
 msgid "Number of columns"
 msgstr "Aantal kolommen"
 
-#: admin.php:453
+#: admin.php:474
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: admin.php:488
+#: admin.php:509
 msgid "Name %s deleted"
 msgstr "Naam %s verwijderd"
 
-#: admin.php:508 admin.php:514
+#: admin.php:529 admin.php:535
 msgid "Name %s updated"
 msgstr "Naam %s bijgewerkt"
 
-#: admin.php:526
+#: admin.php:547
 msgid "Name %s was already on the list, so it was not added"
 msgstr "De naam %s stond al op de lijst, dus deze is niet nogmaals toegevoegd"
 
-#: admin.php:548 admin.php:555
+#: admin.php:569 admin.php:576
 msgid "New name %s added"
 msgstr "Nieuwe naam %s toegevoegd"
 
-#: admin.php:549
+#: admin.php:570
 msgid "Will be visible when the page is refreshed."
 msgstr "Zal getoond wordt als je de pagina vernieuwd."
 
-#: admin.php:562 admin.php:567 shortcode.php:124
+#: admin.php:583 admin.php:588 shortcode.php:133
 msgid "Please fill in at least a name"
 msgstr "Vul tenminste een naam in"
 
-#: admin.php:598
+#: admin.php:619
 msgid "Manage names for %s"
 msgstr "Namen beheren voor %s"
 
-#: admin.php:603
-#, fuzzy
+#: admin.php:624
 msgid "all"
 msgstr "Alles"
 
-#: admin.php:604
+#: admin.php:625
 msgid "published"
 msgstr "gepubliceerd"
 
-#: admin.php:605
+#: admin.php:626
 msgid "unpublished"
 msgstr "verborgen"
 
-#: admin.php:615 admin.php:706 shortcode.php:70
+#: admin.php:636 admin.php:727 shortcode.php:79
 msgid "Name"
 msgstr "Naam"
 
-#: admin.php:617 admin.php:731
+#: admin.php:638 admin.php:752
 msgid "Submitted by"
 msgstr "Toegevoegd door"
 
-#: admin.php:619
+#: admin.php:640
 msgid "Manage"
 msgstr "Beheren"
 
-#: admin.php:627
+#: admin.php:648
 msgid "Currently, there are no names in this directory.."
 msgstr "Er staan op dit moment geen namen op deze namenlijst.."
 
-#: admin.php:645
+#: admin.php:666
 msgid "Edit"
 msgstr "Bewerk"
 
-#: admin.php:659
+#: admin.php:680
 msgid "Edit a name"
 msgstr "Naam bewerken"
 
-#: admin.php:660
+#: admin.php:681
 msgid "Save name"
 msgstr "Naam opslaan"
 
-#: admin.php:664
+#: admin.php:685
 msgid "Add a new name"
 msgstr "Nieuwe naam toevoegen"
 
-#: admin.php:692
+#: admin.php:713
 msgid "Show the compact form, showing only the name, always published)"
 msgstr ""
 "Toon het compacte formulier, waar je alleen een naam hoeft toe te voegen "
 "(die direct op de site getoond wordt)"
 
-#: admin.php:694
+#: admin.php:715
 msgid "Quick add view"
 msgstr "Compacte weergave"
 
-#: admin.php:696
+#: admin.php:717
 msgid ""
 "Show the full form, which allows you to enter a description and submitter"
 msgstr "Volledig formulier weergeven, waarbij alle velden getoond worden"
 
-#: admin.php:698
+#: admin.php:719
 msgid "Full add view"
 msgstr "Volledige weergave"
 
-#: admin.php:712
+#: admin.php:733
 msgid "Please be careful!"
 msgstr "Let goed op!"
 
-#: admin.php:713
+#: admin.php:734
 msgid ""
 "HTML markup is allowed and will we printed on your website and in the "
 "Wordpress admin."
@@ -305,53 +308,69 @@ msgstr ""
 "Het gebruik van HTML is toegestaan en zal op je website en in de Wordpress "
 "admin te zien zijn."
 
-#: shortcode.php:71
+#: shortcode.php:80
 msgid "Required"
 msgstr "Verplicht"
 
-#: shortcode.php:73
+#: shortcode.php:82
 msgid "Your name"
 msgstr "Naam"
 
-#: shortcode.php:74
+#: shortcode.php:83
 msgid "Submit"
 msgstr "Verzenden"
 
-#: shortcode.php:75
+#: shortcode.php:84
 msgid "Back to name directory"
 msgstr "Terug naar de namenlijst"
 
-#: shortcode.php:91
+#: shortcode.php:100
 msgid "Sorry, %s was already on the list so your submission was not sent."
 msgstr "Sorry, %s stond al op de lijst, dus je inzending is niet verstuurd."
 
-#: shortcode.php:112
+#: shortcode.php:121
 msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr ""
 "Bedankt voor je inzending, we zullen deze zo spoedig mogelijk bekijken."
 
-#: shortcode.php:117
+#: shortcode.php:126
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr ""
 "Er moet iets helemaal verkeerd gegaan zijn. Wil je het nog een keer proberen?"
 
-#: shortcode.php:199
+#: shortcode.php:216
 msgid "All"
 msgstr "Alles"
 
-#: shortcode.php:251 shortcode.php:322
+#: shortcode.php:275 shortcode.php:357
 msgid "Submit a name"
 msgstr "Naam toevoegen"
 
-#: shortcode.php:259
+#: shortcode.php:282
+msgid "Search for..."
+msgstr "Zoek naar..."
+
+#: shortcode.php:283
+msgid "Search"
+msgstr "Zoeken"
+
+#: shortcode.php:291
 msgid "There are currently %d names in this directory"
 msgstr "Er staan momenteel %d namen op deze lijst"
 
-#: shortcode.php:263
+#: shortcode.php:295
+msgid "There are %d names in this directory containing the searchterm %s."
+msgstr "Er staan %d namen op deze lijst met de zoekterm %s."
+
+#: shortcode.php:296
+msgid "Clear results"
+msgstr "Zoekresultaat wissen"
+
+#: shortcode.php:300
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr "Er staan %d namen op deze lijst die beginnen met %s."
 
-#: shortcode.php:272
+#: shortcode.php:307
 msgid "There are no names in this directory at the moment"
 msgstr "Er staan op dit moment geen namen op deze namenlijst"
 
