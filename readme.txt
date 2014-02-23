@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 3.8
+Tested up to: 3.8.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,7 @@ Every directory can be embedded with a very simple shortcode which you can past 
  - Show/Hide description
  - Show/Hide suggestion form
  - Show/Hide submitter name
+ - Show/Hide search function
  - Show/Hide a horizontal rule between the entries
  - Choose if it has to be presented in 1, 2 or 3 columns
 
@@ -63,8 +64,8 @@ Yes, through this plugin information page.
 == Changelog ==
 
 = 1.5 =
-* Added search box on front-end
-* Added four-column layout
+* Added search box on front-end (You can enable this in the name-directory settings)
+* Added support for four-column layout
 * Added Russion Translation (Translated by: Rig Kruger http://rodichi.org)
 
 = 1.4.3 =
