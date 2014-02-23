@@ -426,11 +426,32 @@ function name_directory_edit($mode = 'edit')
                 </td>
             </tr>
             <tr>
+                <td><?php echo __('Show search form', 'name-directory'); ?></td>
+                <td>
+                    <label for="show_search_form_yes">
+                        <input type="radio" name="show_search_form" id="show_search_form_yes" value="1" checked="checked" />
+                        &nbsp;<?php echo __('Yes', 'name-directory') ?>
+                    </label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="show_search_form_no">
+                        <input type="radio" name="show_search_form" id="show_search_form_no" value="0"
+                            <?php
+                            if(empty($directory['show_search_form']))
+                            {
+                                echo 'checked="checked"';
+                            }?> />
+                        &nbsp;<?php echo __('No', 'name-directory') ?>
+                    </label>
+                </td>
+            </tr>
+            <tr>
                 <td><?php echo __('Number of columns', 'name-directory'); ?></td>
                 <td>
                     <select name="nr_columns">
                         <?php
-                        for($i=1;$i<4;$i++)
+                        for($i=1;$i<5;$i++)
                         {
                             $selected = null;
                             if(! empty($directory['nr_columns']) && $i == $directory['nr_columns'])

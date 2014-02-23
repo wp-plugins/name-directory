@@ -1,0 +1,339 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: NameDirectory RU\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
+"POT-Creation-Date: 2013-11-10 20:09:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-02-18 14:08+0200\n"
+"Last-Translator: RigKruger <rig@rod1.org>\n"
+"Language-Team: Rodichi <rig@rod1.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: admin.php:12
+msgid "Name Directory Options"
+msgstr "Каталог имен инструменты"
+
+#: admin.php:13
+msgid "Name Directory Plugin"
+msgstr "Каталог имен"
+
+#: admin.php:27 admin.php:326 admin.php:347 admin.php:368 admin.php:389
+#: admin.php:410 admin.php:614 admin.php:697
+msgid "Yes"
+msgstr "Да"
+
+#: admin.php:30 admin.php:338 admin.php:359 admin.php:380 admin.php:401
+#: admin.php:422 admin.php:611 admin.php:705
+msgid "No"
+msgstr "Нет"
+
+#: admin.php:42 admin.php:265 admin.php:456
+msgid "You do not have sufficient permissions to access this page."
+msgstr "У вас недостаточно прав для доступа к данной странице"
+
+#: admin.php:85
+msgid "Name directory %s and all entries deleted"
+msgstr "Каталог %s и все записи удалены"
+
+#: admin.php:98
+msgid "Name Directory management"
+msgstr "Управление каталогом имен"
+
+#: admin.php:99
+msgid "Add directory"
+msgstr "Добавить каталог"
+
+#: admin.php:119
+msgid "Directory %s updated."
+msgstr "Каталог %s обновлен"
+
+#: admin.php:141
+msgid "Directory %s created."
+msgstr "Каталог %s создан"
+
+#: admin.php:147
+msgid "name directory"
+msgstr "каталог имен"
+
+#: admin.php:147
+msgid "name directories"
+msgstr "каталоги имен"
+
+#: admin.php:150
+msgid "You currently have %d %s."
+msgstr "На данный момент у вас %d %s."
+
+#: admin.php:159 admin.php:171 admin.php:314
+msgid "Title"
+msgstr "Название"
+
+#: admin.php:161 admin.php:173
+msgid "Entries"
+msgstr "Записей"
+
+#: admin.php:162 admin.php:174 admin.php:598 admin.php:694
+msgid "Published"
+msgstr "Опубликовано"
+
+#: admin.php:163 admin.php:175
+msgid "Unpublished"
+msgstr "Снято с публикации"
+
+#: admin.php:210
+msgid "Add, edit and remove names"
+msgstr "Удалить/редактировать имена"
+
+#: admin.php:210
+msgid "Manage names"
+msgstr "Управление именами"
+
+#: admin.php:211
+msgid "Go to the add-name-form on the Manage page"
+msgstr "Перейдите на страницу добавления имен, на странице управления"
+
+#: admin.php:211 admin.php:645
+msgid "Add name"
+msgstr "Добавить"
+
+#: admin.php:212
+msgid "Edit name, description and appearance settings"
+msgstr "Редактировать имя, описание или настройки отображения"
+
+#: admin.php:212
+msgid "Settings"
+msgstr "Настройки"
+
+#: admin.php:213
+msgid "Show the copy-paste shortcode for this directory"
+msgstr "показать шордкод для вставки этого каталога"
+
+#: admin.php:213
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: admin.php:214
+msgid "Permanently remove this name directory"
+msgstr "Удалить этот каталог навсегда"
+
+#: admin.php:214 admin.php:626
+msgid "Delete"
+msgstr "Удалить"
+
+#: admin.php:216
+msgid "Number of names in this directory"
+msgstr "Количество записей в данном каталоге"
+
+#: admin.php:232
+msgid "To show your directory on your website, use the shortcode on the right."
+msgstr "Для использования каталога на вашем сайте - используйте шорткод"
+
+#: admin.php:233
+msgid "Copy the code and paste it in a post or in a page."
+msgstr "Скопируйте этот код и вставьте в запись или страницу вашего сайта."
+
+#: admin.php:284 admin.php:286
+msgid "Create new name directory"
+msgstr "Создать новый каталог"
+
+#: admin.php:285
+msgid "Create"
+msgstr "Создать"
+
+#: admin.php:287
+msgid "Complete the form below to create a new name directory."
+msgstr "Заполните форму ниже для создания нового каталога"
+
+#: admin.php:291
+msgid "Edit this directory"
+msgstr "Ркдактировать каталог"
+
+#: admin.php:292
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: admin.php:293
+msgid "Edit name directory"
+msgstr "Редактировать каталог"
+
+#: admin.php:295
+msgid "You are editing the name, description and settings of directory %s"
+msgstr "Вы редактируйте имя, описание и настройки каталога %s"
+
+#: admin.php:298 admin.php:588 admin.php:650
+msgid "Back to the directory overview"
+msgstr "Назад к списку каталогов"
+
+#: admin.php:318 admin.php:596 admin.php:690 shortcode.php:98
+msgid "Description"
+msgstr "Описание"
+
+#: admin.php:322
+msgid "Show title"
+msgstr "Показать заголовок"
+
+#: admin.php:343
+msgid "Show description"
+msgstr "Показать описание"
+
+#: admin.php:364
+msgid "Submit form"
+msgstr "Показать форму"
+
+#: admin.php:385
+msgid "Submitter name"
+msgstr "Имя отправителя"
+
+#: admin.php:406
+msgid "Show line between names"
+msgstr "Показывать линию между записями"
+
+#: admin.php:433
+msgid "Cancel"
+msgstr "Отмена"
+
+#: admin.php:468
+msgid "Name %s deleted"
+msgstr "Запись %s удалена"
+
+#: admin.php:488 admin.php:494
+msgid "Name %s updated"
+msgstr "Запись%s обновлена"
+
+#: admin.php:506
+msgid "Name %s was already on the list, so it was not added"
+msgstr "Имя %s уже есть в списке, по этой причине оно небыло добавлено"
+
+#: admin.php:528 admin.php:535
+msgid "New name %s added"
+msgstr "Запись %s добавлена"
+
+#: admin.php:529
+msgid "Will be visible when the page is refreshed."
+msgstr "Будет отображена после перезагрузки страницы"
+
+#: admin.php:542 admin.php:547 shortcode.php:151
+msgid "Please fill in at least a name"
+msgstr "Ну заполните хотя-бы имя"
+
+#: admin.php:578
+msgid "Manage names for %s"
+msgstr "управление записями %s"
+
+#: admin.php:583
+msgid "all"
+msgstr "все"
+
+#: admin.php:584
+msgid "published"
+msgstr "опубликовано"
+
+#: admin.php:585
+msgid "unpublished"
+msgstr "снято с публикации"
+
+#: admin.php:595 admin.php:686 shortcode.php:96
+msgid "Name"
+msgstr "Запись"
+
+#: admin.php:597 admin.php:709
+msgid "Submitted by"
+msgstr "Отправлено"
+
+#: admin.php:599
+msgid "Manage"
+msgstr "Управление"
+
+#: admin.php:607
+msgid "Currently, there are no names in this directory.."
+msgstr "На данный момент в этом каталоге нет записей"
+
+#: admin.php:625
+msgid "Edit"
+msgstr "Редактировать"
+
+#: admin.php:639
+msgid "Edit a name"
+msgstr "Редактировать запись"
+
+#: admin.php:640
+msgid "Save name"
+msgstr "Сохранить запись"
+
+#: admin.php:644
+msgid "Add a new name"
+msgstr "Добавить новую запись"
+
+#: admin.php:672
+msgid "Show the compact form, showing only the name, always published)"
+msgstr "Показывать компактную форму, только имена, всегда опубликовано)"
+
+#: admin.php:674
+msgid "Quick add view"
+msgstr "Быстрое редактирование"
+
+#: admin.php:676
+msgid ""
+"Show the full form, which allows you to enter a description and submitter"
+msgstr "Показать полную форму, которая позволит внести описание и отправителя"
+
+#: admin.php:678
+msgid "Full add view"
+msgstr "Режим полного добавления"
+
+#: shortcode.php:97
+msgid "Required"
+msgstr "Обязательно"
+
+#: shortcode.php:99
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: shortcode.php:100 shortcode.php:280
+msgid "Submit"
+msgstr "Отправить"
+
+#: shortcode.php:101
+msgid "Back to name directory"
+msgstr "Вернутся в каталог"
+
+#: shortcode.php:118
+msgid "Sorry, %s was already on the list so your submission was not sent."
+msgstr "Простите, но запись %s уже существует и ваша заявка небыла отправлена."
+
+#: shortcode.php:139
+msgid "Thank you for your submission! It will be reviewed shortly."
+msgstr ""
+"Благодарим за информацию. Ваша запись появится вскоре после проверки "
+"модератором."
+
+#: shortcode.php:144
+msgid "Something must have gone terribly wrong. Would you please try it again?"
+msgstr "Что-то пошло не так. Попробуйте еще раз."
+
+#: shortcode.php:228
+msgid "All"
+msgstr "Все"
+
+#: shortcode.php:288
+msgid "There are currently %d names in this directory"
+msgstr "В данном каталоге %d записей на данный момент"
+
+#: shortcode.php:292
+msgid "There are %d names in this directory beginning with the letter %s."
+msgstr "Найдено  %d записей на букву %s."
+
+#: shortcode.php:301
+msgid "There are no names in this directory at the moment"
+msgstr "На данный момент в этом каталоге нет записей"
+
+#: shortcode.php:328
+msgid "Submit a name"
+msgstr "Добавить запись"

@@ -26,6 +26,8 @@ function name_directory_install_list()
                 show_submit_form BOOLEAN NULL,
                 show_submitter_name BOOLEAN NULL,
                 show_line_between_names BOOLEAN NULL,
+                show_search_form BOOLEAN NULL,
+                nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id)
     );";
@@ -42,6 +44,7 @@ function name_directory_install_list()
                 show_submit_form BOOLEAN NULL,
                 show_submitter_name BOOLEAN NULL,
                 show_line_between_names BOOLEAN NULL,
+                show_search_form BOOLEAN NULL,
                 nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id)

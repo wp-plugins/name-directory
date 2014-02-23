@@ -62,12 +62,17 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.5 =
+* Added search box on front-end
+* Added four-column layout
+* Added Russion Translation (Translated by: Rig Kruger http://rodichi.org)
+
 = 1.4.3 =
 * Fixed bug which allowed non-published items to be shown
 
 = 1.4.2 = 
 * Fixed support for Chinese characters
-* Added French Translation (Translated by: Patrick BARDET http://www.web-studio-creation.fr
+* Added French Translation (Translated by: Patrick BARDET http://www.web-studio-creation.fr)
 
 = 1.4.1 = 
 * Fixed sorting issue at the frontend
@@ -77,7 +82,7 @@ Yes, through this plugin information page.
 
 = 1.3 =
 * Name lists can now have multiple columns at the frontend
-* Added css in a seperate file
+* Added css in a separate file
 * Added database upgrade module
 
 = 1.2.1 =

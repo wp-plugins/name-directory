@@ -31,18 +31,22 @@ function get_directory_properties($id)
 /**
  * Get the names of given directory, maybe only with the char?
  * @param $dir
- * @param $char
+ * @param array $name_filter
  * @return mixed
  */
-function get_directory_names($dir, $char)
+function get_directory_names($dir, $name_filter = array())
 {
     global $wpdb;
     global $table_directory_name;
-    $limit = "";
+    $sql_filter = "";
 
-    if(! empty($char))
+    if(! empty($name_filter['character']))
     {
-        $limit = " AND `letter`='" . $char . "' ";
+        $sql_filter = " AND `letter`='" . $name_filter['character'] . "' ";
+    }
+    else if(! empty($name_filter['containing']))
+    {
+        $sql_filter = " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
     }
 
     $names = $wpdb->get_results(sprintf("
@@ -53,7 +57,7 @@ function get_directory_names($dir, $char)
 		ORDER BY `letter`, `name` ASC",
         esc_sql($table_directory_name),
         esc_sql($dir),
-        $limit),
+        $sql_filter),
         ARRAY_A
     );
 
@@ -170,12 +174,19 @@ HTML;
 /**
  * Construct a plugin URL
  * @param string $index
+ * @param null $exclude
  * @return string
  */
-function name_directory_make_plugin_url($index = 'name_directory_startswith')
+function name_directory_make_plugin_url($index = 'name_directory_startswith', $exclude = null)
 {
     $parsed = parse_url($_SERVER['REQUEST_URI']);
     parse_str($parsed['query'], $url);
+
+    if(! empty($exclude))
+    {
+        unset($url[$exclude]);
+    }
+
     unset($url[$index]);
     $url[$index] = '';
 
@@ -190,24 +201,32 @@ function name_directory_make_plugin_url($index = 'name_directory_startswith')
  */
 function show_directory($attributes)
 {
+    $dir = null;
     extract(shortcode_atts(
         array('dir' => '1'),
         $attributes
     ));
 
-    $character = null;
+    $name_filter = array();
     if(! empty($_GET['name_directory_startswith']))
     {
-        $character = $_GET['name_directory_startswith'];
+        $name_filter['character'] = $_GET['name_directory_startswith'];
     }
 
     $str_all = __('All', 'name-directory');
+    $search_value = '';
+    if(! empty($_GET['name-directory-search-value']))
+    {
+        $search_value = htmlspecialchars($_GET['name-directory-search-value']);
+        $name_filter['containing'] = $search_value;
+    }
 
-    $letter_url = name_directory_make_plugin_url('name_directory_startswith');
+    $letter_url = name_directory_make_plugin_url('name_directory_startswith', 'name-directory-search-value');
     $directory = get_directory_properties($dir);
-    $names = get_directory_names($dir, $character);
+    $names = get_directory_names($dir, $name_filter);
+    $num_names = count($names);
 
-    if($_GET['show_submitform'])
+    if(isset($_GET['show_submitform']))
     {
         return name_directory_show_submit_form($dir, name_directory_make_plugin_url('show_submitform'));
     }
@@ -256,23 +275,34 @@ HTML;
         echo " | <a href='" . $letter_url . "&show_submitform=true'>" . __('Submit a name', 'name-directory') . "</a>";
     }
 
+    if(! empty($directory['show_search_form']))
+    {
+        echo "<br />";
+        echo "<form method='get'>";
+        echo "<input type='text' name='name-directory-search-value' id='name-directory-search-input-box' placeholder='" . __('Search for...', 'name-directory') . "' />";
+        echo "<input type='submit' id='name-directory-search-input-button' value='" . __('Search', 'name-directory') . "' />";
+        echo "</form>";
+    }
     echo '</div>';
 
     echo '<div class="name_directory_total">';
-    if(empty($character))
+    if(empty($character) && empty($search_value))
     {
-        echo sprintf(__('There are currently %d names in this directory', 'name-directory'), count($names));
+        echo sprintf(__('There are currently %d names in this directory', 'name-directory'), $num_names);
+    }
+    else if(empty($character) && ! empty($search_value))
+    {
+        echo sprintf(__('There are %d names in this directory containing the searchterm %s.', 'name-directory'), $num_names, "<i>" . $search_value . "</i>");
+        echo " <a href='" . get_permalink() . "'><small>" . __('Clear results', 'name-directory') . "</small></a>.<br />";
     }
     else
     {
-        echo sprintf(__('There are %d names in this directory beginning with the letter %s.', 'name-directory'), count($names), $character);
+        echo sprintf(__('There are %d names in this directory beginning with the letter %s.', 'name-directory'), $num_names, $character);
     }
     echo  '</div>';
 
-    $num_names = count($names);
-
     echo '<div class="name_directory_names">';
-    if($num_names === 0)
+    if($num_names === 0 && empty($search_value))
     {
         echo '<p>' . __('There are no names in this directory at the moment', 'name-directory') . '</p>';
     }
