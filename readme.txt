@@ -63,6 +63,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.5.1 =
+* Fixed bug that prevent saving searchform preference in admin
+
 = 1.5 =
 * Added search box on front-end (You can enable this in the name-directory settings)
 * Added support for four-column layout
