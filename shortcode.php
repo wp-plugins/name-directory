@@ -228,7 +228,7 @@ function show_directory($attributes)
 
     if(isset($_GET['show_submitform']))
     {
-        return name_directory_show_submit_form($dir, name_directory_make_plugin_url('show_submitform'));
+        return name_directory_show_submit_form($dir, name_directory_make_plugin_url('name_directory_startswith','show_submitform'));
     }
 
     ob_start();

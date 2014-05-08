@@ -19,7 +19,7 @@ function name_directory_install_list()
     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
     $sql = "CREATE TABLE $table_directory (
-                id INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                id INT( 11 ) NOT NULL AUTO_INCREMENT,
                 name VARCHAR( 255 ) NOT NULL,
                 show_title BOOLEAN NULL,
                 show_description BOOLEAN NULL,
@@ -29,7 +29,8 @@ function name_directory_install_list()
                 show_search_form BOOLEAN NULL,
                 nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
-                UNIQUE KEY id (id)
+                UNIQUE KEY id (id),
+                PRIMARY KEY (id)
     );";
 
     dbDelta($sql);
@@ -37,7 +38,7 @@ function name_directory_install_list()
     if($installed_ver != $name_directory_db_version)
     {
         $sql = "CREATE TABLE $table_directory (
-                id INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                id INT( 11 ) NOT NULL AUTO_INCREMENT,
                 name VARCHAR( 255 ) NOT NULL,
                 show_title BOOLEAN NULL,
                 show_description BOOLEAN NULL,
@@ -47,7 +48,8 @@ function name_directory_install_list()
                 show_search_form BOOLEAN NULL,
                 nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
-                UNIQUE KEY id (id)
+                UNIQUE KEY id (id),
+                PRIMARY KEY (id)
         );";
 
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -66,14 +68,15 @@ function name_directory_install_names()
     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
     $sqlnames = "CREATE TABLE $table_directory_name (
-                id INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                id INT( 11 ) NOT NULL AUTO_INCREMENT,
                 directory INT( 11 ) NOT NULL ,
                 name VARCHAR( 255 ) NOT NULL ,
                 letter VARCHAR( 1 ) NOT NULL ,
                 description TEXT NOT NULL ,
                 published BOOL NOT NULL ,
                 submitted_by VARCHAR( 255 ) NOT NULL,
-                UNIQUE KEY id (id)
+                UNIQUE KEY id (id),
+                PRIMARY KEY (id)
     );";
     dbDelta($sqlnames);
 }

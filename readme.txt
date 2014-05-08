@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,9 @@ Yes, through this plugin information page.
 7. Dutch view of the 'edit name' form
 
 == Changelog ==
+
+= 1.5.2=
+* Fixed bug in CREATE TABLE and backlink in form, thank you very much MerlIAV for the patch!
 
 = 1.5.1 =
 * Fixed bug that prevent saving searchform preference in admin
