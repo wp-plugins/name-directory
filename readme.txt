@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,7 +29,8 @@ Every directory can be embedded with a very simple shortcode which you can past 
  - Show/Hide submitter name
  - Show/Hide search function
  - Show/Hide a horizontal rule between the entries
- - Choose if it has to be presented in 1, 2 or 3 columns
+ - Show/Hide all entries if a user has not chosen a letter from the index
+ - Choose if it has to be presented in 1, 2, 3 or 4 columns
 
 The administration view of this plugin has the familiar look and feel of (the rest of) the Wordpress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
 
@@ -62,6 +63,9 @@ Yes, through this plugin information page.
 7. Dutch view of the 'edit name' form
 
 == Changelog ==
+
+= 1.6=
+* Added option 'Show all names by default', this can be disabled to hide all entries if a user hasn't chosen a letter from the index.
 
 = 1.5.2=
 * Fixed bug in CREATE TABLE and backlink in form, thank you very much MerlIAV for the patch!

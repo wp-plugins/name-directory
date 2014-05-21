@@ -27,6 +27,7 @@ function name_directory_install_list()
                 show_submitter_name BOOLEAN NULL,
                 show_line_between_names BOOLEAN NULL,
                 show_search_form BOOLEAN NULL,
+                show_all_names_on_index BOOLEAN NULL,
                 nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id),
@@ -46,6 +47,7 @@ function name_directory_install_list()
                 show_submitter_name BOOLEAN NULL,
                 show_line_between_names BOOLEAN NULL,
                 show_search_form BOOLEAN NULL,
+                show_all_names_on_index BOOLEAN NULL,
                 nr_columns INT( 1 ) NULL,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id),
@@ -113,27 +115,31 @@ function name_directory_install_data()
     if($wpdb->num_rows === 0)
     {
         $wpdb->insert($table_directory, array(
-            'id'                => 1,
-            'name'              => 'Bird names',
-            'show_title'        => 1,
-            'show_description'  => 1,
-            'show_submit_form'  => 1,
-            'show_submitter_name' => 0,
-            'description'       => 'Cool budgie names'
+            'id'                    => 1,
+            'name'                  => 'Bird names',
+            'show_title'            => 1,
+            'show_description'      => 1,
+            'show_submit_form'      => 1,
+            'show_submitter_name'   => 0,
+            'show_line_between_names' => 1,
+            'show_line_between_names' => 1,
+            'show_search_form'      => 1,
+            'show_all_names_on_index' => 1,
+            'description'           => 'Cool budgie names'
         ));
         $wpdb->insert($table_directory_name, array(
-            'directory'         => 1,
-            'name'              => 'Navi',
-            'letter'            => 'N',
-            'description'       => 'Navi is a good aviator and navigator. A very strong and big budgie, almost English',
-            'published'         => 1
+            'directory'     => 1,
+            'name'          => 'Navi',
+            'letter'        => 'N',
+            'description'   => 'Navi is a good aviator and navigator. A very strong and big budgie, almost English',
+            'published'     => 1
         ));
         $wpdb->insert($table_directory_name, array(
-            'directory'         => 1,
-            'name'              => 'Mister',
-            'letter'            => 'M',
-            'description'       => 'Mister is a name which can only be assigned to a typical English Budgie. Big, strong and stringent.',
-            'published'         => 1
+            'directory'     => 1,
+            'name'          => 'Mister',
+            'letter'        => 'M',
+            'description'   => 'Mister is a name which can only be assigned to a typical English Budgie. Big, strong and stringent.',
+            'published'     => 1
         ));
     }
 }

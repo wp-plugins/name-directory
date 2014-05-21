@@ -306,6 +306,10 @@ HTML;
     {
         echo '<p>' . __('There are no names in this directory at the moment', 'name-directory') . '</p>';
     }
+    else if(empty($directory['show_all_names_on_index']) && empty($name_filter))
+    {
+        echo '<p>' . __('Please select a letter from the index (above) to see entries', 'name-directory') . '</p>';
+    }
     else
     {
         $split_at = null;

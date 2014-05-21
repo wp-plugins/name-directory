@@ -112,6 +112,7 @@ function show_list()
                 'show_search_form'      => $_POST['show_search_form'],
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
+                'show_all_names_on_index' => $_POST['show_all_names_on_index'],
                 'nr_columns'            => $_POST['nr_columns'],
             ),
             array('id' => intval($_POST['dir_id']))
@@ -136,9 +137,10 @@ function show_list()
                 'show_search_form'      => $_POST['show_search_form'],
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
+                'show_all_names_on_index' => $_POST['show_all_names_on_index'],
                 'nr_columns'            => $_POST['nr_columns'],
             ),
-            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d')
+            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d')
         );
 
         echo "<div class='updated'><p>"
@@ -449,6 +451,30 @@ function name_directory_edit($mode = 'edit')
                 </td>
             </tr>
             <tr>
+                <td>
+                    <?php echo __('Show all names by default', 'name-directory'); ?>
+                    <small><?php echo __('If no, user has to use the index', 'name-directory'); ?></small>
+                </td>
+                <td>
+                    <label for="show_all_names_on_index_yes">
+                        <input type="radio" name="show_all_names_on_index" id="show_all_names_on_index_yes" value="1" checked="checked" />
+                        &nbsp;<?php echo __('Yes', 'name-directory') ?>
+                    </label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="show_all_names_on_index_no">
+                        <input type="radio" name="show_all_names_on_index" id="show_all_names_on_index_no" value="0"
+                            <?php
+                            if(empty($directory['show_all_names_on_index']))
+                            {
+                                echo 'checked="checked"';
+                            }?> />
+                        &nbsp;<?php echo __('No', 'name-directory') ?>
+                    </label>
+                </td>
+            </tr>
+            <tr>
                 <td><?php echo __('Number of columns', 'name-directory'); ?></td>
                 <td>
                     <select name="nr_columns">
@@ -600,16 +626,16 @@ function name_directory_names()
     $wp_url_path = sprintf("%s?page=%s&sub=%s&dir=%d", $wp_file, $wp_page, $wp_sub, $directory_id);
 
     $published_status = '0,1';
-    $empasis_class = 's_all';
+    $emphasis_class = 's_all';
     if($_GET['status'] == 'published')
     {
         $published_status = '1';
-        $empasis_class = 's_published';
+        $emphasis_class = 's_published';
     }
     else if($_GET['status'] == 'unpublished')
     {
         $published_status = '0';
-        $empasis_class = 's_unpublished';
+        $emphasis_class = 's_unpublished';
     }
 
     $directory = $wpdb->get_row("SELECT * FROM " . $table_directory . " WHERE `id` = " . $directory_id, ARRAY_A);
@@ -766,14 +792,15 @@ function name_directory_names()
     </form>
 
     <?php
-    echo print_javascript($empasis_class);
+    echo print_javascript($emphasis_class);
 }
 
 /**
  * Return the Javascripts needed by this plugin
+ * @param string $emphasis_class
  * @return string
  */
-function print_javascript($empasis_class = '')
+function print_javascript($emphasis_class = '')
 {
     $js = '
 
@@ -861,9 +888,9 @@ function print_javascript($empasis_class = '')
         });
     </script>';
 
-    if(! empty($empasis_class))
+    if(! empty($emphasis_class))
     {
-        $js .= "<script>jQuery('." . $empasis_class . "').css('font-weight', 'bold');</script>";
+        $js .= "<script>jQuery('." . $emphasis_class . "').css('font-weight', 'bold');</script>";
     }
 
     if(! empty($_GET['edit_name']))
