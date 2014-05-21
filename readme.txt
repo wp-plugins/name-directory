@@ -64,6 +64,10 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.2 =
+ * Updated Dutch translations
+ * Fixed display bug. Also, the All-link is hidden when you a visitor HAS to choose a letter from the index
+
 = 1.6=
 * Added option 'Show all names by default', this can be disabled to hide all entries if a user hasn't chosen a letter from the index.
 

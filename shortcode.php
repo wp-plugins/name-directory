@@ -202,6 +202,7 @@ function name_directory_make_plugin_url($index = 'name_directory_startswith', $e
 function show_directory($attributes)
 {
     $dir = null;
+    $show_all_link = '';
     extract(shortcode_atts(
         array('dir' => '1'),
         $attributes
@@ -238,9 +239,15 @@ function show_directory($attributes)
         echo "<h3 class='name_directory_title'>" . $directory['name'] . "</h3>";
     }
 
+    // At this moment we can't suffice with an empty() check because of empty values
+    if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] != 1)
+    {
+        $show_all_link = '<a class="name_directory_startswith" href="' . $letter_url . '">' . $str_all . '</a> |';
+    }
+
     echo <<<HTML
-        <div class="name_directory_index">
-            <a class="name_directory_startswith" href="{$letter_url}">{$str_all}</a> |
+	<div class="name_directory_index">
+            {$show_all_link}
             <a class="name_directory_startswith" href="{$letter_url}#">#</a>
             <a class="name_directory_startswith" href="{$letter_url}A">A</a>
             <a class="name_directory_startswith" href="{$letter_url}B">B</a>
@@ -306,7 +313,8 @@ HTML;
     {
         echo '<p>' . __('There are no names in this directory at the moment', 'name-directory') . '</p>';
     }
-    else if(empty($directory['show_all_names_on_index']) && empty($name_filter))
+    // TODO: Enable this if db's are migrated correctly: else if(empty($directory['show_all_names_on_index']) && empty($name_filter))
+    else if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] != 1 && empty($name_filter))
     {
         echo '<p>' . __('Please select a letter from the index (above) to see entries', 'name-directory') . '</p>';
     }

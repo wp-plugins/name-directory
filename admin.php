@@ -453,7 +453,8 @@ function name_directory_edit($mode = 'edit')
             <tr>
                 <td>
                     <?php echo __('Show all names by default', 'name-directory'); ?>
-                    <small><?php echo __('If no, user has to use the index', 'name-directory'); ?></small>
+		    <br />
+                    <small><?php echo __('If no, user HAS to use the index before entries are shown', 'name-directory'); ?></small>
                 </td>
                 <td>
                     <label for="show_all_names_on_index_yes">
