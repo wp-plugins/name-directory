@@ -11,6 +11,7 @@ if (! function_exists('add_action'))
  */
 function name_directory_install_list()
 {
+    global $wpdb;
     global $table_directory;
     global $name_directory_db_version;
 
@@ -56,6 +57,9 @@ function name_directory_install_list()
 
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
+
+        $convert_dirs = "UPDATE $table_directory SET `show_all_names_on_index`=1 WHERE `show_all_names_on_index` IS NULL;";
+        $wpdb->query($convert_dirs);
 
         update_option("name_directory_db_version", $name_directory_db_version);
     }

@@ -240,7 +240,7 @@ function show_directory($attributes)
     }
 
     // At this moment we can't suffice with an empty() check because of empty values
-    if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] != 1)
+    if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] == 1)
     {
         $show_all_link = '<a class="name_directory_startswith" href="' . $letter_url . '">' . $str_all . '</a> |';
     }

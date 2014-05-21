@@ -64,14 +64,15 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
-= 1.6.2 =
+= 1.6.3 =
  * Updated Dutch translations
- * Fixed display bug. Also, the All-link is hidden when you a visitor HAS to choose a letter from the index
+ * Fixed display bug. 
+ * The All-link is hidden when you a visitor HAS to choose a letter from the index
 
-= 1.6=
+= 1.6 =
 * Added option 'Show all names by default', this can be disabled to hide all entries if a user hasn't chosen a letter from the index.
 
-= 1.5.2=
+= 1.5.2 =
 * Fixed bug in CREATE TABLE and backlink in form, thank you very much MerlIAV for the patch!
 
 = 1.5.1 =
