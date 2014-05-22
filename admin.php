@@ -543,9 +543,9 @@ function name_directory_names()
         $wpdb->update(
             $table_directory_name,
             array(
-                'name'          => $_POST['name'],
+                'name'          => stripslashes_deep($_POST['name']),
                 'letter'        => name_directory_get_first_char($_POST['name']),
-                'description'   => $_POST['description'],
+                'description'   => stripslashes_deep($_POST['description']),
                 'published'     => $_POST['published'],
                 'submitted_by'  => $_POST['submitted_by'],
             ),
@@ -583,9 +583,9 @@ function name_directory_names()
             $table_directory_name,
             array(
                 'directory'     => $_POST['directory'],
-                'name'          => $_POST['name'],
+                'name'          => stripslashes_deep($_POST['name']),
                 'letter'        => name_directory_get_first_char($_POST['name']),
-                'description'   => $_POST['description'],
+                'description'   => stripslashes_deep($_POST['description']),
                 'published'     => $_POST['published'],
                 'submitted_by'  => $_POST['submitted_by'],
             ),

@@ -64,6 +64,10 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.4 =
+ * Updated French translations
+ * Fixed too-many-slashes issue
+
 = 1.6.3 =
  * Updated Dutch translations
  * Fixed display bug. 

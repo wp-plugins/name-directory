@@ -2,7 +2,7 @@
 /* Protection! */
 if (! function_exists('add_action'))
 {
-    echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+    echo 'Nothing to See here. Move along now people.';
     exit;
 }
 
