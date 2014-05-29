@@ -64,6 +64,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.5 =
+ * Showed submitted name
+
 = 1.6.4 =
  * Updated French translations
  * Fixed too-many-slashes issue
