@@ -338,7 +338,7 @@ HTML;
             {
                 echo '<br /><div>' . html_entity_decode(stripslashes($entry['description'])) . '</div>';
             }
-			if(! empty($directory['show_submitter_name']))
+			if(! empty($directory['show_submitter_name']) && ! empty($entry['submitted_by']))
 			{
 				echo "<small>" . __('Submitted by:', 'name-directory') . " " . $entry['submitted_by'] . "</small>";
 			}

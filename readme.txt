@@ -64,6 +64,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.6 =
+ * Fixed small display bug
+
 = 1.6.5 =
  * Showed submitted name
 
