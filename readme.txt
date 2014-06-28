@@ -64,6 +64,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.7 =
+ * Updated Russion Translation (Thanks to: Rig Kruger http://rodichi.org)
+
 = 1.6.6 =
  * Fixed small display bug
 
