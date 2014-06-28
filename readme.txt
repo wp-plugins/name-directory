@@ -54,13 +54,11 @@ Yes, through this plugin information page.
 
 == Screenshots ==
 
-1. The output of a name directory on a standard Wordpress website. It's showing only names that begin with the letter F.
+1. The output of a name directory on a standard Wordpress website. It's a full-featured name directory (search form, index links, descriptions and submit button)
 2. Overview of all the name directories in the Wordpress Administration screen for this plugin
-3. The 'Add name' form
-4. Shows where you can find the shortcode
-5. Settings screen for a name directory
-6. Dutch view of the name directory overview
-7. Dutch view of the 'edit name' form
+3. List of all names in the selected directory and the 'Add name' form
+4. Settings screen for a name directory
+5. Where to find the Name Directory plugin settings page
 
 == Changelog ==
 
