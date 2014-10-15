@@ -236,7 +236,8 @@ function show_list()
                     <tr style='display: none;'><td colspan='7'>&nbsp;</td></tr>",
                     $directory->id,
                     __('To show your directory on your website, use the shortcode on the right.', 'name-directory') . '<br />' .
-                    __('Copy the code and paste it in a post or in a page.', 'name-directory'),
+                    __('Copy the code and paste it in a post or in a page.', 'name-directory') . '<br /><small>' .
+                    __('If you want to start with a specific character, like "J", use [namedirectory dir="X" start_with="j"].', 'name-directory') . '</small>',
                     $directory->id);
             }
             ?>

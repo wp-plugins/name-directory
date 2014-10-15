@@ -214,6 +214,11 @@ function show_directory($attributes)
         $name_filter['character'] = $_GET['name_directory_startswith'];
     }
 
+    if(! empty($attributes['start_with']))
+    {
+        $name_filter['character'] = $attributes['start_with'];
+    }
+
     $str_all = __('All', 'name-directory');
     $search_value = '';
     if(! empty($_GET['name-directory-search-value']))
