@@ -6,12 +6,13 @@ Tested up to: 4.0
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T284NKYDFC8PE&lc=US&item_name=wordpress%2dplugin&item_number=name%2ddirectory&currency_code=USD
 
 This plugin provides a name directory (glossary) with a lot of options. It can be embedded with a simple shortcode and can have multiple directories.
 
 == Description ==
 
-This plugin adds name/term directories to your Wordpress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more that words.
+This plugin adds name/term directories to your Wordpress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more than words.
 
 The Name Directory plugin was orginally developed for ParkietenVilla.nl to show a directory of names to name your budgies.
 
@@ -21,7 +22,7 @@ A name directory is a directory that contains entries with the following propert
  - description
  - submitter
 
-Every directory can be embedded with a very simple shortcode which you can past in your own pages and posts. Every directory has a few configuration options that customize the layout and functionality of the directory: 
+You can create multiple directories with this plugin. Every directory can be embedded with a very simple shortcode which you can just copy-and-paste in your own pages and posts. Every directory has a few configuration options that customize the layout and functionality of the directory: 
 
  - Show/Hide title
  - Show/Hide description
@@ -29,8 +30,8 @@ Every directory can be embedded with a very simple shortcode which you can past 
  - Show/Hide submitter name
  - Show/Hide search function
  - Show/Hide a horizontal rule between the entries
- - Show/Hide all entries if a user has not chosen a letter from the index
- - Choose if it has to be presented in 1, 2, 3 or 4 columns
+ - Show/Hide all entries when the user has not chosen an index-letter yet
+ - When you embed a directory, you can configure it to start with a letter of your choosing. E.g.: start on letter J.
 
 The administration view of this plugin has the familiar look and feel of (the rest of) the Wordpress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
 
@@ -43,7 +44,7 @@ If you download the zip-file, it's also very easy:
 1. Unzip the file which results into a directory called `name-directory`
 1. Upload that directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Create a new name directory and
+1. Create a new name directory and add some names
 1. Copy the shortcode and paste it into a post or page to show it on your website
 
 == Frequently Asked Questions ==
