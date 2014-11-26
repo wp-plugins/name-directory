@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T284NKYDFC8PE&lc=US&item_name=wordpress%2dplugin&item_number=name%2ddirectory&currency_code=USD
 
-This plugin provides a name directory (glossary) with a lot of options. It can be embedded with a simple shortcode and can have multiple directories.
+Name directory (glossary) with lots of options. Very easy to add to your site with a simple shortcode. It can have multiple directories.
 
 == Description ==
 

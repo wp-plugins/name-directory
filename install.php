@@ -119,17 +119,17 @@ function name_directory_install_data()
     if($wpdb->num_rows === 0)
     {
         $wpdb->insert($table_directory, array(
-            'id'                    => 1,
-            'name'                  => 'Bird names',
-            'show_title'            => 1,
-            'show_description'      => 1,
-            'show_submit_form'      => 1,
-            'show_submitter_name'   => 0,
-            'show_line_between_names' => 1,
-            'show_line_between_names' => 1,
-            'show_search_form'      => 1,
-            'show_all_names_on_index' => 1,
-            'description'           => 'Cool budgie names'
+            'id'                        => 1,
+            'name'                      => 'Bird names',
+            'show_title'                => 1,
+            'show_description'          => 1,
+            'show_submit_form'          => 1,
+            'show_submitter_name'       => 0,
+            'show_line_between_names'   => 1,
+            'show_line_between_names'   => 1,
+            'show_search_form'          => 1,
+            'show_all_names_on_index'   => 1,
+            'description'               => 'Cool budgie names'
         ));
         $wpdb->insert($table_directory_name, array(
             'directory'     => 1,
