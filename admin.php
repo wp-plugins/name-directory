@@ -86,7 +86,7 @@ function show_list()
             . "</strong></p></div>";
     }
 
-    $wp_file = $_SERVER['SCRIPT_NAME'];
+    $wp_file = admin_url('options-general.php');
     $wp_page = $_GET['page'];
     $wp_url_path = sprintf("%s?page=%s", $wp_file, $wp_page);
     $wp_new_url = sprintf("%s&sub=%s", $wp_url_path, 'new-directory');
@@ -275,7 +275,7 @@ function name_directory_edit($mode = 'edit')
     global $wpdb;
     global $table_directory;
 
-    $wp_file = $_SERVER['SCRIPT_NAME'];
+    $wp_file = admin_url('options-general.php');
     $wp_page = $_GET['page'];
     $wp_sub  = $_GET['sub'];
     $overview_url = sprintf("%s?page=%s", $wp_file, $wp_page, $wp_sub);
@@ -596,8 +596,8 @@ function name_directory_names()
         if($_POST['action'] == "name_directory_ajax_names")
         {
             echo '<p>';
-            echo sprintf(__('New name %s added', 'name-directory'), '<i>' . esc_sql($_POST['name']) . '.</i> ');
-            echo ' <small><i>' . __('Will be visible when the page is refreshed.', 'name-directory') . '</i></small>';
+            printf(__('New name %s added', 'name-directory'), '<i>' . esc_sql($_POST['name']) . '</i> ');
+            echo '. <small><i>' . __('Will be visible when the page is refreshed.', 'name-directory') . '</i></small>';
             echo '</p>';
             exit;
         }
@@ -621,7 +621,7 @@ function name_directory_names()
 
     $directory_id = intval($_GET['dir']);
 
-    $wp_file = $_SERVER['SCRIPT_NAME'];
+    $wp_file = admin_url('options-general.php');
     $wp_page = $_GET['page'];
     $wp_sub  = $_GET['sub'];
     $overview_url = sprintf("%s?page=%s", $wp_file, $wp_page);

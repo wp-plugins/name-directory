@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,10 @@ Yes, through this plugin information page.
 5. Where to find the Name Directory plugin settings page
 
 == Changelog ==
+
+= 1.6.9 =
+ * WND-21: Checked translation strings. Also edited two fussy strings in the Dutch translation
+ * WND-22: Fixed wp-admin paths for WP Multisite users
 
 = 1.6.8 =
  * Added option which let's the user choose a default starting-character when displaying the name directory. For example: use [namedirectory dir="X" start_with="j"] to start with the letter J.
