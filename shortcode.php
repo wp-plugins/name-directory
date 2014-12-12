@@ -253,7 +253,7 @@ function show_directory($attributes)
     echo <<<HTML
 	<div class="name_directory_index">
             {$show_all_link}
-            <a class="name_directory_startswith" href="{$letter_url}#">#</a>
+            <a class="name_directory_startswith" href="{$letter_url}%23">#</a>
             <a class="name_directory_startswith" href="{$letter_url}A">A</a>
             <a class="name_directory_startswith" href="{$letter_url}B">B</a>
             <a class="name_directory_startswith" href="{$letter_url}C">C</a>

@@ -63,6 +63,9 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.10 =
+ * URLencoded the # sign, so entries starting with a number will show up
+
 = 1.6.9 =
  * WND-21: Checked translation strings. Also edited two fussy strings in the Dutch translation
  * WND-22: Fixed wp-admin paths for WP Multisite users
@@ -139,5 +142,4 @@ Yes, through this plugin information page.
 
 = 0.5 =
 * First version for private use
-
 
