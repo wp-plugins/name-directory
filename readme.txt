@@ -63,6 +63,12 @@ Yes, through this plugin information page.
 
 == Changelog ==
 
+= 1.6.11 =
+ * Search URL's didn't function properly
+ * Search argument didn't work together (selected name and input filter)
+ * function didn't work when Wordpress was running without SEO tools
+ * URL improvements (also tested with Yoast SEO plugin)
+
 = 1.6.10 =
  * URLencoded the # sign, so entries starting with a number will show up
 
@@ -71,7 +77,7 @@ Yes, through this plugin information page.
  * WND-22: Fixed wp-admin paths for WP Multisite users
 
 = 1.6.8 =
- * Added option which let's the user choose a default starting-character when displaying the name directory. For example: use [namedirectory dir="X" start_with="j"] to start with the letter J.
+ * WND-17: Added option which let's the user choose a default starting-character when displaying the name directory. For example: use [namedirectory dir="X" start_with="j"] to start with the letter J.
  * WordPress 4.0 compatibility
  * Added Icon to the installer gallery
 
@@ -118,7 +124,7 @@ Yes, through this plugin information page.
 * Fixed sorting issue at the frontend
 
 = 1.4 = 
-* Added support for HTML in the name description
+* WND-19: Added support for HTML in the name description
 
 = 1.3 =
 * Name lists can now have multiple columns at the frontend

@@ -42,11 +42,11 @@ function get_directory_names($dir, $name_filter = array())
 
     if(! empty($name_filter['character']))
     {
-        $sql_filter = " AND `letter`='" . $name_filter['character'] . "' ";
+        $sql_filter .= " AND `letter`='" . $name_filter['character'] . "' ";
     }
-    else if(! empty($name_filter['containing']))
+    if(! empty($name_filter['containing']))
     {
-        $sql_filter = " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
+        $sql_filter .= " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
     }
 
     $names = $wpdb->get_results(sprintf("
@@ -188,9 +188,15 @@ function name_directory_make_plugin_url($index = 'name_directory_startswith', $e
     }
 
     unset($url[$index]);
+    unset($url['page_id']);
+    $paste_char = '?';
+    if(strpos(get_permalink(), '?') !== false)
+    {
+        $paste_char = '&';
+    }
     $url[$index] = '';
 
-    return get_permalink() . '?' . http_build_query($url);
+    return get_permalink() . $paste_char . http_build_query($url);
 }
 
 
@@ -209,12 +215,11 @@ function show_directory($attributes)
     ));
 
     $name_filter = array();
-    if(! empty($_GET['name_directory_startswith']))
+    if(isset($_GET['name_directory_startswith']))
     {
         $name_filter['character'] = $_GET['name_directory_startswith'];
     }
-
-    if(! empty($attributes['start_with']))
+    else if(! empty($attributes['start_with']) && empty($_GET['name-directory-search-value']))
     {
         $name_filter['character'] = $attributes['start_with'];
     }
@@ -289,8 +294,20 @@ HTML;
 
     if(! empty($directory['show_search_form']))
     {
+        $parsed_url = parse_url($_SERVER['REQUEST_URI']);
+        parse_str($parsed_url['query'], $search_get_url);
+        unset($search_get_url['name-directory-search-value']);
+
         echo "<br />";
         echo "<form method='get'>";
+        foreach($search_get_url as $key_name=>$value)
+        {
+            if($key_name == 'name_directory_startswith')
+            {
+                continue;
+            }
+            echo "<input type='hidden' name='" . htmlspecialchars($key_name) . "' value='" . htmlspecialchars($value) . "' />";
+        }
         echo "<input type='text' name='name-directory-search-value' id='name-directory-search-input-box' placeholder='" . __('Search for...', 'name-directory') . "' />";
         echo "<input type='submit' id='name-directory-search-input-button' value='" . __('Search', 'name-directory') . "' />";
         echo "</form>";
@@ -298,18 +315,18 @@ HTML;
     echo '</div>';
 
     echo '<div class="name_directory_total">';
-    if(empty($character) && empty($search_value))
+    if(empty($name_filter['character']) && empty($search_value))
     {
         echo sprintf(__('There are currently %d names in this directory', 'name-directory'), $num_names);
     }
-    else if(empty($character) && ! empty($search_value))
+    else if(empty($name_filter['character']) && ! empty($search_value))
     {
         echo sprintf(__('There are %d names in this directory containing the searchterm %s.', 'name-directory'), $num_names, "<i>" . $search_value . "</i>");
         echo " <a href='" . get_permalink() . "'><small>" . __('Clear results', 'name-directory') . "</small></a>.<br />";
     }
     else
     {
-        echo sprintf(__('There are %d names in this directory beginning with the letter %s.', 'name-directory'), $num_names, $character);
+        echo sprintf(__('There are %d names in this directory beginning with the letter %s.', 'name-directory'), $num_names, $name_filter['character']);
     }
     echo  '</div>';
 
@@ -318,7 +335,6 @@ HTML;
     {
         echo '<p>' . __('There are no names in this directory at the moment', 'name-directory') . '</p>';
     }
-    // TODO: Enable this if db's are migrated correctly: else if(empty($directory['show_all_names_on_index']) && empty($name_filter))
     else if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] != 1 && empty($name_filter))
     {
         echo '<p>' . __('Please select a letter from the index (above) to see entries', 'name-directory') . '</p>';
