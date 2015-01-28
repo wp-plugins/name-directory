@@ -3,12 +3,12 @@
  * Plugin Name: Name Directory
  * Plugin URI: http://www.jeroen.in
  * Description: A Name Directory, i.e. for animal names. Visitors can add, search or just browse all names.
- * Version: 1.6.11
+ * Version: 1.6.12
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * License: GPL2
  */
-/*  Copyright 2013      Jeroen Peters (email : jeroenpeters1986@gmail.com)
+/*  Copyright 2013-2015  Jeroen Peters (email : jeroenpeters1986@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as

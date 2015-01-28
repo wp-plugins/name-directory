@@ -12,7 +12,7 @@ Name directory (glossary) with lots of options. Very easy to add to your site wi
 
 == Description ==
 
-This plugin adds name/term directories to your Wordpress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more than words.
+This plugin adds name/term directories to your WordPress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more than words.
 
 The Name Directory plugin was orginally developed for ParkietenVilla.nl to show a directory of names to name your budgies.
 
@@ -33,11 +33,21 @@ You can create multiple directories with this plugin. Every directory can be emb
  - Show/Hide all entries when the user has not chosen an index-letter yet
  - When you embed a directory, you can configure it to start with a letter of your choosing. E.g.: start on letter J.
 
-The administration view of this plugin has the familiar look and feel of (the rest of) the Wordpress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
+The administration view of this plugin has the familiar look and feel of (the rest of) the WordPress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
 
 == Installation ==
 
-Installation is very easy. You can just download this plugin through the Plugin Finder in your Wordpress Administration Panel.
+= Displaying a directory on your site =
+
+1. Go to the Name Directory settings page
+1. Hover over the directory you want to add to the page.
+1. A few options should show now, like Delete, Manage and Shortcode (see screenshot https://ps.w.org/name-directory/assets/screenshot-2.png).
+1. Click 'Shortcode', a little textbox will show now.
+1. Copy-and-paste the content of the textbox into the page you want the plugin to show up.
+1. Save and view the page to see the result.
+
+= Installing the plugin =
+Installation is very easy. You can just download this plugin through the Plugin Finder in your WordPress Administration Panel.
 
 If you download the zip-file, it's also very easy: 
 
@@ -47,26 +57,52 @@ If you download the zip-file, it's also very easy:
 1. Create a new name directory and add some names
 1. Copy the shortcode and paste it into a post or page to show it on your website
 
+
 == Frequently Asked Questions ==
 
-= Can I contact you? =
+= What does the shortcode look like? =
 
-Yes, through this plugin information page.
+The shortcode for this Name Directory plugin is like this:
+`[namedirectory dir="1"]`
+
+The `1` in this example is the internal ID of the directory, the rest of the shortcode should always look like this.
+
+= I created a directory, how do I show it on my site? =
+
+1. Go to the Name Directory settings page
+1. Hover over the directory you want to add to the page.
+1. A few options should show now, like Delete, Manage and Shortcode (see screenshot https://ps.w.org/name-directory/assets/screenshot-2.png).
+1. Click 'Shortcode', a little textbox will show now.
+1. Copy-and-paste the content of the textbox into the page you want the plugin to show up.
+1. Save and view the page to see the result.
+
+= Can you install this plugin or directory for me? =
+
+Maybe, send me an email to see if we can work this out.
+
+= How can I contact you? =
+
+You can through this plugin information page or in the Support forums.
 
 == Screenshots ==
 
-1. The output of a name directory on a standard Wordpress website. It's a full-featured name directory (search form, index links, descriptions and submit button)
-2. Overview of all the name directories in the Wordpress Administration screen for this plugin
+1. The output of a name directory on a standard WordPress website. It's a full-featured name directory (search form, index links, descriptions and submit button)
+2. Overview of all the name directories in the WordPress Administration screen for this plugin
 3. List of all names in the selected directory and the 'Add name' form
 4. Settings screen for a name directory
 5. Where to find the Name Directory plugin settings page
 
 == Changelog ==
 
+= 1.6.12 =
+ * Expanded FAQ
+ * Updated documentation / edited screenshots
+ * Updated information displayed at the WordPress Plugin Repository page
+
 = 1.6.11 =
  * Search URL's didn't function properly
  * Search argument didn't work together (selected name and input filter)
- * function didn't work when Wordpress was running without SEO tools
+ * function didn't work when WordPress was running without SEO tools
  * URL improvements (also tested with Yoast SEO plugin)
 
 = 1.6.10 =
