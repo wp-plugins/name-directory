@@ -71,7 +71,7 @@ The `1` in this example is the internal ID of the directory, the rest of the sho
 
 1. Go to the Name Directory settings page
 1. Hover over the directory you want to add to the page.
-1. A few options should show now, like Delete, Manage and Shortcode (see screenshot https://ps.w.org/name-directory/assets/screenshot-2.png).
+1. A few options should show now, like Delete, Manage and Shortcode - see screenshot https://ps.w.org/name-directory/assets/screenshot-2.png
 1. Click 'Shortcode', a little textbox will show now.
 1. Copy-and-paste the content of the textbox into the page you want the plugin to show up.
 1. Save and view the page to see the result.
