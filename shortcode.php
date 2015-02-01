@@ -29,6 +29,24 @@ function get_directory_properties($id)
 
 
 /**
+ * Get the directory with the supplied ID
+ * @param $id
+ * @return mixed
+ */
+function get_directory_start_characters($id)
+{
+    global $wpdb;
+    global $table_directory_name;
+
+    $characters = $wpdb->get_col(sprintf("SELECT DISTINCT `letter` FROM %s WHERE `directory` = %d",
+        esc_sql($table_directory_name),
+        esc_sql($id)));
+
+    return array_values($characters);
+}
+
+
+/**
  * Get the names of given directory, maybe only with the char?
  * @param $dir
  * @param array $name_filter
@@ -249,43 +267,28 @@ function show_directory($attributes)
         echo "<h3 class='name_directory_title'>" . $directory['name'] . "</h3>";
     }
 
-    // At this moment we can't suffice with an empty() check because of empty values
-    if(isset($directory['show_all_names_on_index']) && $directory['show_all_names_on_index'] == 1)
+    if(! empty($directory['show_all_names_on_index']))
     {
         $show_all_link = '<a class="name_directory_startswith" href="' . $letter_url . '">' . $str_all . '</a> |';
     }
 
-    echo <<<HTML
-	<div class="name_directory_index">
-            {$show_all_link}
-            <a class="name_directory_startswith" href="{$letter_url}%23">#</a>
-            <a class="name_directory_startswith" href="{$letter_url}A">A</a>
-            <a class="name_directory_startswith" href="{$letter_url}B">B</a>
-            <a class="name_directory_startswith" href="{$letter_url}C">C</a>
-            <a class="name_directory_startswith" href="{$letter_url}D">D</a>
-            <a class="name_directory_startswith" href="{$letter_url}E">E</a>
-            <a class="name_directory_startswith" href="{$letter_url}F">F</a>
-            <a class="name_directory_startswith" href="{$letter_url}G">G</a>
-            <a class="name_directory_startswith" href="{$letter_url}H">H</a>
-            <a class="name_directory_startswith" href="{$letter_url}I">I</a>
-            <a class="name_directory_startswith" href="{$letter_url}J">J</a>
-            <a class="name_directory_startswith" href="{$letter_url}K">K</a>
-            <a class="name_directory_startswith" href="{$letter_url}L">L</a>
-            <a class="name_directory_startswith" href="{$letter_url}M">M</a>
-            <a class="name_directory_startswith" href="{$letter_url}N">N</a>
-            <a class="name_directory_startswith" href="{$letter_url}O">O</a>
-            <a class="name_directory_startswith" href="{$letter_url}P">P</a>
-            <a class="name_directory_startswith" href="{$letter_url}Q">Q</a>
-            <a class="name_directory_startswith" href="{$letter_url}R">R</a>
-            <a class="name_directory_startswith" href="{$letter_url}S">S</a>
-            <a class="name_directory_startswith" href="{$letter_url}T">T</a>
-            <a class="name_directory_startswith" href="{$letter_url}U">U</a>
-            <a class="name_directory_startswith" href="{$letter_url}V">V</a>
-            <a class="name_directory_startswith" href="{$letter_url}W">W</a>
-            <a class="name_directory_startswith" href="{$letter_url}X">X</a>
-            <a class="name_directory_startswith" href="{$letter_url}Y">Y</a>
-            <a class="name_directory_startswith" href="{$letter_url}Z">Z</a>
-HTML;
+    /* Prepare and print the index-letters */
+    echo '<div class="name_directory_index">';
+    echo $show_all_link;
+
+    $index_letters = range('A', 'Z');
+    array_unshift($index_letters, '#');
+
+    if(empty($directory['show_all_index_letters']))
+    {
+        $starting_letters = get_directory_start_characters($dir);
+        $index_letters = array_intersect($index_letters, $starting_letters);
+    }
+
+    foreach($index_letters as $index_letter)
+    {
+        echo ' <a class="name_directory_startswith" href="' . $letter_url . urlencode($index_letter) . '">' . strtoupper($index_letter) . '</a> ';
+    }
 
     if(! empty($directory['show_submit_form']))
     {

@@ -113,6 +113,7 @@ function show_list()
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
                 'show_all_names_on_index' => $_POST['show_all_names_on_index'],
+                'show_all_index_letters'  => $_POST['show_all_index_letters'],
                 'nr_columns'            => $_POST['nr_columns'],
             ),
             array('id' => intval($_POST['dir_id']))
@@ -138,6 +139,7 @@ function show_list()
                 'show_submitter_name'   => $_POST['show_submitter_name'],
                 'show_line_between_names' => $_POST['show_line_between_names'],
                 'show_all_names_on_index' => $_POST['show_all_names_on_index'],
+                'show_all_index_letters'  => $_POST['show_all_index_letters'],
                 'nr_columns'            => $_POST['nr_columns'],
             ),
             array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d')
@@ -318,8 +320,8 @@ function name_directory_edit($mode = 'edit')
             </thead>
             <tbody>
             <tr>
-                <td width="18%"><?php echo __('Title', 'name-directory'); ?></td>
-                <td width="82%"><input type="text" name="name" value="<?php echo $directory['name']; ?>" size="20" style="width: 100%;"></td>
+                <td width="23%"><?php echo __('Title', 'name-directory'); ?></td>
+                <td width="77%"><input type="text" name="name" value="<?php echo $directory['name']; ?>" size="20" style="width: 100%;"></td>
             </tr>
             <tr>
                 <td><?php echo __('Description', 'name-directory'); ?></td>
@@ -454,7 +456,7 @@ function name_directory_edit($mode = 'edit')
             <tr>
                 <td>
                     <?php echo __('Show all names by default', 'name-directory'); ?>
-		    <br />
+		            <br />
                     <small><?php echo __('If no, user HAS to use the index before entries are shown', 'name-directory'); ?></small>
                 </td>
                 <td>
@@ -469,6 +471,31 @@ function name_directory_edit($mode = 'edit')
                         <input type="radio" name="show_all_names_on_index" id="show_all_names_on_index_no" value="0"
                             <?php
                             if(empty($directory['show_all_names_on_index']))
+                            {
+                                echo 'checked="checked"';
+                            }?> />
+                        &nbsp;<?php echo __('No', 'name-directory') ?>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php echo __('Show all letters on index', 'name-directory'); ?>
+                    <br />
+                    <small><?php echo __('If no, just A B D E are shown if there are no entries starting with C', 'name-directory'); ?></small>
+                </td>
+                <td>
+                    <label for="show_all_index_letters_yes">
+                        <input type="radio" name="show_all_index_letters" id="show_all_index_letters_yes" value="1" checked="checked" />
+                        &nbsp;<?php echo __('Yes', 'name-directory') ?>
+                    </label>
+
+                    &nbsp; &nbsp;
+
+                    <label for="show_all_index_letters_no">
+                        <input type="radio" name="show_all_index_letters" id="show_all_index_letters_no" value="0"
+                            <?php
+                            if(empty($directory['show_all_index_letters']))
                             {
                                 echo 'checked="checked"';
                             }?> />

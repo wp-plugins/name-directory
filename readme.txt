@@ -94,6 +94,11 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.6.13 =
+ * WND-23: New option to only show letters on the index when there are entries, so A B D E when there is no entry with C
+ * Fixed small legacy db-convert bug
+ * Gave the admin panel for directory settings some space
+
 = 1.6.12 =
  * Expanded FAQ
  * Updated documentation / edited screenshots
