@@ -80,6 +80,20 @@ The `1` in this example is the internal ID of the directory, the rest of the sho
 
 Maybe, send me an email to see if we can work this out.
 
+= Can I make the text bigger or another color? =
+
+Yes you can, with CSS. If you know your way around CSS you might already know that you can style elements by their class name or HTML structure.
+This plugin was written with styling / CSS in mind. Using the HTML inspector of your favourite browser you should be able to discover the classnames, but here are a few popular classes.
+
+* `.name_directory_index`: Index links (the letters A-Z)
+* `.name_directory_name_box > strong`: Name / Entry title
+* `.name_directory_name_box > div`: Name / Entry descriptiong
+* `.name_directory_total`: Total count of names / entries
+* `.name_directory_index > form`: Search form
+* `#name-directory-search-input-box`: Search input box
+* `#name-directory-search-input-button`: Search button
+* `.name_directory_submit_bottom_link`: Link to submit form
+
 = How can I contact you? =
 
 You can through this plugin information page or in the Support forums.
@@ -181,7 +195,6 @@ You can through this plugin information page or in the Support forums.
 
 = 1.2 =
 * Added support for submission form on the front-end
-
 * Added possibility for admin to filter on published/unpublished names
 * Rearranged directory overview for admin, overview now shows totals for published/unpublished
 
