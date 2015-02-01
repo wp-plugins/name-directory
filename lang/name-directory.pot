@@ -1,14 +1,14 @@
-# Copyright (C) 2014 
+# Copyright (C) 2015 
 # This file is distributed under the same license as the  package.
 msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
-"POT-Creation-Date: 2014-11-26 23:43:21+00:00\n"
+"POT-Creation-Date: 2015-02-01 15:48:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
@@ -20,17 +20,19 @@ msgstr ""
 msgid "Name Directory Plugin"
 msgstr ""
 
-#: admin.php:27 admin.php:333 admin.php:354 admin.php:375 admin.php:396
-#: admin.php:417 admin.php:438 admin.php:463 admin.php:685 admin.php:770
+#: admin.php:27 admin.php:335 admin.php:356 admin.php:377 admin.php:398
+#: admin.php:419 admin.php:440 admin.php:465 admin.php:490 admin.php:712
+#: admin.php:797
 msgid "Yes"
 msgstr ""
 
-#: admin.php:30 admin.php:345 admin.php:366 admin.php:387 admin.php:408
-#: admin.php:429 admin.php:450 admin.php:475 admin.php:682 admin.php:778
+#: admin.php:30 admin.php:347 admin.php:368 admin.php:389 admin.php:410
+#: admin.php:431 admin.php:452 admin.php:477 admin.php:502 admin.php:709
+#: admin.php:805
 msgid "No"
 msgstr ""
 
-#: admin.php:42 admin.php:272 admin.php:527
+#: admin.php:42 admin.php:274 admin.php:554
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
@@ -46,343 +48,351 @@ msgstr ""
 msgid "Add directory"
 msgstr ""
 
-#: admin.php:122
+#: admin.php:123
 msgid "Directory %s updated."
 msgstr ""
 
-#: admin.php:147
+#: admin.php:149
 msgid "Directory %s created."
 msgstr ""
 
-#: admin.php:153
+#: admin.php:155
 msgid "name directory"
 msgstr ""
 
-#: admin.php:153
+#: admin.php:155
 msgid "name directories"
 msgstr ""
 
-#: admin.php:156
+#: admin.php:158
 msgid "You currently have %d %s."
 msgstr ""
 
-#: admin.php:165 admin.php:177 admin.php:321
+#: admin.php:167 admin.php:179 admin.php:323
 msgid "Title"
 msgstr ""
 
-#: admin.php:167 admin.php:179
+#: admin.php:169 admin.php:181
 msgid "Entries"
 msgstr ""
 
-#: admin.php:168 admin.php:180 admin.php:669 admin.php:767
+#: admin.php:170 admin.php:182 admin.php:696 admin.php:794
 msgid "Published"
 msgstr ""
 
-#: admin.php:169 admin.php:181
+#: admin.php:171 admin.php:183
 msgid "Unpublished"
 msgstr ""
 
-#: admin.php:216
+#: admin.php:218
 msgid "Add, edit and remove names"
 msgstr ""
 
-#: admin.php:216
+#: admin.php:218
 msgid "Manage names"
 msgstr ""
 
-#: admin.php:217
+#: admin.php:219
 msgid "Go to the add-name-form on the Manage page"
 msgstr ""
 
-#: admin.php:217 admin.php:716
+#: admin.php:219 admin.php:743
 msgid "Add name"
 msgstr ""
 
-#: admin.php:218
+#: admin.php:220
 msgid "Edit name, description and appearance settings"
 msgstr ""
 
-#: admin.php:218
+#: admin.php:220
 msgid "Settings"
 msgstr ""
 
-#: admin.php:219
+#: admin.php:221
 msgid "Show the copy-paste shortcode for this directory"
 msgstr ""
 
-#: admin.php:219
+#: admin.php:221
 msgid "Shortcode"
 msgstr ""
 
-#: admin.php:220
+#: admin.php:222
 msgid "Permanently remove this name directory"
 msgstr ""
 
-#: admin.php:220 admin.php:697
+#: admin.php:222 admin.php:724
 msgid "Delete"
 msgstr ""
 
-#: admin.php:222
+#: admin.php:224
 msgid "Number of names in this directory"
 msgstr ""
 
-#: admin.php:238
+#: admin.php:240
 msgid "To show your directory on your website, use the shortcode on the right."
 msgstr ""
 
-#: admin.php:239
+#: admin.php:241
 msgid "Copy the code and paste it in a post or in a page."
 msgstr ""
 
-#: admin.php:240
+#: admin.php:242
 msgid ""
 "If you want to start with a specific character, like \"J\", use "
 "[namedirectory dir=\"X\" start_with=\"j\"]."
 msgstr ""
 
-#: admin.php:291 admin.php:293
+#: admin.php:293 admin.php:295
 msgid "Create new name directory"
 msgstr ""
 
-#: admin.php:292
+#: admin.php:294
 msgid "Create"
 msgstr ""
 
-#: admin.php:294
+#: admin.php:296
 msgid "Complete the form below to create a new name directory."
 msgstr ""
 
-#: admin.php:298
+#: admin.php:300
 msgid "Edit this directory"
 msgstr ""
 
-#: admin.php:299
+#: admin.php:301
 msgid "Save Changes"
 msgstr ""
 
-#: admin.php:300
+#: admin.php:302
 msgid "Edit name directory"
 msgstr ""
 
-#: admin.php:302
+#: admin.php:304
 msgid "You are editing the name, description and settings of directory %s"
 msgstr ""
 
-#: admin.php:305 admin.php:659 admin.php:721
+#: admin.php:307 admin.php:686 admin.php:748
 msgid "Back to the directory overview"
 msgstr ""
 
-#: admin.php:325 admin.php:667 admin.php:761 shortcode.php:81
+#: admin.php:327 admin.php:694 admin.php:788 shortcode.php:99
 msgid "Description"
 msgstr ""
 
-#: admin.php:329
+#: admin.php:331
 msgid "Show title"
 msgstr ""
 
-#: admin.php:350
+#: admin.php:352
 msgid "Show description"
 msgstr ""
 
-#: admin.php:371
+#: admin.php:373
 msgid "Submit form"
 msgstr ""
 
-#: admin.php:392
+#: admin.php:394
 msgid "Submitter name"
 msgstr ""
 
-#: admin.php:413
+#: admin.php:415
 msgid "Show line between names"
 msgstr ""
 
-#: admin.php:434
+#: admin.php:436
 msgid "Show search form"
 msgstr ""
 
-#: admin.php:456
+#: admin.php:458
 msgid "Show all names by default"
 msgstr ""
 
-#: admin.php:458
+#: admin.php:460
 msgid "If no, user HAS to use the index before entries are shown"
 msgstr ""
 
-#: admin.php:480
+#: admin.php:483
+msgid "Show all letters on index"
+msgstr ""
+
+#: admin.php:485
+msgid "If no, just A B D E are shown if there are no entries starting with C"
+msgstr ""
+
+#: admin.php:507
 msgid "Number of columns"
 msgstr ""
 
-#: admin.php:504
+#: admin.php:531
 msgid "Cancel"
 msgstr ""
 
-#: admin.php:539
+#: admin.php:566
 msgid "Name %s deleted"
 msgstr ""
 
-#: admin.php:559 admin.php:565
+#: admin.php:586 admin.php:592
 msgid "Name %s updated"
 msgstr ""
 
-#: admin.php:577
+#: admin.php:604
 msgid "Name %s was already on the list, so it was not added"
 msgstr ""
 
-#: admin.php:599 admin.php:606
+#: admin.php:626 admin.php:633
 msgid "New name %s added"
 msgstr ""
 
-#: admin.php:600
+#: admin.php:627
 msgid "Will be visible when the page is refreshed."
 msgstr ""
 
-#: admin.php:613 admin.php:618 shortcode.php:133
+#: admin.php:640 admin.php:645 shortcode.php:151
 msgid "Please fill in at least a name"
 msgstr ""
 
-#: admin.php:649
+#: admin.php:676
 msgid "Manage names for %s"
 msgstr ""
 
-#: admin.php:654
+#: admin.php:681
 msgid "all"
 msgstr ""
 
-#: admin.php:655
+#: admin.php:682
 msgid "published"
 msgstr ""
 
-#: admin.php:656
+#: admin.php:683
 msgid "unpublished"
 msgstr ""
 
-#: admin.php:666 admin.php:757 shortcode.php:79
+#: admin.php:693 admin.php:784 shortcode.php:97
 msgid "Name"
 msgstr ""
 
-#: admin.php:668 admin.php:782
+#: admin.php:695 admin.php:809
 msgid "Submitted by"
 msgstr ""
 
-#: admin.php:670
+#: admin.php:697
 msgid "Manage"
 msgstr ""
 
-#: admin.php:678
+#: admin.php:705
 msgid "Currently, there are no names in this directory.."
 msgstr ""
 
-#: admin.php:696
+#: admin.php:723
 msgid "Edit"
 msgstr ""
 
-#: admin.php:710
+#: admin.php:737
 msgid "Edit a name"
 msgstr ""
 
-#: admin.php:711
+#: admin.php:738
 msgid "Save name"
 msgstr ""
 
-#: admin.php:715
+#: admin.php:742
 msgid "Add a new name"
 msgstr ""
 
-#: admin.php:743
+#: admin.php:770
 msgid "Show the compact form, showing only the name, always published)"
 msgstr ""
 
-#: admin.php:745
+#: admin.php:772
 msgid "Quick add view"
 msgstr ""
 
-#: admin.php:747
+#: admin.php:774
 msgid ""
 "Show the full form, which allows you to enter a description and submitter"
 msgstr ""
 
-#: admin.php:749
+#: admin.php:776
 msgid "Full add view"
 msgstr ""
 
-#: admin.php:763
+#: admin.php:790
 msgid "Please be careful!"
 msgstr ""
 
-#: admin.php:764
+#: admin.php:791
 msgid ""
 "HTML markup is allowed and will we printed on your website and in the "
 "Wordpress admin."
 msgstr ""
 
-#: shortcode.php:80
+#: shortcode.php:98
 msgid "Required"
 msgstr ""
 
-#: shortcode.php:82
+#: shortcode.php:100
 msgid "Your name"
 msgstr ""
 
-#: shortcode.php:83
+#: shortcode.php:101
 msgid "Submit"
 msgstr ""
 
-#: shortcode.php:84
+#: shortcode.php:102
 msgid "Back to name directory"
 msgstr ""
 
-#: shortcode.php:100
+#: shortcode.php:118
 msgid "Sorry, %s was already on the list so your submission was not sent."
 msgstr ""
 
-#: shortcode.php:121
+#: shortcode.php:139
 msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr ""
 
-#: shortcode.php:126
+#: shortcode.php:144
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr ""
 
-#: shortcode.php:222
+#: shortcode.php:245
 msgid "All"
 msgstr ""
 
-#: shortcode.php:287 shortcode.php:378
+#: shortcode.php:295 shortcode.php:397
 msgid "Submit a name"
 msgstr ""
 
-#: shortcode.php:294
+#: shortcode.php:314
 msgid "Search for..."
 msgstr ""
 
-#: shortcode.php:295
+#: shortcode.php:315
 msgid "Search"
 msgstr ""
 
-#: shortcode.php:303
+#: shortcode.php:323
 msgid "There are currently %d names in this directory"
 msgstr ""
 
-#: shortcode.php:307
+#: shortcode.php:327
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr ""
 
-#: shortcode.php:308
+#: shortcode.php:328
 msgid "Clear results"
 msgstr ""
 
-#: shortcode.php:312
+#: shortcode.php:332
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr ""
 
-#: shortcode.php:319
+#: shortcode.php:339
 msgid "There are no names in this directory at the moment"
 msgstr ""
 
-#: shortcode.php:324
+#: shortcode.php:343
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 
-#: shortcode.php:348
+#: shortcode.php:367
 msgid "Submitted by:"
 msgstr ""
