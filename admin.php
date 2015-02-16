@@ -687,7 +687,7 @@ function name_directory_names()
         </a>
     </p>
 
-    <table class="wp-list-table widefat fixed" cellpadding="0">
+    <table class="wp-list-table widefat name_directory_names fixed" cellpadding="0">
         <thead>
         <tr>
             <th width="16%"><?php echo __('Name', 'name-directory'); ?></th>
@@ -821,13 +821,32 @@ function name_directory_names()
     </form>
 
     <?php
-    echo print_javascript($emphasis_class);
+    print_javascript($emphasis_class);
+    print_style();
 }
 
+
 /**
- * Return the Javascripts needed by this plugin
+ * Print the Style rules by this plugin
+ */
+function print_style()
+{
+    $style = '
+
+    <style>
+    table.name_directory_names td
+    {
+        border-bottom: 1px solid #F0F0F0;
+    }
+    </style>';
+
+    echo $style;
+}
+
+
+/**
+ * Print the Javascripts needed by this plugin
  * @param string $emphasis_class
- * @return string
  */
 function print_javascript($emphasis_class = '')
 {
@@ -929,5 +948,5 @@ function print_javascript($emphasis_class = '')
                 });</script>";
     }
 
-    return $js;
+    print $js;
 }

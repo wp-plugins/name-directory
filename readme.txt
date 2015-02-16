@@ -108,6 +108,13 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.6.16 =
+ * WND-26 & WND-28: Honour the Show Description setting in frontend
+
+= 1.6.15 =
+ * Added little spacers in the admin on the Manage names screen
+ * Every name on the front-end got an anchor name
+
 = 1.6.14 =
  * Added new translation file
  * Updated Dutch translation

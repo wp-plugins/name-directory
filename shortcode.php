@@ -357,8 +357,9 @@ function show_directory($attributes)
         foreach($names as $entry)
         {
             echo '<div class="name_directory_name_box">';
+            echo '<a name="namedirectory_' . sanitize_html_class($entry['name']) . '"></a>';
             echo '<strong>' . htmlspecialchars($entry['name']) . '</strong>';
-            if(! empty($entry['description']))
+            if(! empty($directory['show_description']) && ! empty($entry['description']))
             {
                 echo '<br /><div>' . html_entity_decode(stripslashes($entry['description'])) . '</div>';
             }
