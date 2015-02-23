@@ -3,12 +3,14 @@
  * Plugin Name: Name Directory
  * Plugin URI: http://www.jeroen.in
  * Description: A Name Directory, i.e. for animal names. Visitors can add, search or just browse all names.
- * Version: 1.6.16
+ * Version: 1.7
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
+ * Text Domain: name-directory
+ * Domain Path: /lang/
  * License: GPL2
  */
-/*  Copyright 2013-2015  Jeroen Peters (email : jeroenpeters1986@gmail.com)
+/*  Copyright 2013-2015  Jeroen Peters (email: jeroenpeters1986@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -27,14 +29,13 @@
 global $wpdb;
 
 global $name_directory_db_version;
-$name_directory_db_version = '1.7.3';
+$name_directory_db_version = '1.7.4';
 
 global $table_directory;
 $table_directory = $wpdb->prefix . "name_directory";
 
 global $table_directory_name;
 $table_directory_name = $wpdb->prefix . "name_directory_name";
-
 
 // Make sure we don't expose any info if called directly
 if (! function_exists('add_action'))
@@ -43,24 +44,7 @@ if (! function_exists('add_action'))
     exit;
 }
 
-
-/**
- * Return the first character of a word,
- * or hashtag, may the word begin with a number
- * @param $name
- * @return string
- */
-function name_directory_get_first_char($name)
-{
-    $first_char = strtoupper(substr($name, 0, 1));
-    if(is_numeric($first_char))
-    {
-        $first_char = '#';
-    }
-
-    return $first_char;
-}
-
+require_once dirname( __FILE__ ) . '/helpers.php';
 
 /**
  * Only run the DB provisioning if an admin accesses this page
@@ -100,13 +84,13 @@ require_once dirname( __FILE__ ) . '/shortcode.php';
  */
 function name_directory_init()
 {
-    $plugin_dir = basename(dirname(__FILE__));
+    $plugin_dir = dirname(plugin_basename(__FILE__));
     load_plugin_textdomain('name-directory', false, $plugin_dir . '/lang/');
 }
 add_action('plugins_loaded', 'name_directory_init');
 
 
-function myplugin_update_db_check()
+function name_directory_update_db_check()
 {
     global $name_directory_db_version;
     if (get_site_option('name_directory_db_version') != $name_directory_db_version)
@@ -114,4 +98,4 @@ function myplugin_update_db_check()
         run_db_provisioning();
     }
 }
-add_action( 'plugins_loaded', 'myplugin_update_db_check' );
+add_action('plugins_loaded', 'name_directory_update_db_check');

@@ -1,10 +1,10 @@
-# Copyright (C) 2015 
-# This file is distributed under the same license as the  package.
+# Copyright (C) 2015 Name Directory
+# This file is distributed under the same license as the Name Directory package.
 msgid ""
 msgstr ""
-"Project-Id-Version:  \n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/name-directory\n"
-"POT-Creation-Date: 2015-02-01 15:48:44+00:00\n"
+"Project-Id-Version: Name Directory 1.7\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
+"POT-Creation-Date: 2015-02-22 16:40:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,317 +12,424 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: admin.php:12
+#: admin.php:13
 msgid "Name Directory Options"
 msgstr ""
 
-#: admin.php:13
-msgid "Name Directory Plugin"
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: admin.php:14
+msgid "Name Directory"
 msgstr ""
 
-#: admin.php:27 admin.php:335 admin.php:356 admin.php:377 admin.php:398
-#: admin.php:419 admin.php:440 admin.php:465 admin.php:490 admin.php:712
-#: admin.php:797
-msgid "Yes"
-msgstr ""
-
-#: admin.php:30 admin.php:347 admin.php:368 admin.php:389 admin.php:410
-#: admin.php:431 admin.php:452 admin.php:477 admin.php:502 admin.php:709
-#: admin.php:805
-msgid "No"
-msgstr ""
-
-#: admin.php:42 admin.php:274 admin.php:554
+#: admin.php:27 admin.php:263 admin.php:542 admin.php:825
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: admin.php:85
+#: admin.php:73
 msgid "Name directory %s and all entries deleted"
 msgstr ""
 
-#: admin.php:98
+#: admin.php:85
 msgid "Name Directory management"
 msgstr ""
 
-#: admin.php:99
+#: admin.php:86
 msgid "Add directory"
 msgstr ""
 
-#: admin.php:123
+#: admin.php:110
 msgid "Directory %s updated."
 msgstr ""
 
-#: admin.php:149
+#: admin.php:136
 msgid "Directory %s created."
 msgstr ""
 
-#: admin.php:155
+#: admin.php:142
 msgid "name directory"
 msgstr ""
 
-#: admin.php:155
+#: admin.php:142
 msgid "name directories"
 msgstr ""
 
-#: admin.php:158
+#: admin.php:145
 msgid "You currently have %d %s."
 msgstr ""
 
-#: admin.php:167 admin.php:179 admin.php:323
+#: admin.php:154 admin.php:166 admin.php:311
 msgid "Title"
 msgstr ""
 
-#: admin.php:169 admin.php:181
+#: admin.php:156 admin.php:168
 msgid "Entries"
 msgstr ""
 
-#: admin.php:170 admin.php:182 admin.php:696 admin.php:794
+#: admin.php:157 admin.php:169 admin.php:685 admin.php:784
 msgid "Published"
 msgstr ""
 
-#: admin.php:171 admin.php:183
+#: admin.php:158 admin.php:170
 msgid "Unpublished"
 msgstr ""
 
-#: admin.php:218
+#: admin.php:206
 msgid "Add, edit and remove names"
 msgstr ""
 
-#: admin.php:218
+#: admin.php:206
 msgid "Manage names"
 msgstr ""
 
-#: admin.php:219
+#: admin.php:207
 msgid "Go to the add-name-form on the Manage page"
 msgstr ""
 
-#: admin.php:219 admin.php:743
+#: admin.php:207 admin.php:728
 msgid "Add name"
 msgstr ""
 
-#: admin.php:220
+#: admin.php:208
 msgid "Edit name, description and appearance settings"
 msgstr ""
 
-#: admin.php:220
+#: admin.php:208
 msgid "Settings"
 msgstr ""
 
-#: admin.php:221
+#: admin.php:209
+msgid "Import entries for this directory by uploading a .csv file"
+msgstr ""
+
+#: admin.php:209
+msgid "Import"
+msgstr ""
+
+#: admin.php:210
 msgid "Show the copy-paste shortcode for this directory"
 msgstr ""
 
-#: admin.php:221
+#: admin.php:210
 msgid "Shortcode"
 msgstr ""
 
-#: admin.php:222
+#: admin.php:211
 msgid "Permanently remove this name directory"
 msgstr ""
 
-#: admin.php:222 admin.php:724
+#: admin.php:211 admin.php:709
 msgid "Delete"
 msgstr ""
 
-#: admin.php:224
+#: admin.php:213
 msgid "Number of names in this directory"
 msgstr ""
 
-#: admin.php:240
+#: admin.php:229
 msgid "To show your directory on your website, use the shortcode on the right."
 msgstr ""
 
-#: admin.php:241
+#: admin.php:230
 msgid "Copy the code and paste it in a post or in a page."
 msgstr ""
 
-#: admin.php:242
+#: admin.php:231
 msgid ""
 "If you want to start with a specific character, like \"J\", use "
 "[namedirectory dir=\"X\" start_with=\"j\"]."
 msgstr ""
 
-#: admin.php:293 admin.php:295
+#: admin.php:281 admin.php:283
 msgid "Create new name directory"
 msgstr ""
 
-#: admin.php:294
+#: admin.php:282
 msgid "Create"
 msgstr ""
 
-#: admin.php:296
+#: admin.php:284
 msgid "Complete the form below to create a new name directory."
 msgstr ""
 
-#: admin.php:300
+#: admin.php:288
 msgid "Edit this directory"
 msgstr ""
 
-#: admin.php:301
+#: admin.php:289
 msgid "Save Changes"
 msgstr ""
 
-#: admin.php:302
+#: admin.php:290
 msgid "Edit name directory"
 msgstr ""
 
-#: admin.php:304
+#: admin.php:292
 msgid "You are editing the name, description and settings of directory %s"
 msgstr ""
 
-#: admin.php:307 admin.php:686 admin.php:748
+#: admin.php:295 admin.php:675 admin.php:736
 msgid "Back to the directory overview"
 msgstr ""
 
-#: admin.php:327 admin.php:694 admin.php:788 shortcode.php:99
+#: admin.php:315 admin.php:683 admin.php:778 shortcode.php:99
 msgid "Description"
 msgstr ""
 
-#: admin.php:331
+#: admin.php:319
 msgid "Show title"
 msgstr ""
 
-#: admin.php:352
+#: admin.php:323 admin.php:344 admin.php:365 admin.php:386 admin.php:407
+#: admin.php:428 admin.php:453 admin.php:478 admin.php:787 helpers.php:63
+msgid "Yes"
+msgstr ""
+
+#: admin.php:335 admin.php:356 admin.php:377 admin.php:398 admin.php:419
+#: admin.php:440 admin.php:465 admin.php:490 admin.php:795 helpers.php:66
+msgid "No"
+msgstr ""
+
+#: admin.php:340
 msgid "Show description"
 msgstr ""
 
-#: admin.php:373
+#: admin.php:361
 msgid "Submit form"
 msgstr ""
 
-#: admin.php:394
+#: admin.php:382
 msgid "Submitter name"
 msgstr ""
 
-#: admin.php:415
+#: admin.php:403
 msgid "Show line between names"
 msgstr ""
 
-#: admin.php:436
+#: admin.php:424
 msgid "Show search form"
 msgstr ""
 
-#: admin.php:458
+#: admin.php:446
 msgid "Show all names by default"
 msgstr ""
 
-#: admin.php:460
+#: admin.php:448
 msgid "If no, user HAS to use the index before entries are shown"
 msgstr ""
 
-#: admin.php:483
+#: admin.php:471
 msgid "Show all letters on index"
 msgstr ""
 
-#: admin.php:485
+#: admin.php:473
 msgid "If no, just A B D E are shown if there are no entries starting with C"
 msgstr ""
 
-#: admin.php:507
+#: admin.php:495
 msgid "Number of columns"
 msgstr ""
 
-#: admin.php:531
+#: admin.php:519
 msgid "Cancel"
 msgstr ""
 
-#: admin.php:566
+#: admin.php:554
 msgid "Name %s deleted"
 msgstr ""
 
-#: admin.php:586 admin.php:592
+#: admin.php:574 admin.php:580
 msgid "Name %s updated"
 msgstr ""
 
-#: admin.php:604
+#: admin.php:591
 msgid "Name %s was already on the list, so it was not added"
 msgstr ""
 
-#: admin.php:626 admin.php:633
+#: admin.php:613 admin.php:620
 msgid "New name %s added"
 msgstr ""
 
-#: admin.php:627
+#: admin.php:614
 msgid "Will be visible when the page is refreshed."
 msgstr ""
 
-#: admin.php:640 admin.php:645 shortcode.php:151
+#: admin.php:627 admin.php:632 shortcode.php:151
 msgid "Please fill in at least a name"
 msgstr ""
 
-#: admin.php:676
+#: admin.php:663
 msgid "Manage names for %s"
 msgstr ""
 
-#: admin.php:681
+#: admin.php:668 admin.php:893
 msgid "all"
 msgstr ""
 
-#: admin.php:682
+#: admin.php:669
 msgid "published"
 msgstr ""
 
-#: admin.php:683
+#: admin.php:670
 msgid "unpublished"
 msgstr ""
 
-#: admin.php:693 admin.php:784 shortcode.php:97
+#: admin.php:673 admin.php:734
+msgid "Import names"
+msgstr ""
+
+#: admin.php:682 admin.php:774 shortcode.php:97
 msgid "Name"
 msgstr ""
 
-#: admin.php:695 admin.php:809
-msgid "Submitted by"
+#: admin.php:684
+msgid "Submitter"
 msgstr ""
 
-#: admin.php:697
+#: admin.php:686
 msgid "Manage"
 msgstr ""
 
-#: admin.php:705
+#: admin.php:694
 msgid "Currently, there are no names in this directory.."
 msgstr ""
 
-#: admin.php:723
+#: admin.php:706
+msgid "Toggle published status"
+msgstr ""
+
+#: admin.php:708
 msgid "Edit"
 msgstr ""
 
-#: admin.php:737
+#: admin.php:722
 msgid "Edit a name"
 msgstr ""
 
-#: admin.php:738
+#: admin.php:723
 msgid "Save name"
 msgstr ""
 
-#: admin.php:742
+#: admin.php:727
 msgid "Add a new name"
 msgstr ""
 
-#: admin.php:770
+#: admin.php:760
 msgid "Show the compact form, showing only the name, always published)"
 msgstr ""
 
-#: admin.php:772
+#: admin.php:762
 msgid "Quick add view"
 msgstr ""
 
-#: admin.php:774
+#: admin.php:764
 msgid ""
 "Show the full form, which allows you to enter a description and submitter"
 msgstr ""
 
-#: admin.php:776
+#: admin.php:766
 msgid "Full add view"
 msgstr ""
 
-#: admin.php:790
+#: admin.php:780
 msgid "Please be careful!"
 msgstr ""
 
-#: admin.php:791
+#: admin.php:781
 msgid ""
 "HTML markup is allowed and will we printed on your website and in the "
 "Wordpress admin."
+msgstr ""
+
+#: admin.php:799
+msgid "Submitted by"
+msgstr ""
+
+#: admin.php:882
+msgid "Imported %d entries in this directory"
+msgstr ""
+
+#: admin.php:888
+msgid "Could not import any names into Name Directory"
+msgstr ""
+
+#: admin.php:895
+msgid ""
+"Ignored %s names, because they were duplicate (already in the directory)"
+msgstr ""
+
+#: admin.php:900
+msgid "please check your .csv-file"
+msgstr ""
+
+#: admin.php:916
+msgid "Import names for %s"
+msgstr ""
+
+#: admin.php:920
+msgid ""
+"Use the upload form below to upload a .csv-file containing all of your names "
+"(in the first column), description and submitter are optional."
+msgstr ""
+
+#: admin.php:921
+msgid "If you saved it from Excel or OpenOffice, please ensure that:"
+msgstr ""
+
+#: admin.php:922
+msgid ""
+"There is a header row (this contains the column names, the first row will "
+"NOT be imported)"
+msgstr ""
+
+#: admin.php:923
+msgid "Fields are encapsulated by double quotes"
+msgstr ""
+
+#: admin.php:924
+msgid "Fields are comma-separated"
+msgstr ""
+
+#: admin.php:926
+msgid "If uploading or importing fails, these are your options"
+msgstr ""
+
+#: admin.php:927
+msgid "Please check out %s first and ensure your file is formatted the same."
+msgstr ""
+
+#: admin.php:929
+msgid "the example import file"
+msgstr ""
+
+#: admin.php:938
+msgid "Use an online File Convertor"
+msgstr ""
+
+#: admin.php:940
+msgid "If everything else fails, you can always ask a question at the %s."
+msgstr ""
+
+#: admin.php:942
+msgid "plugin support forums"
+msgstr ""
+
+#: admin.php:948
+msgid ""
+"Name Directory Import requires PHP 5.3, you seem to have in older version. "
+"Importing names will not work for your website."
+msgstr ""
+
+#: admin.php:952
+msgid "Upload your .csv-file"
+msgstr ""
+
+#: admin.php:956
+msgid "Back to %s"
+msgstr ""
+
+#: admin.php:958
+msgid "Go to Name Directory Overview"
 msgstr ""
 
 #: shortcode.php:98
@@ -357,7 +464,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: shortcode.php:295 shortcode.php:397
+#: shortcode.php:295 shortcode.php:398
 msgid "Submit a name"
 msgstr ""
 
@@ -393,6 +500,23 @@ msgstr ""
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 
-#: shortcode.php:367
+#: shortcode.php:368
 msgid "Submitted by:"
+msgstr ""
+
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.jeroen.in"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A Name Directory, i.e. for animal names. Visitors can add, search or just "
+"browse all names."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jeroen Peters"
 msgstr ""

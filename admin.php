@@ -2,6 +2,7 @@
 
 add_action('admin_menu', 'name_directory_menu');
 add_action('wp_ajax_name_directory_ajax_names', 'name_directory_names');
+add_action('wp_ajax_name_directory_switch_name_published_status', 'name_directory_ajax_switch_name_published_status');
 
 
 /**
@@ -10,24 +11,8 @@ add_action('wp_ajax_name_directory_ajax_names', 'name_directory_names');
 function name_directory_menu()
 {
     add_options_page(__('Name Directory Options', 'name-directory'),
-        __('Name Directory Plugin', 'name-directory'),
+        __('Name Directory', 'name-directory'),
         'manage_options', 'name-directory', 'name_directory_options');
-}
-
-
-/**
- * Return yes or no based on a variable
- * @param $var
- * @return string|void
- */
-function name_directory_yesno($var)
-{
-    if(! empty($var))
-    {
-        return __('Yes', 'name-directory');
-    }
-
-    return __('No', 'name-directory');
 }
 
 
@@ -57,6 +42,9 @@ function name_directory_options()
             break;
         case 'new-directory':
             name_directory_edit('new');
+            break;
+        case 'import':
+            name_directory_import();
             break;
         default:
             show_list();
@@ -93,7 +81,6 @@ function show_list()
 
 
     echo '<div class="wrap">';
-    echo '<div id="icon-page" class="icon32 icon32-posts-post"><br></div>';
     echo "<h2>"
         . __('Name Directory management', 'name-directory')
         . " <a href='" . $wp_new_url . "' class='add-new-h2'>" . __('Add directory', 'name-directory') . "</a>"
@@ -199,8 +186,9 @@ function show_list()
                         <div class='locked-info'>&nbsp;</div>
                         <div class='row-actions'>
                                <span class='manage'><a href='" . $wp_url_path . "&sub=manage-directory&dir=%d' title='%s'>%s</a>
-                             | </span><span class='view'><a href='" . $wp_url_path . "&sub=manage-directory&dir=%d#anchor_add_name' title='%s'>%s</a>
-                             | </span><span class='inline hide-if-no-js'><a href='" . $wp_url_path . "&sub=edit-directory&dir=%d' class='editinline' title='%s'>%s</a>
+                             | </span><span><a href='" . $wp_url_path . "&sub=manage-directory&dir=%d#anchor_add_name' title='%s'>%s</a>
+                             | </span><span><a href='" . $wp_url_path . "&sub=edit-directory&dir=%d' title='%s'>%s</a>
+                             | </span><span><a href='" . $wp_url_path . "&sub=import&dir=%d' title='%s'>%s</a>
                              | </span><span class='view'><a class='toggle-info' data-id='%s' href='" . $wp_url_path . "&sub=manage-directory&dir=%d#shortcode' title='%s'>%s</a></span>
                              | </span><span class='trash'><a class='submitdelete' href='" . $wp_url_path . "&delete_dir=%d' title=%s'>%s</a>
                         </div>
@@ -218,6 +206,7 @@ function show_list()
                     $directory->id, __('Add, edit and remove names', 'name-directory'), __('Manage names', 'name-directory'),
                     $directory->id, __('Go to the add-name-form on the Manage page', 'name-directory'), __('Add name', 'name-directory'),
                     $directory->id, __('Edit name, description and appearance settings', 'name-directory'), __('Settings', 'name-directory'),
+                    $directory->id, __('Import entries for this directory by uploading a .csv file', 'name-directory'), __('Import', 'name-directory'),
                     $directory->id, $directory->id, __('Show the copy-paste shortcode for this directory', 'name-directory'), __('Shortcode', 'name-directory'),
                     $directory->id, __('Permanently remove this name directory', 'name-directory'), __('Delete', 'name-directory'),
 
@@ -287,7 +276,6 @@ function name_directory_edit($mode = 'edit')
     $directory = $wpdb->get_row("SELECT * FROM " . $table_directory . " WHERE `id` = " . $directory_id, ARRAY_A);
 
     echo '<div class="wrap">';
-    echo '<div id="icon-page" class="icon32 icon32-posts-post"><br></div>';
     if($mode == "new")
     {
         $table_heading  = __('Create new name directory', 'name-directory');
@@ -544,7 +532,7 @@ function name_directory_edit($mode = 'edit')
 /**
  * Handle the names in the name directory
  *  - Display all names
- *  - Edit names (ajax and 'oldskool' view
+ *  - Edit names (ajax and 'oldskool' view)
  *  - Create new names
  */
 function name_directory_names()
@@ -596,9 +584,8 @@ function name_directory_names()
     }
     else if(! empty($_POST['name']))
     {
-        $wpdb->get_results(sprintf("SELECT `id` FROM `%s` WHERE `name` = '%s'",
-                           $table_directory_name, esc_sql($_POST['name'])));
-        if($wpdb->num_rows == 1 && $_POST['action'] == "name_directory_ajax_names")
+        $name_exists = name_directory_name_exists_in_directory($_POST['name'], $_POST['directory']);
+        if($name_exists && $_POST['action'] == "name_directory_ajax_names")
         {
             echo '<p>';
             echo sprintf(__('Name %s was already on the list, so it was not added', 'name-directory'),
@@ -641,7 +628,7 @@ function name_directory_names()
             exit;
         }
 
-        echo "<div class='updated'><p><strong>"
+        echo "<div class='error'><p><strong>"
             . __('Please fill in at least a name', 'name-directory')
             . "</strong></p></div>";
     }
@@ -653,6 +640,7 @@ function name_directory_names()
     $wp_sub  = $_GET['sub'];
     $overview_url = sprintf("%s?page=%s", $wp_file, $wp_page);
     $wp_url_path = sprintf("%s?page=%s&sub=%s&dir=%d", $wp_file, $wp_page, $wp_sub, $directory_id);
+    $wp_import_path = sprintf("%s?page=%s&sub=import&dir=%d", $wp_file, $wp_page, $directory_id);
 
     $published_status = '0,1';
     $emphasis_class = 's_all';
@@ -672,7 +660,6 @@ function name_directory_names()
         $table_directory_name, $directory_id, $published_status));
 
     echo '<div class="wrap">';
-    echo '<div id="icon-page" class="icon32 icon32-posts-post"><br></div>';
     echo "<h2>" . sprintf(__('Manage names for %s', 'name-directory'), $directory['name']) . "</h2>";
     ?>
 
@@ -682,18 +669,18 @@ function name_directory_names()
         <a class='s_published' href='<?php echo $wp_url_path; ?>&status=published'><?php _e('published', 'name-directory'); ?></a> |
         <a class='s_unpublished' href='<?php echo $wp_url_path; ?>&status=unpublished'><?php _e('unpublished', 'name-directory'); ?></a>
 
-        <a style='float: right'; href='<?php echo $overview_url; ?>'>
-            <?php _e('Back to the directory overview', 'name-directory'); ?>
-        </a>
+        <span style='float: right';>
+            <a href='<?php echo $overview_url; ?>'><?php _e('Back to the directory overview', 'name-directory'); ?></a>
+        </span>
     </p>
 
     <table class="wp-list-table widefat name_directory_names fixed" cellpadding="0">
         <thead>
         <tr>
-            <th width="16%"><?php echo __('Name', 'name-directory'); ?></th>
-            <th width="46%"><?php echo __('Description', 'name-directory'); ?></th>
-            <th width="13%"><?php echo __('Submitted by', 'name-directory'); ?></th>
-            <th width="10%"><?php echo __('Published', 'name-directory'); ?></th>
+            <th width="18%"><?php echo __('Name', 'name-directory'); ?></th>
+            <th width="54%"><?php echo __('Description', 'name-directory'); ?></th>
+            <th width="12%"><?php echo __('Submitter', 'name-directory'); ?></th>
+            <th width="9%"><?php echo __('Published', 'name-directory'); ?></th>
             <th width="15%"><?php echo __('Manage', 'name-directory'); ?></th>
         </tr>
         </thead>
@@ -706,20 +693,16 @@ function name_directory_names()
         }
         foreach($names as $name)
         {
-            $published = __('No', 'name-directory');
-            if($name->published == 1)
-            {
-                $published = __('Yes', 'name-directory');
-            }
-
             echo sprintf("
                 <tr>
-                    <td>%s</td><td>%s</td><td>%s</td><td>%s</td>
+                    <td>%s</td><td>%s</td><td>%s</td><td><span title='%s' class='toggle_published' id='nid_%d' data-nameid='%d'>%s</span></td>
                     <td><a class='button button-primary button-small' href='" . $wp_url_path . "&edit_name=%d#anchor_add_form'>%s</a>
                         <a class='button button-small' href='" . $wp_url_path . "&delete_name=%d'>%s</a>
                     </td>
                 </tr>",
-                $name->name, html_entity_decode(stripslashes($name->description)), $name->submitted_by, $published,
+                $name->name, html_entity_decode(stripslashes($name->description)), $name->submitted_by,
+                __('Toggle published status', 'name-directory'), $name->id,
+                $name->id, name_directory_yesno($name->published),
                 $name->id, __('Edit', 'name-directory'),
                 $name->id, __('Delete', 'name-directory'));
         }
@@ -744,9 +727,12 @@ function name_directory_names()
         $name = array();
     }
 
-    echo "<p><a style='float: right;' href='" . $overview_url . "'>"
-        . __('Back to the directory overview', 'name-directory') . "</a><br /></p>";
     ?>
+    <span style='float: right';>
+        <a href='<?php echo $overview_url; ?>'><?php _e('Back to the directory overview', 'name-directory'); ?></a>
+    </span>
+
+    <p>&nbsp;</p>
 
     <div class="updated hidden" id="add_result"></div>
 
@@ -755,7 +741,7 @@ function name_directory_names()
     <table class="wp-list-table widefat" cellpadding="0">
         <thead>
             <tr>
-                <th width="16%"><?php echo $table_heading; ?>
+                <th width="18%"><?php echo $table_heading; ?>
                     <input type="hidden" name="directory" value="<?php echo $directory_id; ?>">
                     <?php
                     if($_GET['edit_name'])
@@ -781,8 +767,8 @@ function name_directory_names()
         </thead>
         <tbody>
             <tr id="add_name">
-                <td width="16%"><?php echo __('Name', 'name-directory'); ?></td>
-                <td width="84%"><input type="text" name="name" value="<?php echo $name['name']; ?>" size="20" style="width: 100%;"></td>
+                <td width="18%"><?php echo __('Name', 'name-directory'); ?></td>
+                <td width="82%"><input type="text" name="name" value="<?php echo $name['name']; ?>" size="20" style="width: 100%;"></td>
             </tr>
             <tr id="add_description">
                 <td><?php echo __('Description', 'name-directory'); ?></td>
@@ -825,6 +811,167 @@ function name_directory_names()
     print_style();
 }
 
+/**
+ * Import names from a csv file into directory
+ */
+function name_directory_import()
+{
+    if (!current_user_can('manage_options'))
+    {
+        wp_die( __('You do not have sufficient permissions to access this page.', 'name-directory') );
+    }
+
+    global $wpdb;
+    global $table_directory;
+    global $table_directory_name;
+
+    $directory_id = intval($_GET['dir']);
+    $import_success = false;
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        $file = wp_import_handle_upload();
+
+        if( isset($file['error']))
+        {
+            echo $file['error'];
+            return;
+        }
+
+        $csv = array_map('str_getcsv', file($file['file']));
+        wp_import_cleanup($file['id']);
+        array_shift($csv);
+
+        $names_imported = 0;
+        $names_duplicate = 0;
+        foreach($csv as $entry)
+        {
+            if(! $prepared_row = name_directory_prepared_import_row($entry))
+            {
+                continue;
+            }
+
+            if(name_directory_name_exists_in_directory($prepared_row['name'], $directory_id))
+            {
+                $names_duplicate++;
+                continue;
+            }
+
+            $wpdb->insert(
+                $table_directory_name,
+                array(
+                    'directory'     => $directory_id,
+                    'name'          => stripslashes_deep($prepared_row['name']),
+                    'letter'        => name_directory_get_first_char($prepared_row['name']),
+                    'description'   => stripslashes_deep($prepared_row['description']),
+                    'published'     => $prepared_row['published'],
+                    'submitted_by'  => $prepared_row['submitted_by'],
+                ),
+                array('%d', '%s', '%s', '%s', '%d', '%s')
+            );
+
+            $names_imported++;
+        }
+
+        $notice_class = 'updated';
+        $import_success = true;
+        $import_message = sprintf(__('Imported %d entries in this directory', 'name-directory'), $names_imported);
+
+        if($names_imported === 0)
+        {
+            $notice_class = 'error';
+            $import_success = false;
+            $import_message = __('Could not import any names into Name Directory', 'name-directory');
+        }
+
+        if($names_duplicate > 0)
+        {
+            $ignored = (count($csv)==$names_duplicate)?__('all', 'name-directory'):$names_duplicate;
+            echo '<div class="error" style="border-left: 4px solid #ffba00;"><p>'
+                . sprintf(__('Ignored %s names, because they were duplicate (already in the directory)', 'name-directory'), $ignored)
+                . '</p></div>';
+        }
+        else
+        {
+            $import_message .= ', ' . __('please check your .csv-file', 'name-directory');
+        }
+
+        echo '<div class="' . $notice_class . '"><p>' . $import_message . '</p></div>';
+    }
+
+    $wp_file = admin_url('options-general.php');
+    $wp_page = $_GET['page'];
+    $wp_sub  = $_GET['sub'];
+    $overview_url = sprintf("%s?page=%s", $wp_file, $wp_page);
+    $wp_url_path = sprintf("%s?page=%s&sub=%s&dir=%d", $wp_file, $wp_page, $wp_sub, $directory_id);
+    $wp_ndir_path = sprintf("%s?page=%s&sub=%s&dir=%d", $wp_file, $wp_page, 'manage-directory', $directory_id);
+
+    $directory = $wpdb->get_row("SELECT * FROM " . $table_directory . " WHERE `id` = " . $directory_id, ARRAY_A);
+
+    echo '<div class="wrap">';
+    echo '<h2>' . sprintf(__('Import names for %s', 'name-directory'), $directory['name']) . '</h2>';
+    echo '<div class="narrow"><p>';
+    if(! $import_success && empty($names_duplicate))
+    {
+        echo __('Use the upload form below to upload a .csv-file containing all of your names (in the first column), description and submitter are optional.', 'name-directory') . ' ';
+        echo '<h4>' . __('If you saved it from Excel or OpenOffice, please ensure that:', 'name-directory') . '</h4> ';
+        echo '<ol><li>' . __('There is a header row (this contains the column names, the first row will NOT be imported)', 'name-directory');
+        echo '</li><li>' . __('Fields are encapsulated by double quotes', 'name-directory');
+        echo '</li><li>' . __('Fields are comma-separated', 'name-directory');
+        echo '</li></ol>';
+        echo '<h4>' . __('If uploading or importing fails, these are your options', 'name-directory') . ':</h4><ol><li>';
+        echo sprintf(__('Please check out %s first and ensure your file is formatted the same.', 'name-directory'),
+                '<a href="http://plugins.svn.wordpress.org/name-directory/assets/name-directory-import-example.csv" target="_blank">' .
+                __('the example import file', 'name-directory') . '</a>') . '</li>';
+        echo '<li>
+                <a href="https://wiki.openoffice.org/wiki/Documentation/OOo3_User_Guides/Calc_Guide/Saving_spreadsheets#Saving_as_a_CSV_file">OpenOffice csv-export help</a>
+              </li>
+              <li>
+                <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c?CorrelationId=fa46399d-2d7a-40bd-b0a5-27b99e96cf68&ui=en-US&rs=en-US&ad=US#bmexport">Excel csv-export help</a>
+              </li>
+              <li>
+                <a href="http://www.freefileconvert.com" target="_blank">' .
+                __('Use an online File Convertor', 'name-directory') . '</a>
+              </li><li>';
+        echo sprintf(__('If everything else fails, you can always ask a question at the %s.', 'name-directory'),
+                '<a href="https://wordpress.org/support/plugin/name-directory" target="_blank">' .
+                __('plugin support forums', 'name-directory') . '</a>') . ' ';
+        echo '</li></ol></p>';
+
+        if(! function_exists('str_getcsv'))
+        {
+            echo '<div class="error"><p>';
+            echo __('Name Directory Import requires PHP 5.3, you seem to have in older version. Importing names will not work for your website.', 'name-directory');
+            echo '</p></div>';
+        }
+
+        echo '<h3>' . __('Upload your .csv-file', 'name-directory') . '</h3>';
+        wp_import_upload_form($wp_url_path);
+    }
+    echo '</div></div>';
+    echo '<a href="' . $wp_ndir_path . '">' . sprintf(__('Back to %s', 'name-directory'), '<i>' . $directory['name'] . '</i>') . '</a>';
+    echo ' | ';
+    echo '<a href="' . $overview_url . '">' . __('Go to Name Directory Overview', 'name-directory') . '</a>';
+}
+
+
+/**
+ * Proxy for the AJAX request to switch published-statusses
+ * No params, assumes POST
+ */
+function name_directory_ajax_switch_name_published_status()
+{
+    $name_id = intval($_POST['name_id']);
+    if(! empty($name_id))
+    {
+        echo name_directory_switch_name_published_status($name_id);
+        exit;
+    }
+
+    echo 'Error!';
+    exit;
+}
+
 
 /**
  * Print the Style rules by this plugin
@@ -837,6 +984,9 @@ function print_style()
     table.name_directory_names td
     {
         border-bottom: 1px solid #F0F0F0;
+    }
+    .toggle_published:hover {
+        cursor: pointer;
     }
     </style>';
 
@@ -932,6 +1082,23 @@ function print_javascript($emphasis_class = '')
                 });
 
                 return false;
+            });
+
+            jQuery(".toggle_published").on("click", function(e)
+            {
+                name_id = jQuery(this).attr("data-nameid");
+                update_ref = jQuery(this).attr("id");
+
+                jQuery(this).html("<div class=\'spinner\' style=\'display:block;float:left;\'></div>");
+
+                jQuery.ajax({
+                    url: "admin-ajax.php",
+                    type: "POST",
+                    data: { action: "name_directory_switch_name_published_status", name_id: name_id }
+                }).done(function(status)
+                {
+                    jQuery("#" + update_ref).html(status);
+                });
             });
         });
     </script>';

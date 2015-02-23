@@ -2,7 +2,7 @@
 Contributors: jeroenpeters1986
 Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,7 @@ The administration view of this plugin has the familiar look and feel of (the re
 = Installing the plugin =
 Installation is very easy. You can just download this plugin through the Plugin Finder in your WordPress Administration Panel.
 
-If you download the zip-file, it's also very easy: 
+If you download the zip-file, installation isn't that difficult either:
 
 1. Unzip the file which results into a directory called `name-directory`
 1. Upload that directory to the `/wp-content/plugins/` directory
@@ -80,10 +80,25 @@ The `1` in this example is the internal ID of the directory, the rest of the sho
 
 Maybe, send me an email to see if we can work this out.
 
+= Is there a bulk-add or import in this plugin? =
+
+Since v1.7, yes there is! You can import a .csv-file into a directory.
+
+1. Go to the Name Directory settings page
+1. Hover over the directory you want to add to the page.
+1. A few options should show now, like Delete, Manage and Import - see screenshot for a settings-example https://ps.w.org/name-directory/assets/screenshot-2.png
+1. Click 'Import'
+1. Select your .csv-file
+1. Upload
+
+You can add names, descriptions and submitter entries, just the first column (name) is required. Good to know: the first row is always ignored (they should be headers).
+You can download an example file at http://ps.w.org/name-directory/assets/name-directory-import-example.csv
+If you need any help, contact me on the forums.
+
 = Can I make the text bigger or another color? =
 
 Yes you can, with CSS. If you know your way around CSS you might already know that you can style elements by their class name or HTML structure.
-This plugin was written with styling / CSS in mind. Using the HTML inspector of your favourite browser you should be able to discover the classnames, but here are a few popular classes.
+This plugin was written with styling / CSS in mind. Using the HTML inspector of your favourite browser you should be able to discover the classnames, but here are a few popular classes:
 
 * `.name_directory_index`: Index links (the letters A-Z)
 * `.name_directory_name_box > strong`: Name / Entry title
@@ -107,6 +122,14 @@ You can through this plugin information page or in the Support forums.
 5. Where to find the Name Directory plugin settings page
 
 == Changelog ==
+
+= 1.7 =
+ * WND-11: Import names and descriptions by csv-upload, find this option at the manage-screen
+ * WND-24: Toggle published-status for name (easily show or hide names)
+ * Name in WordPress settings menu is now "Name Directory" instead of "Name Directory Plugin"
+ * Extended FAQ
+ * Code improvements
+ * Updated Dutch Translation
 
 = 1.6.16 =
  * WND-26 & WND-28: Honour the Show Description setting in frontend
