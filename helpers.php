@@ -156,7 +156,7 @@ function get_directory_names($directory, $name_filter = array())
     }
     elseif(! empty($name_filter['containing']))
     {
-        $sql_filter .= " AND (`name` LIKE '%" . $name_filter['containing'] . "%' ";
+        $sql_filter .= " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
     }
 
 
