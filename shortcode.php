@@ -10,78 +10,6 @@ function name_directory_add_my_stylesheet()
     wp_enqueue_style('prefix-style');
 }
 
-/**
- * Get the directory with the supplied ID
- * @param $id
- * @return mixed
- */
-function get_directory_properties($id)
-{
-    global $wpdb;
-    global $table_directory;
-
-    $directory = $wpdb->get_row(sprintf("SELECT * FROM %s WHERE `id` = %d",
-        esc_sql($table_directory),
-        esc_sql($id)), ARRAY_A);
-
-    return $directory;
-}
-
-
-/**
- * Get the directory with the supplied ID
- * @param $id
- * @return mixed
- */
-function get_directory_start_characters($id)
-{
-    global $wpdb;
-    global $table_directory_name;
-
-    $characters = $wpdb->get_col(sprintf("SELECT DISTINCT `letter` FROM %s WHERE `directory` = %d",
-        esc_sql($table_directory_name),
-        esc_sql($id)));
-
-    return array_values($characters);
-}
-
-
-/**
- * Get the names of given directory, maybe only with the char?
- * @param $dir
- * @param array $name_filter
- * @return mixed
- */
-function get_directory_names($dir, $name_filter = array())
-{
-    global $wpdb;
-    global $table_directory_name;
-    $sql_filter = "";
-
-    if(! empty($name_filter['character']))
-    {
-        $sql_filter .= " AND `letter`='" . $name_filter['character'] . "' ";
-    }
-    if(! empty($name_filter['containing']))
-    {
-        $sql_filter .= " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
-    }
-
-    $names = $wpdb->get_results(sprintf("
-		SELECT * 
-		FROM %s 
-		WHERE `directory` = %d AND `published` = 1
-		%s 
-		ORDER BY `letter`, `name` ASC",
-        esc_sql($table_directory_name),
-        esc_sql($dir),
-        $sql_filter),
-        ARRAY_A
-    );
-
-    return $names;
-}
-
 
 /**
  * Show and handle the submission form
@@ -189,33 +117,7 @@ HTML;
 }
 
 
-/**
- * Construct a plugin URL
- * @param string $index
- * @param null $exclude
- * @return string
- */
-function name_directory_make_plugin_url($index = 'name_directory_startswith', $exclude = null)
-{
-    $parsed = parse_url($_SERVER['REQUEST_URI']);
-    parse_str($parsed['query'], $url);
 
-    if(! empty($exclude))
-    {
-        unset($url[$exclude]);
-    }
-
-    unset($url[$index]);
-    unset($url['page_id']);
-    $paste_char = '?';
-    if(strpos(get_permalink(), '?') !== false)
-    {
-        $paste_char = '&';
-    }
-    $url[$index] = '';
-
-    return get_permalink() . $paste_char . http_build_query($url);
-}
 
 
 /**
@@ -252,7 +154,7 @@ function show_directory($attributes)
 
     $letter_url = name_directory_make_plugin_url('name_directory_startswith', 'name-directory-search-value');
     $directory = get_directory_properties($dir);
-    $names = get_directory_names($dir, $name_filter);
+    $names = get_directory_names($directory, $name_filter);
     $num_names = count($names);
 
     if(isset($_GET['show_submitform']))

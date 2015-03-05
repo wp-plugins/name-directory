@@ -123,6 +123,11 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.7.1 =
+ * Added Norwegian translation thanks to Mikael
+ * WND-31: Search for searchterm in description (but only if show_description is enabled)
+ * Moved common code to helpers, preparing for better code
+
 = 1.7 =
  * WND-11: Import names and descriptions by csv-upload, find this option at the manage-screen
  * WND-24: Toggle published-status for name (easily show or hide names)
