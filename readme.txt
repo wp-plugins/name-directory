@@ -123,6 +123,10 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.7.2 =
+ * WND-32: Show X latest (most recent) names
+ * Updated Dutch Translation
+
 = 1.7.1 =
  * Added Norwegian translation thanks to Mikael
  * WND-31: Search for searchterm in description (but only if show_description is enabled)

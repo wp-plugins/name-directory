@@ -129,6 +129,7 @@ function show_directory($attributes)
 {
     $dir = null;
     $show_all_link = '';
+    $show_latest_link = '';
     extract(shortcode_atts(
         array('dir' => '1'),
         $attributes
@@ -145,6 +146,7 @@ function show_directory($attributes)
     }
 
     $str_all = __('All', 'name-directory');
+    $str_latest = __('Latest', 'name-directory');
     $search_value = '';
     if(! empty($_GET['name-directory-search-value']))
     {
@@ -174,9 +176,15 @@ function show_directory($attributes)
         $show_all_link = '<a class="name_directory_startswith" href="' . $letter_url . '">' . $str_all . '</a> |';
     }
 
+    if(! empty($directory['nr_most_recent']))
+    {
+        $show_latest_link = ' <a class="name_directory_startswith" href="' . $letter_url . 'latest">' . $str_latest . '</a> |';
+    }
+
     /* Prepare and print the index-letters */
     echo '<div class="name_directory_index">';
     echo $show_all_link;
+    echo $show_latest_link;
 
     $index_letters = range('A', 'Z');
     array_unshift($index_letters, '#');
@@ -228,6 +236,10 @@ function show_directory($attributes)
     {
         echo sprintf(__('There are %d names in this directory containing the searchterm %s.', 'name-directory'), $num_names, "<i>" . $search_value . "</i>");
         echo " <a href='" . get_permalink() . "'><small>" . __('Clear results', 'name-directory') . "</small></a>.<br />";
+    }
+    else if($name_filter['character'] == 'latest')
+    {
+        echo sprintf(__('Showing %d most recent names in this directory', 'name-directory'), $num_names);
     }
     else
     {

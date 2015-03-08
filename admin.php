@@ -102,6 +102,7 @@ function show_list()
                 'show_all_names_on_index' => $_POST['show_all_names_on_index'],
                 'show_all_index_letters'  => $_POST['show_all_index_letters'],
                 'nr_columns'            => $_POST['nr_columns'],
+                'nr_most_recent'        => intval($_POST['nr_most_recent']),
             ),
             array('id' => intval($_POST['dir_id']))
         );
@@ -128,8 +129,9 @@ function show_list()
                 'show_all_names_on_index' => $_POST['show_all_names_on_index'],
                 'show_all_index_letters'  => $_POST['show_all_index_letters'],
                 'nr_columns'            => $_POST['nr_columns'],
+                'nr_most_recent'        => $_POST['nr_most_recent'],
             ),
-            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d')
+            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d')
         );
 
         echo "<div class='updated'><p>"
@@ -489,6 +491,29 @@ function name_directory_edit($mode = 'edit')
                             }?> />
                         &nbsp;<?php echo __('No', 'name-directory') ?>
                     </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?php echo __('Show most recent names', 'name-directory'); ?>
+                    <br />
+                    <small><?php echo __('If No, frontend will not show \'Latest\' option.', 'name-directory'); ?></small>
+                </td>
+                <td>
+                    <select name="nr_most_recent">
+                        <?php
+                        $options_latest = array(__('No', 'name-directory'), 3, 5, 10, 25, 50, 100);
+                        foreach($options_latest as $num_latest)
+                        {
+                            $selected = null;
+                            if(! empty($directory['nr_most_recent']) && $num_latest == $directory['nr_most_recent'])
+                            {
+                                $selected = " selected";
+                            }
+                            echo "<option value='" . $num_latest . "'" . $selected . ">" . $num_latest . "</option>";
+                        }
+                        ?>
+                    </select>
                 </td>
             </tr>
             <tr>

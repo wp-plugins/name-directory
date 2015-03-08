@@ -144,6 +144,7 @@ function get_directory_names($directory, $name_filter = array())
     global $wpdb;
     global $table_directory_name;
     $sql_filter = "";
+    $limit = "";
 
     if(! empty($name_filter['character']))
     {
@@ -159,16 +160,23 @@ function get_directory_names($directory, $name_filter = array())
         $sql_filter .= " AND `name` LIKE '%" . $name_filter['containing'] . "%' ";
     }
 
+    if(! empty($name_filter['character']) && $name_filter['character'] == 'latest')
+    {
+        $sql_filter = "";
+        $limit = " LIMIT " . $directory['nr_most_recent'];
+    }
+
 
     $names = $wpdb->get_results(sprintf("
 		SELECT *
 		FROM %s
 		WHERE `directory` = %d AND `published` = 1
 		%s
-		ORDER BY `letter`, `name` ASC",
+		ORDER BY `letter`, `name` ASC %s",
         esc_sql($table_directory_name),
         esc_sql($directory['id']),
-        $sql_filter),
+        $sql_filter,
+        $limit),
         ARRAY_A
     );
 

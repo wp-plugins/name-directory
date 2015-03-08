@@ -31,6 +31,7 @@ function name_directory_install_list()
                 show_all_names_on_index BOOLEAN NULL DEFAULT 1,
                 show_all_index_letters BOOLEAN NULL DEFAULT 1,
                 nr_columns INT( 1 ) NULL,
+                nr_most_recent INT(5) NULL DEFAULT 0,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id),
                 PRIMARY KEY (id)
@@ -52,6 +53,7 @@ function name_directory_install_list()
                 show_all_names_on_index BOOLEAN NULL DEFAULT 1,
                 show_all_index_letters BOOLEAN NULL DEFAULT 1,
                 nr_columns INT( 1 ) NULL,
+                nr_most_recent INT(5) NULL DEFAULT 0,
                 description TEXT NOT NULL,
                 UNIQUE KEY id (id),
                 PRIMARY KEY (id)
@@ -131,6 +133,7 @@ function name_directory_install_data()
             'show_line_between_names'   => 1,
             'show_search_form'          => 1,
             'show_all_names_on_index'   => 1,
+            'nr_most_recent'            => 0,
             'description'               => 'Cool budgie names'
         ));
         $wpdb->insert($table_directory_name, array(
