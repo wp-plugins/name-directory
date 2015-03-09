@@ -1,13 +1,13 @@
-# Copyright (C) 2013 
-# This file is distributed under the same license as the  package.
+# French translation by Patrick BARDET (http://www.web-studio-creation.fr)
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
 "POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
-"PO-Revision-Date: 2015-03-09 05:50+0100\n"
+"PO-Revision-Date: 2015-03-09 05:58+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Patrick BARDET (http://www.web-studio-creation.fr) <LL@li."
+"org>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
