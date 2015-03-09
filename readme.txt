@@ -123,6 +123,10 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.7.3 =
+ * Ordering enhancements
+ * Generated new .pot file and synced all .po files
+
 = 1.7.2 =
  * WND-32: Show X latest (most recent) names
  * Updated Dutch Translation

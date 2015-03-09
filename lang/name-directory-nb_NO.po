@@ -4,27 +4,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Name Directory 1.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
-"POT-Creation-Date: 2015-02-22 16:40:27+00:00\n"
+"POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
+"PO-Revision-Date: 2015-03-09 05:51+0100\n"
+"Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
+"Language-Team: Mikael <mikael.lovik@gmail.com>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-03-02 15:01+0100\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Mikael <mikael.lovik@gmail.com>\n"
-"Language-Team: Mikael <mikael.lovik@gmail.com>\n"
-"Language: nb\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: admin.php:13
 msgid "Name Directory Options"
 msgstr "Alternativer for navnemappe"
 
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin.php:14
 msgid "Name Directory"
 msgstr "Navnemappe"
 
-#: admin.php:27 admin.php:263 admin.php:542 admin.php:825
+#: admin.php:27 admin.php:265 admin.php:567 admin.php:846
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Du har ikke tilstrekkelig tillatelser til å aksessere denne siden."
 
@@ -40,103 +41,103 @@ msgstr "Navnemappe administrering"
 msgid "Add directory"
 msgstr "Legg til mappe"
 
-#: admin.php:110
+#: admin.php:111
 msgid "Directory %s updated."
 msgstr "Mappe %s er oppdatert."
 
-#: admin.php:136
+#: admin.php:138
 msgid "Directory %s created."
 msgstr "Mappe %s er opprettet."
 
-#: admin.php:142
+#: admin.php:144
 msgid "name directory"
 msgstr "navnemappe"
 
-#: admin.php:142
+#: admin.php:144
 msgid "name directories"
 msgstr "navnemapper"
 
-#: admin.php:145
+#: admin.php:147
 msgid "You currently have %d %s."
 msgstr "Du har for øyeblikket %d %s."
 
-#: admin.php:154 admin.php:166 admin.php:311
+#: admin.php:156 admin.php:168 admin.php:313
 msgid "Title"
 msgstr "Tittel"
 
-#: admin.php:156 admin.php:168
+#: admin.php:158 admin.php:170
 msgid "Entries"
 msgstr "Oppføringer"
 
-#: admin.php:157 admin.php:169 admin.php:685 admin.php:784
+#: admin.php:159 admin.php:171 admin.php:708 admin.php:805
 msgid "Published"
 msgstr "Publisert"
 
-#: admin.php:158 admin.php:170
+#: admin.php:160 admin.php:172
 msgid "Unpublished"
 msgstr "Ikke publisert"
 
-#: admin.php:206
+#: admin.php:208
 msgid "Add, edit and remove names"
 msgstr "Legg til, endre og fjerne navn"
 
-#: admin.php:206
+#: admin.php:208
 msgid "Manage names"
 msgstr "Administrer navn"
 
-#: admin.php:207
+#: admin.php:209
 msgid "Go to the add-name-form on the Manage page"
 msgstr "Gå til add-name-form i administrasjonssiden"
 
-#: admin.php:207 admin.php:728
+#: admin.php:209 admin.php:751
 msgid "Add name"
 msgstr "Legg til navn"
 
-#: admin.php:208
+#: admin.php:210
 msgid "Edit name, description and appearance settings"
 msgstr "Endre navn, beskrivelse og utseendeinnstillinger"
 
-#: admin.php:208
+#: admin.php:210
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: admin.php:209
+#: admin.php:211
 msgid "Import entries for this directory by uploading a .csv file"
 msgstr "Importer elementer i denne mappen ved å laste opp en .csv-fil"
 
-#: admin.php:209
+#: admin.php:211
 msgid "Import"
 msgstr "Importer"
 
-#: admin.php:210
+#: admin.php:212
 msgid "Show the copy-paste shortcode for this directory"
 msgstr "Vis klipp-og-lim shortcode for denne mappen"
 
-#: admin.php:210
+#: admin.php:212
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: admin.php:211
+#: admin.php:213
 msgid "Permanently remove this name directory"
 msgstr "Permanent slett denne navnemappen"
 
-#: admin.php:211 admin.php:709
+#: admin.php:213 admin.php:732
 msgid "Delete"
 msgstr "Slett"
 
-#: admin.php:213
+#: admin.php:215
 msgid "Number of names in this directory"
 msgstr "Antall oppføringer in denne mappen"
 
-#: admin.php:229
+#: admin.php:231
 msgid "To show your directory on your website, use the shortcode on the right."
 msgstr "For å vise mappen på din hjemmeside, bruk shortcode'n til høyre."
 
-#: admin.php:230
+#: admin.php:232
 msgid "Copy the code and paste it in a post or in a page."
 msgstr "Kopier koden og lim den inn i en post eller en side."
 
-#: admin.php:231
+#: admin.php:233
 msgid ""
 "If you want to start with a specific character, like \"J\", use "
 "[namedirectory dir=\"X\" start_with=\"j\"]."
@@ -144,236 +145,242 @@ msgstr ""
 "Om du vil starte med en bestemt bokstav, for eksempel \"J\", bruk "
 "[namedirectory dir=\"X\" start_with=\"j\"]."
 
-#: admin.php:281 admin.php:283
+#: admin.php:283 admin.php:285
 msgid "Create new name directory"
 msgstr "Lag en ny navnemappe"
 
-#: admin.php:282
+#: admin.php:284
 msgid "Create"
 msgstr "Opprett"
 
-#: admin.php:284
+#: admin.php:286
 msgid "Complete the form below to create a new name directory."
 msgstr "Fyll ut skjemaet under for å lage en ny navnemappe"
 
-#: admin.php:288
+#: admin.php:290
 msgid "Edit this directory"
 msgstr "Endre denne mappen"
 
-#: admin.php:289
+#: admin.php:291
 msgid "Save Changes"
 msgstr "Lagre endringer"
 
-#: admin.php:290
+#: admin.php:292
 msgid "Edit name directory"
 msgstr "Endre navnemappe"
 
-#: admin.php:292
+#: admin.php:294
 msgid "You are editing the name, description and settings of directory %s"
 msgstr "Du endrer navnet, beskrivelsen og innstillengene til mappe %s"
 
-#: admin.php:295 admin.php:675 admin.php:736
+#: admin.php:297 admin.php:698 admin.php:757
 msgid "Back to the directory overview"
 msgstr "Tilbake til oversikten over mappene"
 
-#: admin.php:315 admin.php:683 admin.php:778 shortcode.php:99
+#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: admin.php:319
+#: admin.php:321
 msgid "Show title"
 msgstr "Vis tittel"
 
-#: admin.php:323 admin.php:344 admin.php:365 admin.php:386 admin.php:407
-#: admin.php:428 admin.php:453 admin.php:478 admin.php:787 helpers.php:63
+#: admin.php:325 admin.php:346 admin.php:367 admin.php:388 admin.php:409
+#: admin.php:430 admin.php:455 admin.php:480 admin.php:808 helpers.php:63
 msgid "Yes"
 msgstr "Ja"
 
-#: admin.php:335 admin.php:356 admin.php:377 admin.php:398 admin.php:419
-#: admin.php:440 admin.php:465 admin.php:490 admin.php:795 helpers.php:66
+#: admin.php:337 admin.php:358 admin.php:379 admin.php:400 admin.php:421
+#: admin.php:442 admin.php:467 admin.php:492 admin.php:505 admin.php:816
+#: helpers.php:66
 msgid "No"
 msgstr "Nei"
 
-#: admin.php:340
+#: admin.php:342
 msgid "Show description"
 msgstr "Vis beskrivelse"
 
-#: admin.php:361
+#: admin.php:363
 msgid "Submit form"
 msgstr "Forslagsskjema"
 
-#: admin.php:382
+#: admin.php:384
 msgid "Submitter name"
 msgstr "Forfatternavn"
 
-#: admin.php:403
+#: admin.php:405
 msgid "Show line between names"
 msgstr "Vis en linje mellom navnene"
 
-#: admin.php:424
+#: admin.php:426
 msgid "Show search form"
 msgstr "Vis søkefelt"
 
-#: admin.php:446
+#: admin.php:448
 msgid "Show all names by default"
 msgstr "Vis alle navn som standard"
 
-#: admin.php:448
+#: admin.php:450
 msgid "If no, user HAS to use the index before entries are shown"
 msgstr "Om nei, MÅ brukeren bruke innholdsfortegnelsen før elementer blir vist"
 
-#: admin.php:471
+#: admin.php:473
 msgid "Show all letters on index"
 msgstr "Vis alle bokstaver i innholdsfortegnelsen"
 
-#: admin.php:473
+#: admin.php:475
 msgid "If no, just A B D E are shown if there are no entries starting with C"
 msgstr ""
 "Om nei, vil bare A B D E bli vist om det ikke er noen elementer som begynner "
 "med C"
 
-#: admin.php:495
+#: admin.php:498
+msgid "Show most recent names"
+msgstr ""
+
+#: admin.php:500
+msgid "If No, frontend will not show 'Latest' option."
+msgstr ""
+
+#: admin.php:520
 msgid "Number of columns"
 msgstr "Antall kolonner"
 
-#: admin.php:519
+#: admin.php:544
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: admin.php:554
+#: admin.php:579
 msgid "Name %s deleted"
 msgstr "Navn %s ble fjernet"
 
-#: admin.php:574 admin.php:580
+#: admin.php:599 admin.php:605
 msgid "Name %s updated"
 msgstr "Navn %s ble oppdatert"
 
-#: admin.php:591
+#: admin.php:616
 msgid "Name %s was already on the list, so it was not added"
 msgstr "Navn %s var allerede i lista, så det bli ikke lagt til"
 
-#: admin.php:613 admin.php:620
+#: admin.php:638 admin.php:645
 msgid "New name %s added"
 msgstr "Nytt navn %s er lagt til"
 
-#: admin.php:614
+#: admin.php:639
 msgid "Will be visible when the page is refreshed."
 msgstr "Det vil bli synlig når siden blir oppdatert."
 
-#: admin.php:627 admin.php:632 shortcode.php:151
+#: admin.php:652 admin.php:657 shortcode.php:79
 msgid "Please fill in at least a name"
 msgstr "Vennligst skriv inn minst et navn"
 
-#: admin.php:663
+#: admin.php:688
 msgid "Manage names for %s"
 msgstr "Administrer navn for %s"
 
-#: admin.php:668 admin.php:893
+#: admin.php:693 admin.php:914
 msgid "all"
 msgstr "alt"
 
-#: admin.php:669
+#: admin.php:694
 msgid "published"
 msgstr "publisert"
 
-#: admin.php:670
+#: admin.php:695
 msgid "unpublished"
 msgstr "ikke publisert"
 
-#: admin.php:673 admin.php:734
-msgid "Import names"
-msgstr "Importer navn"
-
-#: admin.php:682 admin.php:774 shortcode.php:97
+#: admin.php:705 admin.php:795 shortcode.php:25
 msgid "Name"
 msgstr "Navn"
 
-#: admin.php:684
+#: admin.php:707
 msgid "Submitter"
 msgstr "Forfatter"
 
-#: admin.php:686
+#: admin.php:709
 msgid "Manage"
 msgstr "Administrer"
 
-#: admin.php:694
+#: admin.php:717
 msgid "Currently, there are no names in this directory.."
 msgstr "Det er ingen navn i denne mappen.."
 
-#: admin.php:706
+#: admin.php:729
 msgid "Toggle published status"
 msgstr "Skifte mellom publiseringsstatus"
 
-#: admin.php:708
+#: admin.php:731
 msgid "Edit"
 msgstr "Rediger"
 
-#: admin.php:722
+#: admin.php:745
 msgid "Edit a name"
 msgstr "Rediger et navn"
 
-#: admin.php:723
+#: admin.php:746
 msgid "Save name"
 msgstr "Lagre navn"
 
-#: admin.php:727
+#: admin.php:750
 msgid "Add a new name"
 msgstr "Legg til et nytt navn"
 
-#: admin.php:760
+#: admin.php:781
 msgid "Show the compact form, showing only the name, always published)"
 msgstr "Vis kompakt skjema, bare navn er synlig, alltid publisert)"
 
-#: admin.php:762
+#: admin.php:783
 msgid "Quick add view"
 msgstr "Enkel visning"
 
-#: admin.php:764
+#: admin.php:785
 msgid ""
 "Show the full form, which allows you to enter a description and submitter"
 msgstr ""
 "Vis hele skjemaet, som gjør at du kan legge inn beskrivelse og forfatter"
 
-#: admin.php:766
+#: admin.php:787
 msgid "Full add view"
 msgstr "Full visning"
 
-#: admin.php:780
+#: admin.php:801
 msgid "Please be careful!"
 msgstr "Vennligst vær forsiktig!"
 
-#: admin.php:781
+#: admin.php:802
 msgid ""
 "HTML markup is allowed and will we printed on your website and in the "
 "Wordpress admin."
 msgstr ""
 "HTML markering er tillatt og vil komme på ditt nettsted og i Wordpress admin"
 
-#: admin.php:799
+#: admin.php:820
 msgid "Submitted by"
 msgstr "Lagt til av"
 
-#: admin.php:882
+#: admin.php:903
 msgid "Imported %d entries in this directory"
 msgstr "Importerte %d elementer i denne mappen"
 
-#: admin.php:888
+#: admin.php:909
 msgid "Could not import any names into Name Directory"
 msgstr "Kunne ikke importere noen navn i navnemappen"
 
-#: admin.php:895
-msgid "Ignored %s names, because they were duplicate (already in the directory)"
+#: admin.php:916
+msgid ""
+"Ignored %s names, because they were duplicate (already in the directory)"
 msgstr "Ignorerte %s navn, fordi de var duplikater (allerede i mappen)"
 
-#: admin.php:900
+#: admin.php:921
 msgid "please check your .csv-file"
 msgstr "vennligst kontroller din .csv-fil"
 
-#: admin.php:916
+#: admin.php:937
 msgid "Import names for %s"
 msgstr "Importer navn for %s"
 
-#: admin.php:920
+#: admin.php:941
 msgid ""
 "Use the upload form below to upload a .csv-file containing all of your names "
 "(in the first column), description and submitter are optional."
@@ -381,53 +388,53 @@ msgstr ""
 "Bruk opplastingsskjema nedenfor til å importere en .csv-fil som inneholder "
 "alle navnene (i den første kolonnen), beskrivelse og forfatter er valgfrie."
 
-#: admin.php:921
+#: admin.php:942
 msgid "If you saved it from Excel or OpenOffice, please ensure that:"
 msgstr "Om du lagret den fra Excel eller OpenOffice, vennligst pass på at:"
 
-#: admin.php:922
+#: admin.php:943
 msgid ""
-"There is a header row (this contains the column names, the first row will NOT "
-"be imported)"
+"There is a header row (this contains the column names, the first row will "
+"NOT be imported)"
 msgstr ""
 "Det er en header-rad (denne inneholder kolonnenavnene, den første raden vil "
 "IKKE bli importert)"
 
-#: admin.php:923
+#: admin.php:944
 msgid "Fields are encapsulated by double quotes"
 msgstr "Feltene er omsluttet av doble apostrofer"
 
-#: admin.php:924
+#: admin.php:945
 msgid "Fields are comma-separated"
 msgstr "Feltene er komma-separerte"
 
-#: admin.php:926
+#: admin.php:947
 msgid "If uploading or importing fails, these are your options"
 msgstr "Om opplasting eller importering feiler, er dette dine alternativer"
 
-#: admin.php:927
+#: admin.php:948
 msgid "Please check out %s first and ensure your file is formatted the same."
 msgstr ""
 "Vennligst se på %s først og forsikre deg om at din fil er formatert på samme "
 "måte."
 
-#: admin.php:929
+#: admin.php:950
 msgid "the example import file"
 msgstr "eksempelfilen for import"
 
-#: admin.php:938
+#: admin.php:959
 msgid "Use an online File Convertor"
 msgstr "Bruk en online filkonverterer"
 
-#: admin.php:940
+#: admin.php:961
 msgid "If everything else fails, you can always ask a question at the %s."
 msgstr "Om alt annet feiler, kan du alltid stille et spørsmål i %s."
 
-#: admin.php:942
+#: admin.php:963
 msgid "plugin support forums"
 msgstr "plugin brukerstøtteforumene"
 
-#: admin.php:948
+#: admin.php:969
 msgid ""
 "Name Directory Import requires PHP 5.3, you seem to have in older version. "
 "Importing names will not work for your website."
@@ -435,94 +442,104 @@ msgstr ""
 "Navnemappe importering krever PHP 5.3, det virker som du har en eldre "
 "versjon. Det fungerer ikke å importere navn for ditt nettsted."
 
-#: admin.php:952
+#: admin.php:973
 msgid "Upload your .csv-file"
 msgstr "Last opp din .csv-fil"
 
-#: admin.php:956
+#: admin.php:977
 msgid "Back to %s"
 msgstr "Tilbake til %s"
 
-#: admin.php:958
+#: admin.php:979
 msgid "Go to Name Directory Overview"
 msgstr "Gå til oversikten over navnemapper"
 
-#: shortcode.php:98
+#: shortcode.php:26
 msgid "Required"
 msgstr "Obligatorisk"
 
-#: shortcode.php:100
+#: shortcode.php:28
 msgid "Your name"
 msgstr "Ditt navn"
 
-#: shortcode.php:101
+#: shortcode.php:29
 msgid "Submit"
 msgstr "Legg til"
 
-#: shortcode.php:102
+#: shortcode.php:30
 msgid "Back to name directory"
 msgstr "Tilbake til navnemappe"
 
-#: shortcode.php:118
+#: shortcode.php:46
 msgid "Sorry, %s was already on the list so your submission was not sent."
 msgstr ""
 "Beklager, %s var allerede i listen, så din innsendelse ble ikke sent inn."
 
-#: shortcode.php:139
+#: shortcode.php:67
 msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr "Takk for din innsendelse! Den vil bli gjennomgått snarlig. "
 
-#: shortcode.php:144
+#: shortcode.php:72
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr "Noe må ha gått forferdelig galt. Kan du vennligst forsøke en gang til?"
 
-#: shortcode.php:245
+#: shortcode.php:148
 msgid "All"
 msgstr "Alt"
 
-#: shortcode.php:295 shortcode.php:398
+#: shortcode.php:149
+msgid "Latest"
+msgstr ""
+
+#: shortcode.php:205 shortcode.php:312
 msgid "Submit a name"
 msgstr "Legg til navn"
 
-#: shortcode.php:314
+#: shortcode.php:224
 msgid "Search for..."
 msgstr "Søk etter ..."
 
-#: shortcode.php:315
+#: shortcode.php:225
 msgid "Search"
 msgstr "Søk"
 
-#: shortcode.php:323
+#: shortcode.php:233
 msgid "There are currently %d names in this directory"
 msgstr "Det er for øyeblikket %d navn i denne mappen"
 
-#: shortcode.php:327
+#: shortcode.php:237
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr "Det er %d navn i denne mappen som inneholder søkeordet %s."
 
-#: shortcode.php:328
+#: shortcode.php:238
 msgid "Clear results"
 msgstr "Fjern resultater"
 
-#: shortcode.php:332
+#: shortcode.php:242
+msgid "Showing %d most recent names in this directory"
+msgstr ""
+
+#: shortcode.php:246
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr "Det er %d navn i denne mappen som begynner med bokstaven %s."
 
-#: shortcode.php:339
+#: shortcode.php:253
 msgid "There are no names in this directory at the moment"
 msgstr "Det er ingen navn i denne mappen for øyeblikket."
 
-#: shortcode.php:343
+#: shortcode.php:257
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 "Vennligst velg en bokstav fra innholdsfortegnelsen (over) for å se "
 "oppføringene"
 
-#: shortcode.php:368
+#: shortcode.php:282
 msgid "Submitted by:"
 msgstr "Lagt til av:"
 
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7.2)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
+#. #-#-#-#-#  name-directory.pot (Name Directory 1.7.2)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://www.jeroen.in"
 msgstr ""
@@ -532,9 +549,12 @@ msgid ""
 "A Name Directory, i.e. for animal names. Visitors can add, search or just "
 "browse all names."
 msgstr ""
-"En navnemappe, for eksempel til dyrenavn. Besøkende kan legge til, søke eller "
-"bla gjennom alle navnene."
+"En navnemappe, for eksempel til dyrenavn. Besøkende kan legge til, søke "
+"eller bla gjennom alle navnene."
 
 #. Author of the plugin/theme
 msgid "Jeroen Peters"
 msgstr ""
+
+#~ msgid "Import names"
+#~ msgstr "Importer navn"

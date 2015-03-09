@@ -145,6 +145,7 @@ function get_directory_names($directory, $name_filter = array())
     global $table_directory_name;
     $sql_filter = "";
     $limit = "";
+    $order_by = "ORDER BY `letter`, `name` ASC";
 
     if(! empty($name_filter['character']))
     {
@@ -163,6 +164,7 @@ function get_directory_names($directory, $name_filter = array())
     if(! empty($name_filter['character']) && $name_filter['character'] == 'latest')
     {
         $sql_filter = "";
+        $order_by = "ORDER BY `id` DESC";
         $limit = " LIMIT " . $directory['nr_most_recent'];
     }
 
@@ -172,10 +174,11 @@ function get_directory_names($directory, $name_filter = array())
 		FROM %s
 		WHERE `directory` = %d AND `published` = 1
 		%s
-		ORDER BY `letter`, `name` ASC %s",
+		%s %s",
         esc_sql($table_directory_name),
         esc_sql($directory['id']),
         $sql_filter,
+        $order_by,
         $limit),
         ARRAY_A
     );
