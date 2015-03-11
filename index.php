@@ -3,7 +3,7 @@
  * Plugin Name: Name Directory
  * Plugin URI: http://www.jeroen.in
  * Description: A Name Directory, i.e. for animal names. Visitors can add, search or just browse all names.
- * Version: 1.7.2
+ * Version: 1.7.4
  * Author: Jeroen Peters
  * Author URI: http://www.jeroen.in
  * Text Domain: name-directory

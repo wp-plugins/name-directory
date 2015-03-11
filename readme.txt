@@ -1,12 +1,12 @@
 === Plugin Name ===
 Contributors: jeroenpeters1986
-Tags: glossary, index, name, directory, names
 Requires at least: 3.0.1
 Tested up to: 4.1.1
 Stable tag: "trunk"
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T284NKYDFC8PE&lc=US&item_name=wordpress%2dplugin&item_number=name%2ddirectory&currency_code=USD
+Tags: glossary, index, name, directory, names, NameDirectory, Name Directory, telephonebook, glossaries, directories, dictionary, dictorionaries
 
 Name directory (glossary) with lots of options. Very easy to add to your site with a simple shortcode. It can have multiple directories.
 
@@ -14,7 +14,7 @@ Name directory (glossary) with lots of options. Very easy to add to your site wi
 
 This plugin adds name/term directories to your WordPress installation. They are like glossaries. The output on your website is like a glossary/index. I recommend you to take a look at the screenshots, they illustrate more than words.
 
-The Name Directory plugin was orginally developed for ParkietenVilla.nl to show a directory of names to name your budgies.
+The Name Directory plugin was orginally developed for [ParkietenVilla.nl](http://www.parkietenvilla.nl/namenlijst/) to show a directory of names to name your budgies.
 
 A name directory is a directory that contains entries with the following properties:
 
@@ -28,12 +28,22 @@ You can create multiple directories with this plugin. Every directory can be emb
  - Show/Hide description
  - Show/Hide suggestion form
  - Show/Hide submitter name
- - Show/Hide search function
+ - Show/Hide search function (searches names/titles and description)
  - Show/Hide a horizontal rule between the entries
  - Show/Hide all entries when the user has not chosen an index-letter yet
+ - Show/Hide the newest entries (and choose an amount of newest entries to show)
  - When you embed a directory, you can configure it to start with a letter of your choosing. E.g.: start on letter J.
 
 The administration view of this plugin has the familiar look and feel of (the rest of) the WordPress Administration panel. I have done my best to enable some AJAX-features in the administration panel, so you can work efficiently while adding new entries.
+
+Also featured since v1.7: .CSV-file import functionality
+
+Current supported languages:
+ - English
+ - Dutch
+ - French
+ - Russian
+ - Norwegian
 
 == Installation ==
 
@@ -122,6 +132,10 @@ You can through this plugin information page or in the Support forums.
 5. Where to find the Name Directory plugin settings page
 
 == Changelog ==
+
+= 1.7.4 =
+ * WND-25: Send e-mailnotification to WordPress admin when a new name is submitted
+ * Generated new .pot file and synced all .po files
 
 = 1.7.3 =
  * Ordering enhancements

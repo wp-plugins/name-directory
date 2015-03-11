@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
-"POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
-"PO-Revision-Date: 2015-03-09 05:58+0100\n"
+"POT-Creation-Date: 2015-03-10 23:48:10+00:00\n"
+"PO-Revision-Date: 2015-03-11 00:50+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
 "Language-Team: Patrick BARDET (http://www.web-studio-creation.fr) <LL@li."
 "org>\n"
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Back to the directory overview"
 msgstr "Retour à la liste des annuaires"
 
-#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27
+#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27 shortcode.php:75
 msgid "Description"
 msgstr "Description"
 
@@ -274,7 +274,7 @@ msgstr "Le nouvel annuaire %s a été ajouté"
 msgid "Will be visible when the page is refreshed."
 msgstr "sera visible quand la page sera rafraichie."
 
-#: admin.php:652 admin.php:657 shortcode.php:79
+#: admin.php:652 admin.php:657 shortcode.php:92
 msgid "Please fill in at least a name"
 msgstr "Entrez au moins le nom"
 
@@ -294,7 +294,7 @@ msgstr "publié"
 msgid "unpublished"
 msgstr "non publié"
 
-#: admin.php:705 admin.php:795 shortcode.php:25
+#: admin.php:705 admin.php:795 shortcode.php:25 shortcode.php:74
 msgid "Name"
 msgstr "Entrée"
 
@@ -362,7 +362,7 @@ msgstr ""
 "Les balises HTML sont autorisées et seront prises en compte côté front-"
 "office et back-office"
 
-#: admin.php:820
+#: admin.php:820 shortcode.php:76
 msgid "Submitted by"
 msgstr "Soumis par"
 
@@ -480,61 +480,82 @@ msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr ""
 "Merci pour votre soumission. Votre demande sera traitée très prochainment."
 
+#: shortcode.php:71
+msgid "New submission for Name Directory"
+msgstr ""
+
 #: shortcode.php:72
+msgid "Howdy,"
+msgstr ""
+
+#: shortcode.php:73
+msgid "There was a new submission to the Name Directory on %s at %s"
+msgstr ""
+
+#: shortcode.php:77
+msgid "This new submission does not have the published status."
+msgstr ""
+
+#: shortcode.php:78
+msgid ""
+"Please login to your WordPress admin to review and accept the submission."
+msgstr ""
+
+#: shortcode.php:85
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr "Erreur !! Merdi de réessayer."
 
-#: shortcode.php:148
+#: shortcode.php:161
 msgid "All"
 msgstr "Tout"
 
-#: shortcode.php:149
+#: shortcode.php:162
 msgid "Latest"
 msgstr "Le plus récent"
 
-#: shortcode.php:205 shortcode.php:312
+#: shortcode.php:218 shortcode.php:325
 msgid "Submit a name"
 msgstr "Soumettre une entrée"
 
-#: shortcode.php:224
+#: shortcode.php:237
 msgid "Search for..."
 msgstr "Recherche pour..."
 
-#: shortcode.php:225
+#: shortcode.php:238
 msgid "Search"
 msgstr "Recherche"
 
-#: shortcode.php:233
+#: shortcode.php:246
 msgid "There are currently %d names in this directory"
 msgstr "Il y a %s entrée(s) dans cet annuaire"
 
-#: shortcode.php:237
+#: shortcode.php:250
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr "Il y a %d entrée(s) contenant %s dans cet annuaire."
 
-#: shortcode.php:238
+#: shortcode.php:251
 msgid "Clear results"
 msgstr "Effacer les résultats"
 
-#: shortcode.php:242
+#: shortcode.php:255
 msgid "Showing %d most recent names in this directory"
 msgstr "Affichage %s entrée(s) les plus récentes dans cet annuaire"
 
-#: shortcode.php:246
+#: shortcode.php:259
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr "Il y a %d entrée(s) commençant par la lettre %s dans cet annuaire "
 
-#: shortcode.php:253
+#: shortcode.php:266
 msgid "There are no names in this directory at the moment"
 msgstr "Il n'y a aucune entrée dans cet annuaire pour le moment."
 
-#: shortcode.php:257
+#: shortcode.php:270
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 "S'il vous plaît sélectionnez une lettre de l'indice (ci-dessus) pour voir "
 "les entrées"
 
-#: shortcode.php:282
+#: shortcode.php:295
 msgid "Submitted by:"
 msgstr "Soumis par:"
 

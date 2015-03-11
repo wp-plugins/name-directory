@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress plugin: Name Directory\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
-"POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
-"PO-Revision-Date: 2015-03-08 21:07+0100\n"
+"POT-Creation-Date: 2015-03-10 23:48:10+00:00\n"
+"PO-Revision-Date: 2015-03-11 00:50+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -177,7 +177,7 @@ msgstr "Bewerk naam, beschrijving en layout instellingen van namenlijst %s"
 msgid "Back to the directory overview"
 msgstr "Terug naar het namenlijst overzicht"
 
-#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27
+#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27 shortcode.php:75
 msgid "Description"
 msgstr "Beschrijving"
 
@@ -238,7 +238,6 @@ msgid "Show most recent names"
 msgstr "Toon de nieuwste namen"
 
 #: admin.php:500
-#, fuzzy
 msgid "If No, frontend will not show 'Latest' option."
 msgstr "Nee? Dan wordt de 'Nieuwste' optie niet getoond op de site."
 
@@ -270,7 +269,7 @@ msgstr "Nieuwe naam %s toegevoegd"
 msgid "Will be visible when the page is refreshed."
 msgstr "Zal getoond wordt als je de pagina vernieuwd."
 
-#: admin.php:652 admin.php:657 shortcode.php:79
+#: admin.php:652 admin.php:657 shortcode.php:92
 msgid "Please fill in at least a name"
 msgstr "Vul tenminste een naam in"
 
@@ -290,7 +289,7 @@ msgstr "gepubliceerd"
 msgid "unpublished"
 msgstr "verborgen"
 
-#: admin.php:705 admin.php:795 shortcode.php:25
+#: admin.php:705 admin.php:795 shortcode.php:25 shortcode.php:74
 msgid "Name"
 msgstr "Naam"
 
@@ -357,7 +356,7 @@ msgstr ""
 "Het gebruik van HTML is toegestaan en zal op je website en in de Wordpress "
 "admin te zien zijn."
 
-#: admin.php:820
+#: admin.php:820 shortcode.php:76
 msgid "Submitted by"
 msgstr "Toegevoegd door"
 
@@ -485,61 +484,84 @@ msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr ""
 "Bedankt voor je inzending, we zullen deze zo spoedig mogelijk bekijken."
 
+#: shortcode.php:71
+msgid "New submission for Name Directory"
+msgstr "Nieuwe inzending voor je Namenlijst"
+
 #: shortcode.php:72
+msgid "Howdy,"
+msgstr "Hallootjes,"
+
+#: shortcode.php:73
+msgid "There was a new submission to the Name Directory on %s at %s"
+msgstr "Er is een nieuwe inzending op de Namenlijst van %s op %s"
+
+#: shortcode.php:77
+msgid "This new submission does not have the published status."
+msgstr "Deze nieuwe inzending wordt standaard verborgen."
+
+#: shortcode.php:78
+msgid ""
+"Please login to your WordPress admin to review and accept the submission."
+msgstr ""
+"Log in op je WordPress admin om de nieuwe inzending te bekijken en te "
+"accepteren."
+
+#: shortcode.php:85
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr ""
 "Er moet iets helemaal verkeerd gegaan zijn. Wil je het nog een keer proberen?"
 
-#: shortcode.php:148
+#: shortcode.php:161
 msgid "All"
 msgstr "Alles"
 
-#: shortcode.php:149
+#: shortcode.php:162
 msgid "Latest"
 msgstr "Nieuwste"
 
-#: shortcode.php:205 shortcode.php:312
+#: shortcode.php:218 shortcode.php:325
 msgid "Submit a name"
 msgstr "Naam toevoegen"
 
-#: shortcode.php:224
+#: shortcode.php:237
 msgid "Search for..."
 msgstr "Zoek naar..."
 
-#: shortcode.php:225
+#: shortcode.php:238
 msgid "Search"
 msgstr "Zoeken"
 
-#: shortcode.php:233
+#: shortcode.php:246
 msgid "There are currently %d names in this directory"
 msgstr "Er staan momenteel %d namen op deze lijst"
 
-#: shortcode.php:237
+#: shortcode.php:250
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr "Er staan %d namen op deze lijst met de zoekterm %s."
 
-#: shortcode.php:238
+#: shortcode.php:251
 msgid "Clear results"
 msgstr "Zoekresultaat wissen"
 
-#: shortcode.php:242
+#: shortcode.php:255
 msgid "Showing %d most recent names in this directory"
 msgstr "Toont de %d laatst toegevoegde namen in deze lijst"
 
-#: shortcode.php:246
+#: shortcode.php:259
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr "Er staan %d namen op deze lijst die beginnen met %s."
 
-#: shortcode.php:253
+#: shortcode.php:266
 msgid "There are no names in this directory at the moment"
 msgstr "Er staan op dit moment geen namen op deze namenlijst"
 
-#: shortcode.php:257
+#: shortcode.php:270
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 "Kies alsjeblieft een beginletter uit de index (hierboven) om namen te zien "
 
-#: shortcode.php:282
+#: shortcode.php:295
 msgid "Submitted by:"
 msgstr "Toegevoegd door:"
 

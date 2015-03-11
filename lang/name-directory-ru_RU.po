@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NameDirectory RU\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
-"POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
-"PO-Revision-Date: 2015-03-09 05:52+0100\n"
+"POT-Creation-Date: 2015-03-10 23:48:10+00:00\n"
+"PO-Revision-Date: 2015-03-11 00:50+0100\n"
 "Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
 "Language-Team: Rodichi <rig@rod1.org>\n"
 "Language: ru_RU\n"
@@ -177,7 +177,7 @@ msgstr "Вы редактируйте имя, описание и настрой
 msgid "Back to the directory overview"
 msgstr "Назад к списку каталогов"
 
-#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27
+#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27 shortcode.php:75
 msgid "Description"
 msgstr "Описание"
 
@@ -270,7 +270,7 @@ msgstr "Запись %s добавлена"
 msgid "Will be visible when the page is refreshed."
 msgstr "Будет отображена после перезагрузки страницы"
 
-#: admin.php:652 admin.php:657 shortcode.php:79
+#: admin.php:652 admin.php:657 shortcode.php:92
 msgid "Please fill in at least a name"
 msgstr "Ну заполните хотя-бы имя"
 
@@ -290,7 +290,7 @@ msgstr "опубликовано"
 msgid "unpublished"
 msgstr "снято с публикации"
 
-#: admin.php:705 admin.php:795 shortcode.php:25
+#: admin.php:705 admin.php:795 shortcode.php:25 shortcode.php:74
 msgid "Name"
 msgstr "Запись"
 
@@ -355,7 +355,7 @@ msgstr ""
 "HTML разметка разрешена и будет отображаться, как на сайте, так и в "
 "административной панеле."
 
-#: admin.php:820
+#: admin.php:820 shortcode.php:76
 msgid "Submitted by"
 msgstr "Отправлено"
 
@@ -472,61 +472,82 @@ msgstr ""
 "Благодарим за информацию. Ваша запись появится вскоре после проверки "
 "модератором."
 
+#: shortcode.php:71
+msgid "New submission for Name Directory"
+msgstr ""
+
 #: shortcode.php:72
+msgid "Howdy,"
+msgstr ""
+
+#: shortcode.php:73
+msgid "There was a new submission to the Name Directory on %s at %s"
+msgstr ""
+
+#: shortcode.php:77
+msgid "This new submission does not have the published status."
+msgstr ""
+
+#: shortcode.php:78
+msgid ""
+"Please login to your WordPress admin to review and accept the submission."
+msgstr ""
+
+#: shortcode.php:85
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr "Что-то пошло не так. Попробуйте еще раз."
 
-#: shortcode.php:148
+#: shortcode.php:161
 msgid "All"
 msgstr "Все"
 
-#: shortcode.php:149
+#: shortcode.php:162
 msgid "Latest"
 msgstr ""
 
-#: shortcode.php:205 shortcode.php:312
+#: shortcode.php:218 shortcode.php:325
 msgid "Submit a name"
 msgstr "Добавить запись"
 
-#: shortcode.php:224
+#: shortcode.php:237
 msgid "Search for..."
 msgstr "Искать..."
 
-#: shortcode.php:225
+#: shortcode.php:238
 msgid "Search"
 msgstr "Поиск"
 
-#: shortcode.php:233
+#: shortcode.php:246
 msgid "There are currently %d names in this directory"
 msgstr "В данном каталоге %d записей на данный момент"
 
-#: shortcode.php:237
+#: shortcode.php:250
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr ""
 
-#: shortcode.php:238
+#: shortcode.php:251
 msgid "Clear results"
 msgstr "Отчистить результаты"
 
-#: shortcode.php:242
+#: shortcode.php:255
 msgid "Showing %d most recent names in this directory"
 msgstr ""
 
-#: shortcode.php:246
+#: shortcode.php:259
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr "Найдено  %d записей на букву %s."
 
-#: shortcode.php:253
+#: shortcode.php:266
 msgid "There are no names in this directory at the moment"
 msgstr "На данный момент в этом каталоге нет записей"
 
-#: shortcode.php:257
+#: shortcode.php:270
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 "Пожалуйста выбирите букву из алфавитного указателя (выше) для просмотра "
 "записей"
 
-#: shortcode.php:282
+#: shortcode.php:295
 msgid "Submitted by:"
 msgstr ""
 

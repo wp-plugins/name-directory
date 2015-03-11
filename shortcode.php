@@ -65,6 +65,19 @@ function name_directory_show_submit_form($directory, $overview_url)
             {
                 $result_class = 'form-result-success';
                 $form_result = __('Thank you for your submission! It will be reviewed shortly.', 'name-directory');
+
+                $admin_email = get_option('admin_email');
+                wp_mail($admin_email,
+                    __('New submission for Name Directory', 'name-directory'),
+                    __('Howdy,', 'name-directory') . "\n\n" .
+                    sprintf(__('There was a new submission to the Name Directory on %s at %s', 'name-directory'), get_option('blogname'), get_option('home')) . "\n\n" .
+                    sprintf("%s: %s", __('Name', 'name-directory'), $_POST['name_directory_name']) . "\n" .
+                    sprintf("%s: %s", __('Description', 'name-directory'), $_POST['name_directory_description']) . "\n" .
+                    sprintf("%s: %s", __('Submitted by', 'name-directory'), $_POST['name_directory_submitter']) . "\n\n" .
+                    __('This new submission does not have the published status.', 'name-directory') . ' ' .
+                    __('Please login to your WordPress admin to review and accept the submission.', 'name-directory') . "\n\n" .
+                    sprintf("Link: %s/wp-admin/options-general.php?page=name-directory&sub=manage-directory&dir=%d&status=unpublished", get_option('home'), $directory) . "\n\n" .
+                    sprintf("Your %s WordPress site", get_option('blogname')));
             }
             else
             {

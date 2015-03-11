@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Name Directory 1.7.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
-"POT-Creation-Date: 2015-03-08 20:06:49+00:00\n"
+"POT-Creation-Date: 2015-03-10 23:48:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Back to the directory overview"
 msgstr ""
 
-#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27
+#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27 shortcode.php:75
 msgid "Description"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgstr ""
 msgid "Will be visible when the page is refreshed."
 msgstr ""
 
-#: admin.php:652 admin.php:657 shortcode.php:79
+#: admin.php:652 admin.php:657 shortcode.php:92
 msgid "Please fill in at least a name"
 msgstr ""
 
@@ -283,7 +283,7 @@ msgstr ""
 msgid "unpublished"
 msgstr ""
 
-#: admin.php:705 admin.php:795 shortcode.php:25
+#: admin.php:705 admin.php:795 shortcode.php:25 shortcode.php:74
 msgid "Name"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgid ""
 "Wordpress admin."
 msgstr ""
 
-#: admin.php:820
+#: admin.php:820 shortcode.php:76
 msgid "Submitted by"
 msgstr ""
 
@@ -461,59 +461,80 @@ msgstr ""
 msgid "Thank you for your submission! It will be reviewed shortly."
 msgstr ""
 
+#: shortcode.php:71
+msgid "New submission for Name Directory"
+msgstr ""
+
 #: shortcode.php:72
+msgid "Howdy,"
+msgstr ""
+
+#: shortcode.php:73
+msgid "There was a new submission to the Name Directory on %s at %s"
+msgstr ""
+
+#: shortcode.php:77
+msgid "This new submission does not have the published status."
+msgstr ""
+
+#: shortcode.php:78
+msgid ""
+"Please login to your WordPress admin to review and accept the submission."
+msgstr ""
+
+#: shortcode.php:85
 msgid "Something must have gone terribly wrong. Would you please try it again?"
 msgstr ""
 
-#: shortcode.php:148
+#: shortcode.php:161
 msgid "All"
 msgstr ""
 
-#: shortcode.php:149
+#: shortcode.php:162
 msgid "Latest"
 msgstr ""
 
-#: shortcode.php:205 shortcode.php:312
+#: shortcode.php:218 shortcode.php:325
 msgid "Submit a name"
 msgstr ""
 
-#: shortcode.php:224
+#: shortcode.php:237
 msgid "Search for..."
 msgstr ""
 
-#: shortcode.php:225
+#: shortcode.php:238
 msgid "Search"
 msgstr ""
 
-#: shortcode.php:233
+#: shortcode.php:246
 msgid "There are currently %d names in this directory"
 msgstr ""
 
-#: shortcode.php:237
+#: shortcode.php:250
 msgid "There are %d names in this directory containing the searchterm %s."
 msgstr ""
 
-#: shortcode.php:238
+#: shortcode.php:251
 msgid "Clear results"
 msgstr ""
 
-#: shortcode.php:242
+#: shortcode.php:255
 msgid "Showing %d most recent names in this directory"
 msgstr ""
 
-#: shortcode.php:246
+#: shortcode.php:259
 msgid "There are %d names in this directory beginning with the letter %s."
 msgstr ""
 
-#: shortcode.php:253
+#: shortcode.php:266
 msgid "There are no names in this directory at the moment"
 msgstr ""
 
-#: shortcode.php:257
+#: shortcode.php:270
 msgid "Please select a letter from the index (above) to see entries"
 msgstr ""
 
-#: shortcode.php:282
+#: shortcode.php:295
 msgid "Submitted by:"
 msgstr ""
 
