@@ -236,11 +236,11 @@ msgstr ""
 
 #: admin.php:498
 msgid "Show most recent names"
-msgstr ""
+msgstr "Vis nyeste navn"
 
 #: admin.php:500
 msgid "If No, frontend will not show 'Latest' option."
-msgstr ""
+msgstr "Om nei, vil ikke klientdelen vise 'Siste' alternativ."
 
 #: admin.php:520
 msgid "Number of columns"
@@ -481,19 +481,19 @@ msgstr "Takk for din innsendelse! Den vil bli gjennomgått snarlig. "
 
 #: shortcode.php:71
 msgid "New submission for Name Directory"
-msgstr ""
+msgstr "Ny innsendelse til navnemappe"
 
 #: shortcode.php:72
 msgid "Howdy,"
-msgstr ""
+msgstr "Morn,"
 
 #: shortcode.php:73
 msgid "There was a new submission to the Name Directory on %s at %s"
-msgstr ""
+msgstr "Det var en ny innsendelse til navnemappen til %s på %s"
 
 #: shortcode.php:77
 msgid "This new submission does not have the published status."
-msgstr ""
+msgstr "Denne nye innsendelsen har ikke status som publisert."
 
 #: shortcode.php:78
 msgid ""
@@ -510,7 +510,7 @@ msgstr "Alt"
 
 #: shortcode.php:162
 msgid "Latest"
-msgstr ""
+msgstr "Siste"
 
 #: shortcode.php:218 shortcode.php:325
 msgid "Submit a name"
@@ -538,7 +538,7 @@ msgstr "Fjern resultater"
 
 #: shortcode.php:255
 msgid "Showing %d most recent names in this directory"
-msgstr ""
+msgstr "Viser de %d mest nylige navnene i denne mappen"
 
 #: shortcode.php:259
 msgid "There are %d names in this directory beginning with the letter %s."
