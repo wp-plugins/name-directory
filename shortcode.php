@@ -247,7 +247,7 @@ function show_directory($attributes)
     }
     else if(empty($name_filter['character']) && ! empty($search_value))
     {
-        echo sprintf(__('There are %d names in this directory containing the searchterm %s.', 'name-directory'), $num_names, "<i>" . $search_value . "</i>");
+        echo sprintf(__('There are %d names in this directory containing the search term %s.', 'name-directory'), $num_names, "<i>" . $search_value . "</i>");
         echo " <a href='" . get_permalink() . "'><small>" . __('Clear results', 'name-directory') . "</small></a>.<br />";
     }
     else if($name_filter['character'] == 'latest')

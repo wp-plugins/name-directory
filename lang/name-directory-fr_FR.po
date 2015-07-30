@@ -4,10 +4,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/name-directory\n"
 "POT-Creation-Date: 2015-03-10 23:48:10+00:00\n"
-"PO-Revision-Date: 2015-03-11 00:50+0100\n"
-"Last-Translator: Jeroen Peters <jeroenpeters1986@gmail.com>\n"
-"Language-Team: Patrick BARDET (http://www.web-studio-creation.fr) <LL@li."
-"org>\n"
+"PO-Revision-Date: 2015-07-30 07:32+0100\n"
+"Last-Translator: Jeroen Peters <jeroen@quoteshirts.nl>\n"
+"Language-Team: Patrick BARDET (http://www.web-studio-creation.fr) <LL@li.org>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +24,10 @@ msgstr "Options de l'annuaire"
 msgid "Name Directory"
 msgstr "Entrée de l'annuaire"
 
-#: admin.php:27 admin.php:265 admin.php:567 admin.php:846
+#: admin.php:27
+#: admin.php:265
+#: admin.php:567
+#: admin.php:846
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous ne disposez pas des droits suffisants pour accéder à cette page"
 
@@ -61,19 +63,26 @@ msgstr "Entrées de l'annuaire"
 msgid "You currently have %d %s."
 msgstr "Vous avez %d %s"
 
-#: admin.php:156 admin.php:168 admin.php:313
+#: admin.php:156
+#: admin.php:168
+#: admin.php:313
 msgid "Title"
 msgstr "Titre"
 
-#: admin.php:158 admin.php:170
+#: admin.php:158
+#: admin.php:170
 msgid "Entries"
 msgstr "Entrées"
 
-#: admin.php:159 admin.php:171 admin.php:708 admin.php:805
+#: admin.php:159
+#: admin.php:171
+#: admin.php:708
+#: admin.php:805
 msgid "Published"
 msgstr "Publié"
 
-#: admin.php:160 admin.php:172
+#: admin.php:160
+#: admin.php:172
 msgid "Unpublished"
 msgstr "Non publié"
 
@@ -89,7 +98,8 @@ msgstr "Gérer les entrées"
 msgid "Go to the add-name-form on the Manage page"
 msgstr "Aller au formulaire add-name-form dans la gestion des pages"
 
-#: admin.php:209 admin.php:751
+#: admin.php:209
+#: admin.php:751
 msgid "Add name"
 msgstr "Ajouter un élément"
 
@@ -103,8 +113,7 @@ msgstr "Paramètres de configuration"
 
 #: admin.php:211
 msgid "Import entries for this directory by uploading a .csv file"
-msgstr ""
-"Entrées à l'importation pour l'annuaire en téléchargeant un fichier .csv"
+msgstr "Entrées à l'importation pour l'annuaire en téléchargeant un fichier .csv"
 
 #: admin.php:211
 msgid "Import"
@@ -122,7 +131,8 @@ msgstr "Shortcode"
 msgid "Permanently remove this name directory"
 msgstr "Supprimer définitivement cet annuaire"
 
-#: admin.php:213 admin.php:732
+#: admin.php:213
+#: admin.php:732
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -132,21 +142,18 @@ msgstr "Nombre d'éléments de l'annuaire"
 
 #: admin.php:231
 msgid "To show your directory on your website, use the shortcode on the right."
-msgstr ""
-"Pour afficher l'annuaire sur votre site, utilisez le shortcode présent sur "
-"la droite"
+msgstr "Pour afficher l'annuaire sur votre site, utilisez le shortcode présent sur la droite"
 
 #: admin.php:232
 msgid "Copy the code and paste it in a post or in a page."
 msgstr "Copier le code et collez le dans un article ou une page"
 
 #: admin.php:233
-msgid ""
-"If you want to start with a specific character, like \"J\", use "
-"[namedirectory dir=\"X\" start_with=\"j\"]."
+msgid "If you want to start with a specific character, like \"J\", use [namedirectory dir=\"X\" start_with=\"j\"]."
 msgstr ""
 
-#: admin.php:283 admin.php:285
+#: admin.php:283
+#: admin.php:285
 msgid "Create new name directory"
 msgstr "Créer "
 
@@ -156,8 +163,7 @@ msgstr "Créer"
 
 #: admin.php:286
 msgid "Complete the form below to create a new name directory."
-msgstr ""
-"Remplissez le formulaire ci-dessous pour créer un élément de l'annuaire"
+msgstr "Remplissez le formulaire ci-dessous pour créer un élément de l'annuaire"
 
 #: admin.php:290
 msgid "Edit this directory"
@@ -173,15 +179,19 @@ msgstr "Editer l'annuaire"
 
 #: admin.php:294
 msgid "You are editing the name, description and settings of directory %s"
-msgstr ""
-"Vous éditez actuellement le nom, la description et les parmaètres de "
-"l'annuaire %s"
+msgstr "Vous éditez actuellement le nom, la description et les parmaètres de l'annuaire %s"
 
-#: admin.php:297 admin.php:698 admin.php:757
+#: admin.php:297
+#: admin.php:698
+#: admin.php:757
 msgid "Back to the directory overview"
 msgstr "Retour à la liste des annuaires"
 
-#: admin.php:317 admin.php:706 admin.php:799 shortcode.php:27 shortcode.php:75
+#: admin.php:317
+#: admin.php:706
+#: admin.php:799
+#: shortcode.php:27
+#: shortcode.php:75
 msgid "Description"
 msgstr "Description"
 
@@ -189,13 +199,29 @@ msgstr "Description"
 msgid "Show title"
 msgstr "Afficher le titre"
 
-#: admin.php:325 admin.php:346 admin.php:367 admin.php:388 admin.php:409
-#: admin.php:430 admin.php:455 admin.php:480 admin.php:808 helpers.php:63
+#: admin.php:325
+#: admin.php:346
+#: admin.php:367
+#: admin.php:388
+#: admin.php:409
+#: admin.php:430
+#: admin.php:455
+#: admin.php:480
+#: admin.php:808
+#: helpers.php:63
 msgid "Yes"
 msgstr "Oui"
 
-#: admin.php:337 admin.php:358 admin.php:379 admin.php:400 admin.php:421
-#: admin.php:442 admin.php:467 admin.php:492 admin.php:505 admin.php:816
+#: admin.php:337
+#: admin.php:358
+#: admin.php:379
+#: admin.php:400
+#: admin.php:421
+#: admin.php:442
+#: admin.php:467
+#: admin.php:492
+#: admin.php:505
+#: admin.php:816
 #: helpers.php:66
 msgid "No"
 msgstr "Non"
@@ -226,8 +252,7 @@ msgstr "Afficher tous les noms par défaut"
 
 #: admin.php:450
 msgid "If no, user HAS to use the index before entries are shown"
-msgstr ""
-"Si non, l'utilisateur doit utiliser les index avant entrées sont affichées"
+msgstr "Si non, l'utilisateur doit utiliser les index avant entrées sont affichées"
 
 #: admin.php:473
 msgid "Show all letters on index"
@@ -257,16 +282,17 @@ msgstr "Annuler"
 msgid "Name %s deleted"
 msgstr "L'entrée %s a été supprimée"
 
-#: admin.php:599 admin.php:605
+#: admin.php:599
+#: admin.php:605
 msgid "Name %s updated"
 msgstr "L'entrée %s a été mise à jour"
 
 #: admin.php:616
 msgid "Name %s was already on the list, so it was not added"
-msgstr ""
-"Le nouvel annuaire %s est déjà présent dasn la liste; il n'a pas eté ajouté"
+msgstr "Le nouvel annuaire %s est déjà présent dasn la liste; il n'a pas eté ajouté"
 
-#: admin.php:638 admin.php:645
+#: admin.php:638
+#: admin.php:645
 msgid "New name %s added"
 msgstr "Le nouvel annuaire %s a été ajouté"
 
@@ -274,7 +300,9 @@ msgstr "Le nouvel annuaire %s a été ajouté"
 msgid "Will be visible when the page is refreshed."
 msgstr "sera visible quand la page sera rafraichie."
 
-#: admin.php:652 admin.php:657 shortcode.php:92
+#: admin.php:652
+#: admin.php:657
+#: shortcode.php:92
 msgid "Please fill in at least a name"
 msgstr "Entrez au moins le nom"
 
@@ -282,7 +310,8 @@ msgstr "Entrez au moins le nom"
 msgid "Manage names for %s"
 msgstr "Gestion des entrées de %s"
 
-#: admin.php:693 admin.php:914
+#: admin.php:693
+#: admin.php:914
 msgid "all"
 msgstr "tout"
 
@@ -294,7 +323,10 @@ msgstr "publié"
 msgid "unpublished"
 msgstr "non publié"
 
-#: admin.php:705 admin.php:795 shortcode.php:25 shortcode.php:74
+#: admin.php:705
+#: admin.php:795
+#: shortcode.php:25
+#: shortcode.php:74
 msgid "Name"
 msgstr "Entrée"
 
@@ -332,19 +364,15 @@ msgstr "Ajouter une nouvelle entrée"
 
 #: admin.php:781
 msgid "Show the compact form, showing only the name, always published)"
-msgstr ""
-"Afficher le formulaire compact, affichant seulement le nom, toujours publié) "
+msgstr "Afficher le formulaire compact, affichant seulement le nom, toujours publié) "
 
 #: admin.php:783
 msgid "Quick add view"
 msgstr "Ajout partiel de paramètres"
 
 #: admin.php:785
-msgid ""
-"Show the full form, which allows you to enter a description and submitter"
-msgstr ""
-"Afficher le formulaire complet, permettant d'entrer une description et de la "
-"soumettre"
+msgid "Show the full form, which allows you to enter a description and submitter"
+msgstr "Afficher le formulaire complet, permettant d'entrer une description et de la soumettre"
 
 #: admin.php:787
 msgid "Full add view"
@@ -355,14 +383,11 @@ msgid "Please be careful!"
 msgstr "Attention !!!"
 
 #: admin.php:802
-msgid ""
-"HTML markup is allowed and will we printed on your website and in the "
-"Wordpress admin."
-msgstr ""
-"Les balises HTML sont autorisées et seront prises en compte côté front-"
-"office et back-office"
+msgid "HTML markup is allowed and will we printed on your website and in the Wordpress admin."
+msgstr "Les balises HTML sont autorisées et seront prises en compte côté front-office et back-office"
 
-#: admin.php:820 shortcode.php:76
+#: admin.php:820
+#: shortcode.php:76
 msgid "Submitted by"
 msgstr "Soumis par"
 
@@ -375,8 +400,7 @@ msgid "Could not import any names into Name Directory"
 msgstr ""
 
 #: admin.php:916
-msgid ""
-"Ignored %s names, because they were duplicate (already in the directory)"
+msgid "Ignored %s names, because they were duplicate (already in the directory)"
 msgstr ""
 
 #: admin.php:921
@@ -388,9 +412,7 @@ msgid "Import names for %s"
 msgstr "Importer des entrées de %s"
 
 #: admin.php:941
-msgid ""
-"Use the upload form below to upload a .csv-file containing all of your names "
-"(in the first column), description and submitter are optional."
+msgid "Use the upload form below to upload a .csv-file containing all of your names (in the first column), description and submitter are optional."
 msgstr ""
 
 #: admin.php:942
@@ -398,9 +420,7 @@ msgid "If you saved it from Excel or OpenOffice, please ensure that:"
 msgstr ""
 
 #: admin.php:943
-msgid ""
-"There is a header row (this contains the column names, the first row will "
-"NOT be imported)"
+msgid "There is a header row (this contains the column names, the first row will NOT be imported)"
 msgstr ""
 
 #: admin.php:944
@@ -436,9 +456,7 @@ msgid "plugin support forums"
 msgstr ""
 
 #: admin.php:969
-msgid ""
-"Name Directory Import requires PHP 5.3, you seem to have in older version. "
-"Importing names will not work for your website."
+msgid "Name Directory Import requires PHP 5.3, you seem to have in older version. Importing names will not work for your website."
 msgstr ""
 
 #: admin.php:973
@@ -471,14 +489,11 @@ msgstr "Retour à la liste des annuaires"
 
 #: shortcode.php:46
 msgid "Sorry, %s was already on the list so your submission was not sent."
-msgstr ""
-"Désolé, %s est déjà dans la liste; votre soumission n'a pas été prise en "
-"compte."
+msgstr "Désolé, %s est déjà dans la liste; votre soumission n'a pas été prise en compte."
 
 #: shortcode.php:67
 msgid "Thank you for your submission! It will be reviewed shortly."
-msgstr ""
-"Merci pour votre soumission. Votre demande sera traitée très prochainment."
+msgstr "Merci pour votre soumission. Votre demande sera traitée très prochainment."
 
 #: shortcode.php:71
 msgid "New submission for Name Directory"
@@ -497,8 +512,7 @@ msgid "This new submission does not have the published status."
 msgstr ""
 
 #: shortcode.php:78
-msgid ""
-"Please login to your WordPress admin to review and accept the submission."
+msgid "Please login to your WordPress admin to review and accept the submission."
 msgstr ""
 
 #: shortcode.php:85
@@ -513,7 +527,8 @@ msgstr "Tout"
 msgid "Latest"
 msgstr "Le plus récent"
 
-#: shortcode.php:218 shortcode.php:325
+#: shortcode.php:218
+#: shortcode.php:325
 msgid "Submit a name"
 msgstr "Soumettre une entrée"
 
@@ -530,7 +545,7 @@ msgid "There are currently %d names in this directory"
 msgstr "Il y a %s entrée(s) dans cet annuaire"
 
 #: shortcode.php:250
-msgid "There are %d names in this directory containing the searchterm %s."
+msgid "There are %d names in this directory containing the search term %s."
 msgstr "Il y a %d entrée(s) contenant %s dans cet annuaire."
 
 #: shortcode.php:251
@@ -551,9 +566,7 @@ msgstr "Il n'y a aucune entrée dans cet annuaire pour le moment."
 
 #: shortcode.php:270
 msgid "Please select a letter from the index (above) to see entries"
-msgstr ""
-"S'il vous plaît sélectionnez une lettre de l'indice (ci-dessus) pour voir "
-"les entrées"
+msgstr "S'il vous plaît sélectionnez une lettre de l'indice (ci-dessus) pour voir les entrées"
 
 #: shortcode.php:295
 msgid "Submitted by:"
@@ -567,11 +580,10 @@ msgid "http://www.jeroen.in"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"A Name Directory, i.e. for animal names. Visitors can add, search or just "
-"browse all names."
+msgid "A Name Directory, i.e. for animal names. Visitors can add, search or just browse all names."
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "Jeroen Peters"
 msgstr ""
+

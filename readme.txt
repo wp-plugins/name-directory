@@ -133,6 +133,11 @@ You can through this plugin information page or in the Support forums.
 
 == Changelog ==
 
+= 1.7.5 =
+ * Updated Norwegian translation (Thanks Mikael!)
+ * Some improvements for English language
+ * Synced .pot and .po files
+
 = 1.7.4 =
  * WND-25: Send e-mailnotification to WordPress admin when a new name is submitted
  * Generated new .pot file and synced all .po files
